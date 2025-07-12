@@ -1,5 +1,6 @@
 import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
+import Stats from './components/Stats';
 
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
+      <Stats />
     </div>
   );
 }

@@ -1,24 +1,10 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window !== 'undefined') {
-        setIsScrolled(window.scrollY > 50);
-      }
-    };
-    
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
 
   const navigation = [
     { name: 'About', href: '#about' },
@@ -29,15 +15,13 @@ const Header = () => {
   ];
 
   return (
-    <header className={`absolute w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
-    }`}>
+    <header className="absolute w-full z-50 bg-transparent">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center gap-4">
               {/* Date Badge */}
-              <div className="text-white text-center">
+              <div className="text-white text-center" suppressHydrationWarning>
                 <div className="text-2xl font-bold leading-none">30</div>
                 <div className="text-2xl font-bold leading-none">31</div>
                 <div className="text-xs uppercase tracking-wide">AUG</div>
