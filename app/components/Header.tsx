@@ -9,10 +9,15 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (typeof window !== 'undefined') {
+        setIsScrolled(window.scrollY > 50);
+      }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   const navigation = [
@@ -24,7 +29,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="absolute w-full z-50 bg-transparent">
+    <header className={`absolute w-full z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
+    }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">

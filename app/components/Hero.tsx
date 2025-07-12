@@ -19,7 +19,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl leading-relaxed">
-            <span className="font-semibold text-white">AFROCHAIN</span> is Ethiopia's largest blockchain education initiative centered around empowering students, developers, and startups with cutting-edge blockchain technology.
+            <span className="font-semibold text-white">AFROCHAIN</span> is Ethiopia&apos;s largest blockchain education initiative centered around empowering students, developers, and startups with cutting-edge blockchain technology.
           </p>
 
           {/* CTA Button */}
