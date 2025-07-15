@@ -1,6 +1,7 @@
 import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
 import Stats from './components/Stats';
+import Showcase from './components/Showcase';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Hero />
       <Stats />
+      <Showcase />
     </div>
   );
 }
