@@ -68,9 +68,8 @@ const Showcase = () => {
                           <Image
                             src={speaker.image}
                             alt={speaker.name}
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-md"
+                            fill
+                            className="rounded-md object-cover"
                           />
                         </div>
                       </div>
@@ -84,8 +83,8 @@ const Showcase = () => {
                           <Image
                             src={speaker.image}
                             alt={speaker.name}
-                            layout="fill"
-                            objectFit="contain"
+                            fill
+                            className="object-contain"
                             unoptimized
                           />
                         </div>
@@ -102,9 +101,8 @@ const Showcase = () => {
             <Image
               src="/spacescience.png"
               alt="Venue"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
         </div>

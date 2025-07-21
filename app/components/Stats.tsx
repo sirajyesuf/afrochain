@@ -26,12 +26,12 @@ const UsersIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 
-const oldStats = [
-  { name: 'Participants', value: '1,200+' },
-  { name: 'Companies', value: '300+' },
-  { name: 'Countries Represented', value: '25' },
-  { name: 'Speakers', value: '150+' },
-];
+// const oldStats = [
+//   { name: 'Participants', value: '1,200+' },
+//   { name: 'Companies', value: '300+' },
+//   { name: 'Countries Represented', value: '25' },
+//   { name: 'Speakers', value: '150+' },
+// ];
 
 const newStats = [
   { name: 'Target', value: '$40,000', icon: BullseyeIcon },
@@ -44,35 +44,35 @@ const newStats = [
 const Stats = () => {
   return (
     <>
-      <div className="bg-gray-900 py-24 sm:py-32">
+      <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Our Funding and <span className="text-yellow-400">Impact</span>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                Our Funding and <span className="text-yellow-500">Impact</span>
               </h2>
-              <p className="mt-4 text-lg leading-8 text-gray-300">
+              <p className="mt-4 text-lg leading-8 text-gray-600">
                 We are on a mission to empower the next generation of African innovators.
               </p>
             </div>
             <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 text-center sm:grid-cols-2 lg:grid-cols-5">
               {newStats.map((stat) => (
                 <div key={stat.name} className="flex flex-col items-center">
-                  <div className="rounded-full bg-yellow-400/10 p-4">
-                    <stat.icon className="h-8 w-8 text-yellow-400" aria-hidden="true" />
+                  <div className="rounded-full bg-yellow-500/10 p-4">
+                    <stat.icon className="h-8 w-8 text-yellow-500" aria-hidden="true" />
                   </div>
-                  <p className="mt-4 text-3xl font-semibold tracking-tight text-white">
+                  <p className="mt-4 text-3xl font-semibold tracking-tight text-gray-900">
                     {stat.value}
                   </p>
-                  <p className="mt-1 text-base leading-7 text-gray-300">{stat.name}</p>
+                  <p className="mt-1 text-base leading-7 text-gray-600">{stat.name}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
       </div>
-
-      <div className="bg-white py-24 sm:py-32">
+{/* 
+      <div className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -90,7 +90,7 @@ const Stats = () => {
             ))}
           </dl>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
