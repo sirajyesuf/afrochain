@@ -133,14 +133,14 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="mt-8 space-y-2">
+            {/* <div className="mt-8 space-y-2">
               <a href="/privacy" className="text-xs text-gray-500 hover:text-black transition-colors duration-200 block">
                 Privacy Policy
               </a>
               <a href="/terms" className="text-xs text-gray-500 hover:text-black transition-colors duration-200 block">
                 Terms of Service
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
 
