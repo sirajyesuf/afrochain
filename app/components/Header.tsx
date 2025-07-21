@@ -15,7 +15,7 @@ const Header = () => {
   const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
 
   const navigation = [
-    { name: 'About', href: '/aboutus' },
+    { name: 'About Us', href: '/aboutus' },
     {
       name: 'Programs',
       hasDropdown: true,

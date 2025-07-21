@@ -98,7 +98,7 @@ const Hero = () => {
                 Register for Event
               </a>
               <a 
-                href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
+                href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-transparent hover:bg-white/10 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base"
@@ -106,7 +106,7 @@ const Hero = () => {
                 Become a Sponsor
               </a>
               <a 
-                href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
+                href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-transparent hover:bg-white/10 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base"
