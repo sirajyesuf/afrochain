@@ -1,20 +1,70 @@
-import React from 'react';
+'use client';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 const Hero = () => {
+  // Video URLs from uploadthing
+  const videoUrls = [
+    'https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pxnWGxmQSYdZWIlTk4D9uAsXHMO6hy5Nng8BR',
+    'https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4prw5nmxTPKVGmvRrXaC4HeNUSkAEOIDb5zTYh',
+    'https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pygdpS9OVn1ChkmXY5LBt3Du7oT2e9izwcMRA'
+  ];
+
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    // Change video every 10 seconds
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoUrls.length);
+        setIsTransitioning(false);
+      }, 500); // Fade transition duration
+    }, 10000); // Change video every 10 seconds
+
+    return () => clearInterval(interval);
+  }, [videoUrls.length]);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full z-0">
-        <video
-          className="absolute top-1/2 left-1/2 w-screen h-full object-cover -translate-x-1/2 -translate-y-1/2"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/pizzaday2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {/* Video container with transition effect */}
+        <div className={`absolute inset-0 transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
+          <video
+            key={currentVideoIndex}
+            className="absolute top-1/2 left-1/2 w-screen h-full object-cover -translate-x-1/2 -translate-y-1/2"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        
+        {/* Video indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+          {videoUrls.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => {
+                setIsTransitioning(true);
+                setTimeout(() => {
+                  setCurrentVideoIndex(index);
+                  setIsTransitioning(false);
+                }, 500);
+              }}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                index === currentVideoIndex 
+                  ? 'bg-white w-8' 
+                  : 'bg-white/50 hover:bg-white/75'
+              }`}
+              aria-label={`Go to video ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
       
       {/* Overlay for better text readability - stronger on left, lighter on right */}
