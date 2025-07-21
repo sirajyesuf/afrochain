@@ -28,7 +28,7 @@ export default function PartnersPage() {
             🤝 Our Partners & Sponsors
           </h1>
           <p className="text-lg md:text-xl text-gray-200 font-light mb-6 max-w-2xl mx-auto">
-            We are grateful for the support and collaboration of our partners and sponsors who make Afrochain possible. Explore the organizations driving innovation and positive change in Africa's blockchain ecosystem.
+            We are grateful for the support and collaboration of our partners and sponsors who make Afrochain possible. Discover the innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa. Explore their projects, connect, and get inspired!
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a

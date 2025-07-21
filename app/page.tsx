@@ -16,10 +16,18 @@ function App() {
       <Hero />
       <Stats />
       <AboutUs />
+      <div id="launchpad">
       <Launchpad />
+      </div>
+      <div id="hackathon">
       <Hackathon />
+      </div>
+      <div id="speakers">
       <SpeakersSection />
+      </div>
+      <div id="venue">
       <VenueSection />
+      </div>
       <PartnersSection />
       <Footer />
     </div>

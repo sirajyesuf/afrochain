@@ -84,10 +84,10 @@ export default function Component() {
 
             <div className="space-y-6">
               <p className="text-gray-700 leading-relaxed text-lg">
-                AfroChain 2025 is Ethiopia's flagship blockchain summit — a two-day experience blending tech, culture, policy, and community. Powered by Kese Events and supported by leading partners, AfroChain brings together builders, dreamers, and doers shaping the decentralized future of Africa.
+                AfroChain 2025 is Ethiopia&apos;s flagship blockchain summit — a two-day experience blending tech, culture, policy, and community. Powered by Kese Events and supported by leading partners, AfroChain brings together builders, dreamers, and doers shaping the decentralized future of Africa.
               </p>
               <p className="text-gray-700 leading-relaxed text-lg">
-                Whether you're a developer, founder, policymaker, investor, or creator — 
+                Whether you&apos;re a developer, founder, policymaker, investor, or creator — 
                 <span className="font-bold">this is where Africa builds on-chain.</span>
               </p>
 

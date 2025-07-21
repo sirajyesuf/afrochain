@@ -1,6 +1,6 @@
 export default function Launchpad() {
   return (
-    <div className="bg-gray-50 py-16 lg:py-24">
+    <div  className="bg-gray-50 py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="space-y-6">
@@ -16,7 +16,7 @@ export default function Launchpad() {
                 AfroChain 2025 is also the official launchpad for NextChain Ethiopia, a year-round builder ecosystem tour across 15 universities, developer incubators, and policy hubs.
               </p>
               <p className="text-gray-700 leading-relaxed text-lg font-semibold">
-                You'll meet the next 10,000 builders right here.
+                You&apos;ll meet the next 10,000 builders right here.
               </p>
             </div>
 

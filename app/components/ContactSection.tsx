@@ -68,7 +68,7 @@ export default function ContactSection() {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Chat to support</h3>
-                <p className="text-gray-600 mb-4">We're here to help.</p>
+                <p className="text-gray-600 mb-4">We&apos;re here to help.</p>
                 <button
                   onClick={() => handleEmailClick("support@afrochain.com")}
                   className="text-gray-900 font-medium hover:text-teal-600 transition-colors underline"

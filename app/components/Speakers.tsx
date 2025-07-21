@@ -47,7 +47,7 @@ const speakers = [
 
 export default function SpeakersSection() {
   return (
-    <div className="bg-white py-16 lg:py-24">
+    <div id="speakers" className="bg-white py-16 lg:py-24">
       <style jsx>{`
   @keyframes scroll {
     0% {
