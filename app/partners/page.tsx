@@ -32,12 +32,12 @@ export default function PartnersPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
-              href="#"
+              href="https://forms.gle/yxBFYDFu6tMWGQvC9"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg border-2 border-teal-600 transition-colors duration-200 text-base shadow"
             >
-              Become a Partner
+              Become a Partner or Sponsor
             </a>
             <a
               href="/contactus"
