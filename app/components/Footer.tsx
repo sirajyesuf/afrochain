@@ -45,40 +45,40 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-black mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="/aboutus" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/aboutus" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#speakers" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/#speakers" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Speakers
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#venue" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/#venue" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Venue
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/partners" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/partners" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Partners
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#hackathon" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/#hackathon" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Hackathon
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/contactus" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/contactus" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Contact Us
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a href="/exhibitors" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <Link href="/exhibitors" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Exhibitors
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
