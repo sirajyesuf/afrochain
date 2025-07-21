@@ -67,7 +67,7 @@ const Hackathon = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
+                  href="https://forms.gle/JyExpoRFWumUkzWW9" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="border-2 border-black text-black hover:text-gray-600 hover:border-gray-600 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 bg-transparent flex items-center justify-center"

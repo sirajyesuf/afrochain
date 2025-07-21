@@ -31,7 +31,7 @@ export default function ExhibitorsPage() {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
               <a
-                href="https://forms.gle/your-exhibitor-registration-link" // TODO: Replace with actual link
+                href="https://forms.gle/TzdZAjkXtdkwZAMa8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200 text-base shadow-md text-center"
@@ -39,7 +39,7 @@ export default function ExhibitorsPage() {
                 REGISTER AS EXHIBITOR
               </a>
               <a
-                href="mailto:info@afrochain.com?subject=Exhibitor%20Inquiry"
+                href="/contactus"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-teal-700 font-bold py-2 px-6 rounded-lg transition-colors duration-200 text-base shadow-md text-center"
               >
                 CONTACT US

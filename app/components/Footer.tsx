@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Mail, MapPin, ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState("2025")
@@ -17,7 +18,9 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-black mb-2">AfroChain</h3>
+              <Link href="/">
+                <h3 className="text-2xl font-bold text-black mb-2">AfroChain</h3>
+              </Link>
               <p className="text-gray-600 text-sm leading-relaxed max-w-md">
                 The premier blockchain and Web3 conference in East Africa, bringing together innovators, 
                 developers, and thought leaders to shape the future of decentralized technology.
@@ -42,28 +45,39 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-black mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#about" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <a href="/aboutus" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#speakers" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <a href="/#speakers" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Speakers
                 </a>
               </li>
               <li>
-                <a href="#venue" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <a href="/#venue" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Venue
                 </a>
               </li>
               <li>
-                <a href="#partners" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <a href="/partners" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Partners
                 </a>
               </li>
               <li>
-                <a href="#hackathon" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                <a href="/#hackathon" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
                   Hackathon
+                </a>
+              </li>
+              <li>
+                <a href="/contactus" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                  Contact Us
+                </a>
+              </li>
+
+              <li>
+                <a href="/exhibitors" className="text-sm text-gray-600 hover:text-black transition-colors duration-200">
+                  Exhibitors
                 </a>
               </li>
             </ul>

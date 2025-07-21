@@ -2,7 +2,7 @@ import Image from 'next/image';
 import AboutUs from '../components/AboutUs';
 import FAQ from '../components/FAQ';
 import Header from '../components/Header';
-
+import Footer from '../components/Footer';
 export default function AboutUsPage() {
   return (
     <>
@@ -66,6 +66,7 @@ export default function AboutUsPage() {
         </div>
       </section>
       <FAQ />
+      <Footer />
     </>
   );
 } 

@@ -32,7 +32,7 @@ export default function PartnersPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
-              href="https://forms.gle/Z1ppaNhjXZWVsqTT8"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg border-2 border-teal-600 transition-colors duration-200 text-base shadow"
@@ -40,7 +40,7 @@ export default function PartnersPage() {
               Become a Partner
             </a>
             <a
-              href="mailto:info@afrochain.com"
+              href="/contactus"
               className="bg-transparent hover:bg-white/10 text-white font-bold py-2 px-6 rounded-lg border-2 border-white transition-colors duration-200 text-base shadow"
             >
               Contact Us
