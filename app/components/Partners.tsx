@@ -1,25 +1,31 @@
 import React from 'react';
+import Image from 'next/image';
 
 const partners = [
   {
     name: "Tether",
     url: "https://tether.to",
+    logo: "/tetherusdt.png",
   },
   {
     name: "Sorted Wallet",
     url: "https://sortedwallet.com",
+    logo: "/sorted.png",
   },
   {
     name: "Project Catalyst",
     url: "https://projectcatalyst.io",
+    logo: "/projectcatalyst.png",
   },
   {
     name: "MINT",
     url: "https://mint.gov.et",
+    logo: "/mint.png",
   },
   {
     name: "Africa Blockchain Institute",
     url: "https://africablockchaininstitute.org",
+    logo: "/africablockchain.png",
   },
 ];
 
@@ -50,9 +56,7 @@ export default function PartnersSponsorSection() {
             <div className="group relative">
               <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <div className="text-lg lg:text-xl font-semibold text-gray-900">
-                    {partners[0]?.name}
-                  </div>
+                  <Image src={partners[0]?.logo} alt={partners[0]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
               </div>
               {/* Hover Link */}
@@ -71,9 +75,7 @@ export default function PartnersSponsorSection() {
             <div className="group relative">
               <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <div className="text-lg lg:text-xl font-semibold text-gray-900">
-                    {partners[4]?.name}
-                  </div>
+                  <Image src={partners[4]?.logo} alt={partners[4]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
               </div>
               {/* Hover Link */}
@@ -93,9 +95,7 @@ export default function PartnersSponsorSection() {
             <div className="group relative">
               <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <div className="text-lg lg:text-xl font-semibold text-gray-900">
-                    {partners[1]?.name}
-                  </div>
+                  <Image src={partners[1]?.logo} alt={partners[1]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
               </div>
               {/* Hover Link */}
@@ -114,9 +114,7 @@ export default function PartnersSponsorSection() {
             <div className="group relative">
               <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <div className="text-lg lg:text-xl font-semibold text-gray-900">
-                    {partners[2]?.name}
-                  </div>
+                  <Image src={partners[2]?.logo} alt={partners[2]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
               </div>
               {/* Hover Link */}
@@ -136,9 +134,7 @@ export default function PartnersSponsorSection() {
             <div className="group relative">
               <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <div className="text-lg lg:text-xl font-semibold text-gray-900">
-                    {partners[3]?.name}
-                  </div>
+                  <Image src={partners[3]?.logo} alt={partners[3]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
               </div>
               {/* Hover Link */}
