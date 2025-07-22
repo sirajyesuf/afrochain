@@ -122,7 +122,7 @@ const Hero = () => {
               {[
                 { src: "/keseevents-logo.png", alt: "Kese Events" },
                 { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025" },
-                { src: "/tetherusdt.png", alt: "Tether USDT" },
+                { src: "/tether.png", alt: "Tether USDT" },
                 { src: "/sorted.png", alt: "Sorted Wallet" },
               ].map((logo, idx) => (
                 <div

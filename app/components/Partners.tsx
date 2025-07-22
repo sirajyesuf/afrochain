@@ -5,7 +5,7 @@ const partners = [
   {
     name: "Tether",
     url: "https://tether.to",
-    logo: "/tetherusdt.png",
+    logo: "/tether.png",
   },
   {
     name: "Sorted Wallet",
