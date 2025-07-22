@@ -118,22 +118,26 @@ const Hero = () => {
 
           {/* Right side - Logos */}
           <div className="flex flex-col items-start justify-start lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="flex flex-row items-center gap-2 sm:gap-6 rounded-lg p-4">
-              <Image
-                src="/keseevents-logo.png"
-                alt="Kese Events and AfroChain 2025 Logos"
-                width={100}
-                height={80}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 border-2 border-yellow-400 rounded-lg p-[1px]"
-              />
-
-              <Image
-                src="/afrochainwithwhitebg.png"
-                alt="AfroChain 2025 Logo"
-                width={100}
-                height={80}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 border-2 border-yellow-400 rounded-lg p-[1px]"
-              />
+            <div className="flex flex-row items-center gap-6 rounded-lg p-4">
+              {[
+                { src: "/keseevents-logo.png", alt: "Kese Events" },
+                { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025" },
+                { src: "/tetherusdt.png", alt: "Tether USDT" },
+                { src: "/sorted.png", alt: "Sorted Wallet" },
+              ].map((logo, idx) => (
+                <div
+                  key={idx}
+                  className="w-32 h-20 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200"
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={100}
+                    height={60}
+                    className="object-contain max-h-16"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
