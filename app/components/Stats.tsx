@@ -1,4 +1,5 @@
 import React from 'react';
+import { Building2, GraduationCap, Users } from 'lucide-react';
 
 // --- Icon components ---
 const BullseyeIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -34,11 +35,9 @@ const UsersIcon = (props: React.SVGProps<SVGSVGElement>) => (
 // ];
 
 const newStats = [
-  { name: 'Target', value: '$40,000', icon: BullseyeIcon },
-  { name: 'Raised', value: '$15,000', icon: CurrencyDollarIcon },
-  { name: 'Needed', value: '$25,000', icon: CurrencyDollarIcon },
-  { name: 'Institutes', value: '10+', icon: BuildingLibraryIcon },
-  { name: 'Attendees', value: '2000+', icon: UsersIcon },
+  { name: 'Institutes', value: '10', icon: Building2 },
+  { name: 'Universities', value: '15', icon: GraduationCap },
+  { name: 'Attendees', value: '2000', icon: Users },
 ];
 
 const Stats = () => {
@@ -49,17 +48,17 @@ const Stats = () => {
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Our Funding and <span className="text-yellow-500">Impact</span>
+                Our <span className="text-blue-600">Impact</span>
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-600">
                 We are on a mission to empower the next generation of African innovators.
               </p>
             </div>
-            <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 text-center sm:grid-cols-2 lg:grid-cols-5">
+            <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 text-center sm:grid-cols-2 lg:grid-cols-3">
               {newStats.map((stat) => (
                 <div key={stat.name} className="flex flex-col items-center">
-                  <div className="rounded-full bg-yellow-500/10 p-4">
-                    <stat.icon className="h-8 w-8 text-yellow-500" aria-hidden="true" />
+                  <div className="rounded-full bg-blue-500/10 p-4">
+                    <stat.icon className="h-8 w-8 text-blue-600" aria-hidden="true" />
                   </div>
                   <p className="mt-4 text-3xl font-semibold tracking-tight text-gray-900">
                     {stat.value}

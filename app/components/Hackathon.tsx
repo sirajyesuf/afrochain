@@ -32,7 +32,7 @@ const Hackathon = () => {
                 
                 <div className="grid grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">$50K+</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-4">300K+ ETB</div>
                     <div className="text-xs text-gray-500 uppercase tracking-wide">In Prizes</div>
                   </div>
                   <div className="text-center">
