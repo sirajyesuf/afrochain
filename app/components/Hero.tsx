@@ -127,7 +127,7 @@ const Hero = () => {
               ].map((logo, idx) => (
                 <div
                   key={idx}
-                  className="w-20 h-20 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200"
+                  className="w-24 h-20 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200"
                 >
                   <Image
                     src={logo.src}
