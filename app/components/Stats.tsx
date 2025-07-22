@@ -1,30 +1,6 @@
 import React from 'react';
 import { Building2, GraduationCap, Users } from 'lucide-react';
 
-// --- Icon components ---
-const BullseyeIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9.75v3.375m-3.375-3.375h3.375m-3.375 0V6.375m3.375 3.375h3.375m-3.375 0h-3.375m3.375 0v3.375m-3.375-3.375H6.375m3.375 0v3.375m3.375-3.375v3.375m0-3.375h3.375M12 21a9 9 0 110-18 9 9 0 010 18z" />
-  </svg>
-);
-
-const CurrencyDollarIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
-const BuildingLibraryIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-  </svg>
-);
-
-const UsersIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.542 2.72c-.318.054-.636.098-.957.133A9.006 9.006 0 014.5 12c0-1.657.44-3.223 1.218-4.572A9.036 9.036 0 0112 4.5c1.657 0 3.223.44 4.572 1.218a9.036 9.036 0 017.218 7.218c.261.64.445 1.304.588 1.987M15 11.25a3 3 0 11-6 0 3 3 0 016 0z" />
-  </svg>
-);
 
 
 // const oldStats = [
