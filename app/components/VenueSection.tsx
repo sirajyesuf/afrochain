@@ -7,7 +7,7 @@ import { MapPin, Calendar, Building, ExternalLink } from "lucide-react"
 export default function VenueSection() {
   const handleMapClick = () => {
     window.open(
-      "https://www.google.com/maps/search/African+Union+Conference+Center+Addis+Ababa+Ethiopia",
+      "https://maps.app.goo.gl/NtfA1ZrZszkyU1eFA",
       "_blank",
       "noopener,noreferrer",
     )
@@ -29,8 +29,8 @@ export default function VenueSection() {
               <div className="relative group">
                 <div className="aspect-[4/3] overflow-hidden rounded-3xl transform group-hover:scale-105 transition-transform duration-500">
                   <Image
-                    src="/aucc.png"
-                    alt="African Union Conference Center in Addis Ababa, Ethiopia"
+                    src="/venue.png"
+                    alt="Ethiopian Science Museum in Addis Ababa, Ethiopia"
                     width={800}
                     height={600}
                     className="w-full h-full object-cover"
@@ -66,7 +66,7 @@ export default function VenueSection() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-black uppercase tracking-wide">Venue</p>
-                      <p className="text-xl font-bold text-black">African Union Conference Center</p>
+                      <p className="text-xl font-bold text-black">Addis Ababa Science  Museum</p>
                     </div>
                   </div>
                 </div>

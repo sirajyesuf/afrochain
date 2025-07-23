@@ -27,6 +27,16 @@ const partners = [
     url: "https://africablockchaininstitute.org",
     logo: "/africablockchain.png",
   },
+  {
+    name:"santa trading plc",
+    url:"https://santatradingplc.com",
+    logo:"/santa.jpeg"
+  },
+  {
+    name:'yeneta blockchain academy',
+    url:'#',
+    logo:'/yeneta.jpeg'
+  }
 ];
 
 export default function PartnersSponsorSection() {
@@ -130,6 +140,47 @@ export default function PartnersSponsorSection() {
               </a>
             </div>
 
+            {/* Santa Trading PLC */}
+            <div className="group relative">
+              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
+                  <Image src={partners[5]?.logo} alt={partners[5]?.name} width={100} height={60} className="object-contain max-h-16" />
+                </div>
+              </div>
+              {/* Hover Link */}
+              <a
+                href={partners[5]?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+              >
+                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Yeneta Blockchain Academy */}
+            <div className="group relative">
+              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
+                  <Image src={partners[6]?.logo} alt={partners[6]?.name} width={100} height={60} className="object-contain max-h-16" />
+                </div>
+              </div>
+              {/* Hover Link */}
+              <a
+                href={partners[6]?.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+              >
+                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+
+
             {/* Row 3 */}
             <div className="group relative">
               <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
@@ -149,6 +200,7 @@ export default function PartnersSponsorSection() {
                 </svg>
               </a>
             </div>
+
 
             {/* More Coming Soon Card */}
             <div className="bg-white border-2 border-dashed border-gray-300 hover:border-gray-400 hover:shadow-lg transition-all duration-300 rounded-lg">

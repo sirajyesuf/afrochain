@@ -1,6 +1,18 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import '../globals.css';
+
+const heroLogos = [
+  { src: "/keseevents-logo.png", alt: "Kese Events" },
+  { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025" },
+  { src: "/tether.png", alt: "Tether USDT" },
+  { src: "/sorted.png", alt: "Sorted Wallet" },
+  {src:"/santa.jpeg", alt:"Santa Trading PLC"},
+  {src:"/yeneta.jpeg", alt:"Yeneta Blockchain Academy"},
+  {src:"/africablockchain.png", alt:"Africa Blockchain Institute"},
+  {src:"/ethiopianblockchain.png", alt:"Ethiopian Blockchain Association"},
+];
 
 const Hero = () => {
   // Video URLs from uploadthing
@@ -117,14 +129,29 @@ const Hero = () => {
           </div>
 
           {/* Right side - Logos */}
-          <div className="flex flex-col items-start justify-start lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0">
-            <div className="flex flex-row items-center gap-6 rounded-lg p-4">
-              {[
-                { src: "/keseevents-logo.png", alt: "Kese Events" },
-                { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025" },
-                { src: "/tether.png", alt: "Tether USDT" },
-                { src: "/sorted.png", alt: "Sorted Wallet" },
-              ].map((logo, idx) => (
+          <div className="flex flex-col items-start justify-start lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0 w-full">
+            {/* Mobile: Marquee */}
+            <div className="block sm:hidden w-full overflow-x-hidden">
+              <div className="marquee">
+                {[...heroLogos, ...heroLogos].map((logo, idx) => (
+                  <div
+                    key={idx}
+                    className="w-24 h-20 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200 mx-2"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      width={100}
+                      height={60}
+                      className="object-contain max-h-16"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Desktop: Grid */}
+            <div className="hidden sm:flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 rounded-lg p-2 sm:p-4 justify-center">
+              {heroLogos.map((logo, idx) => (
                 <div
                   key={idx}
                   className="w-24 h-20 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200"
