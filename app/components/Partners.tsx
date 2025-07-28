@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Plus } from 'lucide-react';
 
 const partners = [
   {
@@ -20,7 +21,7 @@ const partners = [
   {
     name: "MINT",
     url: "https://mint.gov.et",
-    logo: "/mint.png",
+    logo: "/MINT.png",
   },
   {
     name: "Africa Blockchain Institute",
@@ -41,30 +42,30 @@ const partners = [
 
 export default function PartnersSponsorSection() {
   return (
-    <div className="bg-gray-50 py-16 lg:py-24">
+    <div className="bg-[#05429c] py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <p className="text-sm font-semibold text-gray-500 tracking-wider uppercase">Our Partners</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              <p className="text-sm font-semibold text-white/80 tracking-wider uppercase">Our Partners</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Partnering For Positive Change
               </h2>
             </div>
-            <div className="space-y-4">
-              <p className="text-lg text-gray-600 leading-relaxed">
+            <div className="space-y-2">
+              <p className="text-lg text-white leading-relaxed">
                 Empowering Potential Through Collaboration And Innovation.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed">Join Us To Make A Positive Impact</p>
+              <p className="text-lg text-white/90 leading-relaxed">Join Us To Make A Positive Impact.</p>
             </div>
           </div>
 
           {/* Right Partners Grid */}
-          <div className="grid grid-cols-2 gap-4 lg:gap-6">
+          <div className="grid grid-cols-3 gap-4 lg:gap-6">
             {/* Row 1 */}
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[0]?.logo} alt={partners[0]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -74,16 +75,16 @@ export default function PartnersSponsorSection() {
                 href={partners[0]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
             </div>
 
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[4]?.logo} alt={partners[4]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -93,9 +94,9 @@ export default function PartnersSponsorSection() {
                 href={partners[4]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
@@ -103,7 +104,7 @@ export default function PartnersSponsorSection() {
 
             {/* Row 2 */}
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[1]?.logo} alt={partners[1]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -113,16 +114,16 @@ export default function PartnersSponsorSection() {
                 href={partners[1]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
             </div>
 
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[2]?.logo} alt={partners[2]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -132,9 +133,9 @@ export default function PartnersSponsorSection() {
                 href={partners[2]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
@@ -142,7 +143,7 @@ export default function PartnersSponsorSection() {
 
             {/* Santa Trading PLC */}
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[5]?.logo} alt={partners[5]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -152,9 +153,9 @@ export default function PartnersSponsorSection() {
                 href={partners[5]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
@@ -162,7 +163,7 @@ export default function PartnersSponsorSection() {
 
             {/* Yeneta Blockchain Academy */}
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[6]?.logo} alt={partners[6]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -172,9 +173,9 @@ export default function PartnersSponsorSection() {
                 href={partners[6]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
@@ -183,7 +184,7 @@ export default function PartnersSponsorSection() {
 
             {/* Row 3 */}
             <div className="group relative">
-              <div className="bg-white border border-gray-200 hover:shadow-lg transition-shadow duration-300 cursor-pointer rounded-lg">
+              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
                 <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image src={partners[3]?.logo} alt={partners[3]?.name} width={100} height={60} className="object-contain max-h-16" />
                 </div>
@@ -193,9 +194,9 @@ export default function PartnersSponsorSection() {
                 href={partners[3]?.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
+                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
               >
-                <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 text-[#245a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
               </a>
@@ -203,12 +204,14 @@ export default function PartnersSponsorSection() {
 
 
             {/* More Coming Soon Card */}
-            <div className="bg-white border-2 border-dashed border-gray-300 hover:border-gray-400 hover:shadow-lg transition-all duration-300 rounded-lg">
-              <div className="p-6 lg:p-8 flex flex-col items-center justify-center h-24 lg:h-32 space-y-2">
-                <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                  <div className="text-lg text-gray-400">+</div>
+            <div className="bg-white border-2 border-dashed border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 rounded-lg">
+              <div className="p-8 lg:p-8 flex flex-col items-center justify-center h-24 lg:h-32 space-y-2">
+                <div className="w-12 h-12  rounded-full flex items-center justify-center">
+                  <div className="text-lg text-[#245a9a]">
+                    <Plus/>
+                  </div>
                 </div>
-                <div className="text-sm font-medium text-gray-500 text-center">More Coming Soon</div>
+                <div className="text-sm font-medium text-[#245a9a] text-center">More Coming Soon</div>
               </div>
             </div>
           </div>
