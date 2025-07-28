@@ -80,7 +80,7 @@ const Hero = () => {
       </div>
       
       {/* Overlay for better text readability - stronger on left, lighter on right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#245a9a]/80 via-[#245a9a]/60 to-[#245a9a]/20"></div>
 
 
 
@@ -94,7 +94,7 @@ const Hero = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide mb-6 sm:mb-8 max-w-5xl">
+            <p className="text-base sm:text-lg md:text-xl  text-white font-light tracking-wide mb-6 sm:mb-8 max-w-5xl">
               Join the pioneers building Africa&apos;s on-chain future. Two days of hackathons, keynotes, music, partnerships & bold ideas — right from the heart of Ethiopia.
             </p>
 
@@ -105,7 +105,7 @@ const Hero = () => {
                 href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-transparent hover:bg-white/10 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base"
+                className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base border-2 border-white hover:bg-white hover:text-[#245a9a]"
               >
                 Register for Event
               </a>
@@ -113,7 +113,7 @@ const Hero = () => {
                 href="https://forms.gle/yxBFYDFu6tMWGQvC9" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-transparent hover:bg-white/10 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base"
+                className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
               >
                 Become a Sponsor
               </a>
@@ -121,7 +121,7 @@ const Hero = () => {
                 href="#" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-transparent hover:bg-white/10 text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base"
+                className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
               >
                 Apply to Speak
               </a>

@@ -83,7 +83,7 @@ const Header = () => {
                 return (
                   <DropdownMenu key={item.name}>
                     <DropdownMenuTrigger asChild>
-                      <span className="text-white hover:text-teal-300 px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1 cursor-pointer">
+                      <span className="text-white hover:text-[#dbe900] px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1 cursor-pointer">
                         {item.name}
                         <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -111,7 +111,7 @@ const Header = () => {
                     <Link
                       href={item.href || '/'}
                       scroll={true}
-                      className="text-white hover:text-teal-300 px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1"
+                      className="text-white hover:text-[#dbe900] px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1"
                     >
                       {item.name}
                     </Link>
@@ -124,7 +124,7 @@ const Header = () => {
               href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded text-sm font-medium transition-colors duration-300"
+              className="bg-transparent text-white px-6 py-2 rounded text-sm font-medium transition-colors duration-300 border-2 border-white hover:bg-white hover:text-[#245a9a]"
             >
               Register for Event
             </a>
@@ -158,7 +158,7 @@ const Header = () => {
                     return (
                       <DropdownMenu key={item.name}>
                         <DropdownMenuTrigger asChild>
-                          <span className="block px-3 py-4 text-white text-lg font-semibold text-center hover:text-teal-300 transition-colors duration-300 rounded cursor-pointer">
+                          <span className="block px-3 py-4 text-white text-lg font-semibold text-center hover:text-[#dbe900] transition-colors duration-300 rounded cursor-pointer">
                             {item.name}
                             <svg className="w-4 h-4 ml-1 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -186,7 +186,7 @@ const Header = () => {
                         <Link
                           href={item.href || '/'}
                           scroll={true}
-                          className="block px-3 py-4 text-white text-lg font-semibold text-center hover:text-teal-300 transition-colors duration-300 rounded"
+                          className="block px-3 py-4 text-white text-lg font-semibold text-center hover:text-[#dbe900] transition-colors duration-300 rounded"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {item.name}
@@ -199,7 +199,7 @@ const Header = () => {
                   href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="w-full block text-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-4 rounded-full text-lg font-bold transition-colors duration-300 mt-6"
+                  className="w-full block text-center bg-transparent text-white px-6 py-4 rounded-full text-lg font-bold transition-colors duration-300 mt-6 border-2 border-white hover:bg-white hover:text-[#245a9a]"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Register for Event
