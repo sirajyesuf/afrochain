@@ -69,44 +69,44 @@ export default function SpeakersSection() {
       <div className="container mx-auto px-4">
         {/* Topics Header */}
         <div className="mb-12 lg:mb-16">
-          <p className="text-sm text-gray-600 mb-4">— Topics Covered In 2025.</p>
+          <p className="text-sm text-[#245a9a] mb-4">— Topics Covered In 2025.</p>
 
           {/* Horizontal Scrolling Topics */}
           <div className="relative overflow-hidden mb-8">
             <div className="flex animate-scroll whitespace-nowrap">
-              <div className="flex items-center space-x-8 text-4xl lg:text-6xl xl:text-7xl font-bold text-gray-900">
+              <div className="flex items-center space-x-8 text-4xl lg:text-6xl xl:text-7xl font-bold">
                 <span className="text-gray-300">ng.</span>
-                <span>Web3.</span>
-                <span>Blockchain.</span>
-                <span>DeFi.</span>
-                <span>NFTs.</span>
-                <span>Innovation.</span>
-                <span>Fintech.</span>
-                <span>Smart Contracts.</span>
-                <span>Sustainability.</span>
-                <span>Digital Identity.</span>
+                <span className="text-[#245a9a]">Web3.</span>
+                <span className="text-[#245a9a]">Blockchain.</span>
+                <span className="text-[#245a9a]">DeFi.</span>
+                <span className="text-[#245a9a]">NFTs.</span>
+                <span className="text-[#245a9a]">Innovation.</span>
+                <span className="text-[#245a9a]">Fintech.</span>
+                <span className="text-[#245a9a]">Smart Contracts.</span>
+                <span className="text-[#245a9a]">Sustainability.</span>
+                <span className="text-[#245a9a]">Digital Identity.</span>
                 <span className="text-gray-300">ng.</span>
-                <span>Web3.</span>
-                <span>Blockchain.</span>
-                <span>DeFi.</span>
-                <span>NFTs.</span>
-                <span>Innovation.</span>
-                <span>Fintech.</span>
-                <span>Smart Contracts.</span>
-                <span>Sustainability.</span>
-                <span>Digital Identity.</span>
+                <span className="text-[#245a9a]">Web3.</span>
+                <span className="text-[#245a9a]">Blockchain.</span>
+                <span className="text-[#245a9a]">DeFi.</span>
+                <span className="text-[#245a9a]">NFTs.</span>
+                <span className="text-[#245a9a]">Innovation.</span>
+                <span className="text-[#245a9a]">Fintech.</span>
+                <span className="text-[#245a9a]">Smart Contracts.</span>
+                <span className="text-[#245a9a]">Sustainability.</span>
+                <span className="text-[#245a9a]">Digital Identity.</span>
               </div>
             </div>
           </div>
 
-          <p className="text-lg text-gray-700 font-medium">
+          <p className="text-lg text-[#245a9a] font-medium">
             — Network With Game-Changers And Thought Leaders At AfroChain 2025.
           </p>
         </div>
 
         {/* Featured Speakers */}
         <div className="mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-12">Featured Speakers of 2025</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#245a9a] mb-12">Featured Speakers of 2025</h2>
         </div>
 
         {/* Speakers Grid */}
@@ -115,8 +115,8 @@ export default function SpeakersSection() {
             <div key={index}>
               {speaker.type === 'person' ? (
                 <>
-                  <div className="flex h-60 items-center justify-center rounded-lg border border-blue-300 bg-white p-4 text-center">
-                    <div className="relative h-60 w-full">
+                  <div className="flex h-60 items-center justify-center rounded-lg border border-[#245a9a] bg-white p-4 text-center hover:border-[#245a9a]/80 transition-colors duration-300">
+                    <div className="relative h-56 w-full">
                       <Image
                         src={speaker.image}
                         alt={speaker.name}
@@ -126,13 +126,13 @@ export default function SpeakersSection() {
                       />
                     </div>
                   </div>
-                  <h4 className="mt-4 text-lg font-semibold text-gray-900">{speaker.name}</h4>
-                  <p className="text-sm text-gray-600">{speaker.title}</p>
+                  <h4 className="mt-4 text-lg font-semibold text-[#245a9a]">{speaker.name}</h4>
+                  <p className="text-sm text-[#245a9a]/80">{speaker.title}</p>
                 </>
               ) : (
                 <>
-                  <div className="flex h-60 items-center justify-center rounded-lg border border-gray-300 bg-white p-6 text-center">
-                    <div className="relative h-60 w-full">
+                  <div className="flex h-60 items-center justify-center rounded-lg border border-[#245a9a] bg-white p-6 text-center hover:border-[#245a9a]/80 transition-colors duration-300">
+                    <div className="relative h-56 w-full">
                       <Image
                         src={speaker.image}
                         alt={speaker.name}
@@ -142,7 +142,7 @@ export default function SpeakersSection() {
                       />
                     </div>
                   </div>
-                  <h4 className="mt-4 text-lg font-semibold text-gray-900">{speaker.name}</h4>
+                  <h4 className="mt-4 text-lg font-semibold text-[#245a9a]">{speaker.name}</h4>
                 </>
               )}
             </div>
