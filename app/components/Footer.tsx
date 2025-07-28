@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Mail, MapPin, ExternalLink, Facebook, Linkedin, Twitter, Send } from "lucide-react"
+import { Mail, MapPin, Facebook, Linkedin, Twitter, Send } from "lucide-react"
 import Link from "next/link"
 
 export default function Footer() {
@@ -12,7 +12,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className="bg-[#014dbd] border-t border-[#014bd] font-sans">
+    <footer className="bg-[#014dbd] border-none  font-sans">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand Section */}
