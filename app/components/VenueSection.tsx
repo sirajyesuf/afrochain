@@ -19,8 +19,8 @@ export default function VenueSection() {
         <div className="max-w-5xl mx-auto">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold text-black mb-4">Venue</h2>
-            <div className="w-24 h-1 bg-black mx-auto rounded-full"></div>
+            <h2 className="text-5xl lg:text-6xl font-bold text-[#245a9a] mb-4">Venue</h2>
+            <div className="w-24 h-1 bg-[#dbe900] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -38,8 +38,8 @@ export default function VenueSection() {
                   />
                 </div>
                 {/* Floating decorative elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-black rounded-full opacity-20 animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-black rounded-full opacity-30 animate-bounce delay-500"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#245a9a] rounded-full opacity-20 animate-bounce"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#dbe900] rounded-full opacity-30 animate-bounce delay-500"></div>
               </div>
             </div>
 
@@ -47,38 +47,38 @@ export default function VenueSection() {
             <div className="space-y-8">
               {/* Venue Details Cards */}
               <div className="space-y-6">
-                <div className="bg-white rounded-2xl p-6 border-2 border-black">
+                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
                       <Calendar className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-black uppercase tracking-wide">Event Dates</p>
-                      <p className="text-xl font-bold text-black">August 30–31, 2025</p>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">Event Dates</p>
+                      <p className="text-xl font-bold text-[#245a9a]">August 30–31, 2025</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-black">
+                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
                       <Building className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-black uppercase tracking-wide">Venue</p>
-                      <p className="text-xl font-bold text-black">Addis Ababa Science  Museum</p>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">Venue</p>
+                      <p className="text-xl font-bold text-[#245a9a]">Addis Ababa Science Museum</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-black">
+                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-black uppercase tracking-wide">Location</p>
-                      <p className="text-xl font-bold text-black">Addis Ababa, Ethiopia</p>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">Location</p>
+                      <p className="text-xl font-bold text-[#245a9a]">Addis Ababa, Ethiopia</p>
                     </div>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ export default function VenueSection() {
                 <Button
                   onClick={handleMapClick}
                   size="lg"
-                  className="w-full bg-black hover:bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform hover:scale-105 transition-all duration-300"
+                  className="w-full bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transform hover:scale-105 transition-all duration-300"
                 >
                   <MapPin className="w-5 h-5 mr-3" />
                   View on Google Maps
