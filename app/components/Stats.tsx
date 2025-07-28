@@ -23,8 +23,8 @@ const Stats = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Our <span className="text-blue-600">Impact</span>
+              <h2 className="text-3xl font-bold tracking-tight text-[var(--brand-blue)] sm:text-4xl">
+                Our <span className="text-[var(--brand-blue)]">Impact</span>
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-600">
                 We are on a mission to empower the next generation of African innovators.
@@ -33,8 +33,8 @@ const Stats = () => {
             <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 text-center sm:grid-cols-2 lg:grid-cols-3">
               {newStats.map((stat) => (
                 <div key={stat.name} className="flex flex-col items-center">
-                  <div className="rounded-full bg-blue-500/10 p-4">
-                    <stat.icon className="h-8 w-8 text-blue-600" aria-hidden="true" />
+                  <div className="rounded-full bg-[var(--brand-blue)]/10 p-4">
+                    <stat.icon className="h-8 w-8 text-[var(--brand-blue)]" aria-hidden="true" />
                   </div>
                   <p className="mt-4 text-3xl font-semibold tracking-tight text-gray-900">
                     {stat.value}
