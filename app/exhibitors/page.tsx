@@ -21,7 +21,7 @@ export default function ExhibitorsPage() {
           {/* Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40 z-10" />
           {/* Hero Content */}
-          <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-24">
+          <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-24 mt-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg text-center">
               Meet the <span className="text-[#dbe900]">Exhibitors</span> of AfroChain 2025
             </h1>

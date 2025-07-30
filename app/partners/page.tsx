@@ -13,7 +13,7 @@ export default function PartnersPage() {
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40"></div>
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg mt-8">
             🤝 Our Partners & Sponsors
           </h1>
           <p className="text-lg md:text-xl text-gray-200 font-light mb-6 max-w-2xl mx-auto">
