@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hackathon = () => {
   return (
-    <section  className="py-16 relative bg-white">
+    <section  className="py-16 relative" style={{ backgroundColor: '#eaf2fb' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

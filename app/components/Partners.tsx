@@ -42,22 +42,22 @@ const partners = [
 
 export default function PartnersSponsorSection() {
   return (
-    <div className="bg-[#05429c] py-16 lg:py-24">
+    <div className="bg-white py-16 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <p className="text-sm font-semibold text-white/80 tracking-wider uppercase">Our Partners</p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
+              <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">Our Partners</p>
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
                 Partnering For Positive Change
               </h2>
             </div>
             <div className="space-y-2">
-              <p className="text-lg text-white leading-relaxed">
+              <p className="text-lg text-[#245a9a]/90 leading-relaxed">
                 Empowering Potential Through Collaboration And Innovation.
               </p>
-              <p className="text-lg text-white/90 leading-relaxed">Join Us To Make A Positive Impact.</p>
+              <p className="text-lg text-[#245a9a]/90 leading-relaxed">Join Us To Make A Positive Impact.</p>
             </div>
           </div>
 
