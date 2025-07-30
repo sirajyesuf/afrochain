@@ -9,20 +9,9 @@ export default function PartnersPage() {
     <>
       <Header />
       {/* Hero Section for Partners Page */}
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-black overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full z-0">
-          <video
-            className="absolute top-1/2 left-1/2 w-screen h-full object-cover -translate-x-1/2 -translate-y-1/2 opacity-60"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/pizzaday2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/30"></div>
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]">
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40"></div>
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-20 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg">
             🤝 Our Partners & Sponsors
@@ -35,7 +24,7 @@ export default function PartnersPage() {
               href="https://forms.gle/yxBFYDFu6tMWGQvC9"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-6 rounded-lg border-2 border-teal-600 transition-colors duration-200 text-base shadow"
+              className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white font-bold py-2 px-6 rounded-lg border-2 border-[#245a9a] transition-colors duration-200 text-base shadow"
             >
               Become a Partner or Sponsor
             </a>
@@ -52,14 +41,14 @@ export default function PartnersPage() {
               alt="Kese Events Logo"
               width={80}
               height={64}
-              className="w-16 h-16 md:w-20 md:h-20 border-2 border-yellow-400 rounded-lg p-[1px] bg-white"
+              className="w-16 h-16 md:w-20 md:h-20 border-2 border-[#245a9a] rounded-lg p-[1px] bg-white"
             />
             <Image
               src="/afrochainwithwhitebg.png"
               alt="AfroChain Logo"
               width={80}
               height={64}
-              className="w-16 h-16 md:w-20 md:h-20 border-2 border-yellow-400 rounded-lg p-[1px] bg-white"
+              className="w-16 h-16 md:w-20 md:h-20 border-2 border-[#245a9a] rounded-lg p-[1px] bg-white"
             />
           </div>
         </div>
