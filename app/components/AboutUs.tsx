@@ -77,26 +77,24 @@ export default function Component() {
           {/* Content Section */}
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
-              <p className="text-lg text-gray-600 font-medium">Where Collaboration Transforms Vision into Reality.</p>
+              <p className="text-lg text-[#245a9a] font-medium">Where Collaboration Transforms Vision into Reality.</p>
 
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">About AfroChain</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">About AfroChain</h1>
+              <div className="w-16 h-0.5 bg-[#245a9a] mb-2"></div>
             </div>
 
             <div className="space-y-6">
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-[#245a9a]/90 leading-relaxed text-lg">
                 AfroChain 2025 is Ethiopia&apos;s flagship blockchain summit — a two-day experience blending tech, culture, policy, and community. Powered by Kese Events and supported by leading partners, AfroChain brings together builders, dreamers, and doers shaping the decentralized future of Africa.
               </p>
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-[#245a9a]/90 leading-relaxed text-lg">
                 Whether you&apos;re a developer, founder, policymaker, investor, or creator — 
-                <span className="font-bold">this is where Africa builds on-chain.</span>
+                <span className="font-bold text-[#245a9a]">this is where Africa builds on-chain.</span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200 flex items-center">
+                <button className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200 text-base">
                   Become A Partner
-                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
                 </button>
               </div>
             </div>
