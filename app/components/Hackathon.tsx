@@ -90,7 +90,7 @@ const Hackathon = () => {
             <div className="mt-8">
               <h4 className="text-lg font-semibold text-[#245a9a] mb-2">Powered by:</h4>
               <div className="flex flex-wrap gap-6 items-center">
-                <div className="bg-white p-3 rounded-lg border border-gray-200">
+                {/* <div className="bg-white p-3 rounded-lg border border-gray-200">
                   <Image
                     src="/lisk.png"
                     alt="Lisk"
@@ -107,14 +107,14 @@ const Hackathon = () => {
                     height={40}
                     className="h-8 w-auto object-contain"
                   />
-                </div>
-                <div className="bg-white p-3 rounded-lg border border-gray-200">
+                </div> */}
+                <div className="bg-[#eaf2fb] border-none border-yellow-200 p-2">
                   <Image
                     src="/xerxist.png"
                     alt="Xerxis Web3"
                     width={100}
-                    height={40}
-                    className="h-8 w-auto object-contain"
+                    height={100}
+                    className="h-12 w-16  object-contain"
                   />
                 </div>
               </div>
