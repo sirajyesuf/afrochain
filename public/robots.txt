@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://afrochain.com/sitemap.xml
+Sitemap: https://afrochainsummit.com/sitemap.xml
 
 # Disallow admin or private areas (if any)
 # Disallow: /admin/

@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://afrochain.com'),
+  metadataBase: new URL('https://afrochainsummit.com'),
   alternates: {
     canonical: '/',
   },
