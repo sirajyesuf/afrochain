@@ -1,7 +1,7 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
 import React from 'react';
-import ContactSection from '../components/ContactSection';
+import ContactSection from '@/app/components/ContactSection';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

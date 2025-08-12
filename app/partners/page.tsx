@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import PartnersSponsorSection from '../components/Partners';
+import Header from '@/app/components/Header';
+import PartnersSponsorSection from '@/app/components/Partners';
 import Image from 'next/image';
-import Footer from '../components/Footer';
+import Footer from '@/app/components/Footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
