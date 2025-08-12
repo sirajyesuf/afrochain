@@ -9,29 +9,27 @@ import VenueSection from '@/app/components/VenueSection';
 import PartnersSection from '@/app/components/Partners';
 import Footer from '@/app/components/Footer';
 
-function App() {
+export default function HomePage() {
   return (
-    <div className="">
+    <>
       <Header />
       <Hero />
       <Stats />
       <AboutUs />
-      <div id="launchpad">
-      <Launchpad />
-      </div>
-      <div id="hackathon">
-      <Hackathon />
-      </div>
-      <div id="speakers">
-      <SpeakersSection />
-      </div>
-      <div id="venue">
-      <VenueSection />
-      </div>
+      <section id="launchpad" aria-label="Launchpad Section">
+        <Launchpad />
+      </section>
+      <section id="hackathon" aria-label="Hackathon Section">
+        <Hackathon />
+      </section>
+      <section id="speakers" aria-label="Speakers Section">
+        <SpeakersSection />
+      </section>
+      <section id="venue" aria-label="Venue Section">
+        <VenueSection />
+      </section>
       <PartnersSection />
       <Footer />
-    </div>
+    </>
   );
 }
-
-export default App;

@@ -4,14 +4,14 @@ import Image from 'next/image';
 import '../globals.css';
 
 const heroLogos = [
-  { src: "/keseevents-logo.png", alt: "Kese Events" },
-  { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025" },
-  { src: "/tether.png", alt: "Tether USDT" },
-  { src: "/sorted.png", alt: "Sorted Wallet" },
-  {src:"/santa.jpeg", alt:"Santa Trading PLC"},
-  {src:"/yeneta.jpeg", alt:"Yeneta Blockchain Academy"},
-  {src:"/africablockchain.png", alt:"Africa Blockchain Institute"},
-  {src:"/ethiopianblockchain.png", alt:"Ethiopian Blockchain Association"},
+  { src: "/keseevents-logo.png", alt: "Kese Events - Event Management & Live Streaming" },
+  { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025 - Africa's Web3 Blockchain Summit" },
+  { src: "/tether.png", alt: "Tether USDT - Stablecoin Cryptocurrency" },
+  { src: "/sorted.png", alt: "Sorted Wallet - Digital Asset Management" },
+  {src:"/santa.jpeg", alt:"Santa Trading PLC - Financial Services"},
+  {src:"/yeneta.jpeg", alt:"Yeneta Blockchain Academy - Blockchain Education"},
+  {src:"/africablockchain.png", alt:"Africa Blockchain Institute - Blockchain Research & Education"},
+  {src:"/ethiopianblockchain.png", alt:"Ethiopian Blockchain Association - Local Blockchain Community"},
 ];
 
 const Hero = () => {
@@ -39,7 +39,7 @@ const Hero = () => {
   }, [videoUrls.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
       <div className="absolute top-0 left-0 w-full h-full z-0">
         {/* Video container with transition effect */}
         <div className={`absolute inset-0 transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
@@ -50,6 +50,7 @@ const Hero = () => {
             muted
             loop
             playsInline
+            aria-label={`AfroChain Summit promotional video ${currentVideoIndex + 1}`}
           >
             <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
             Your browser does not support the video tag.
@@ -57,7 +58,7 @@ const Hero = () => {
         </div>
         
         {/* Video indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20" role="tablist" aria-label="Video navigation">
           {videoUrls.map((_, index) => (
             <button
               key={index}
@@ -74,6 +75,8 @@ const Hero = () => {
                   : 'bg-white/50 hover:bg-white/75'
               }`}
               aria-label={`Go to video ${index + 1}`}
+              aria-selected={index === currentVideoIndex}
+              role="tab"
             />
           ))}
         </div>
@@ -81,8 +84,6 @@ const Hero = () => {
       
       {/* Overlay for better text readability - stronger on left, lighter on right */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#245a9a]/80 via-[#245a9a]/60 to-[#245a9a]/20"></div>
-
-
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="border-none border-red-500">
@@ -98,7 +99,6 @@ const Hero = () => {
               Join the pioneers building Africa&apos;s on-chain future. Two days of hackathons, keynotes, music, partnerships & bold ideas — right from the heart of Ethiopia.
             </p>
 
-
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a 
@@ -106,6 +106,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base border-2 border-white hover:bg-white hover:text-[#245a9a]"
+                aria-label="Register for AfroChain Summit 2025"
               >
                 Register for Event
               </a>
@@ -114,6 +115,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
+                aria-label="Become a sponsor for AfroChain Summit 2025"
               >
                 Become a Sponsor
               </a>
@@ -122,6 +124,7 @@ const Hero = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
+                aria-label="Apply to speak at AfroChain Summit 2025"
               >
                 Apply to Speak
               </a>
@@ -132,7 +135,7 @@ const Hero = () => {
           <div className="flex flex-col items-start justify-start lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0 w-full">
             {/* Mobile: Marquee */}
             <div className="block sm:hidden w-full overflow-x-hidden">
-              <div className="marquee">
+              <div className="marquee" aria-label="Partner and sponsor logos">
                 {[...heroLogos, ...heroLogos].map((logo, idx) => (
                   <div
                     key={idx}
@@ -150,7 +153,7 @@ const Hero = () => {
               </div>
             </div>
             {/* Desktop: Grid */}
-            <div className="hidden sm:flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 rounded-lg p-2 sm:p-4 justify-center">
+            <div className="hidden sm:flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 rounded-lg p-2 sm:p-4 justify-center" aria-label="Partner and sponsor logos">
               {heroLogos.map((logo, idx) => (
                 <div
                   key={idx}

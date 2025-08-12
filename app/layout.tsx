@@ -19,8 +19,75 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Afrochain",
-  description: "Afrochain is a blockchain education initiative centered around empowering students, developers, and startups with cutting-edge blockchain technology.",
+  title: {
+    default: "AfroChain Summit 2025 - Africa's Boldest Web3 & Blockchain Event",
+    template: "%s | AfroChain Summit 2025"
+  },
+  description: "Join Africa's boldest Web3 & Blockchain summit in Ethiopia. Two days of hackathons, keynotes, music, partnerships & bold ideas. Register now for AfroChain 2025!",
+  keywords: [
+    "blockchain conference",
+    "Web3 summit",
+    "Africa blockchain",
+    "Ethiopia blockchain",
+    "blockchain education",
+    "Web3 Africa",
+    "blockchain hackathon",
+    "cryptocurrency conference",
+    "DeFi summit",
+    "blockchain networking"
+  ],
+  authors: [{ name: "AfroChain Team" }],
+  creator: "AfroChain",
+  publisher: "Kese Events",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://afrochain.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://afrochain.com',
+    siteName: 'AfroChain Summit 2025',
+    title: "AfroChain Summit 2025 - Africa's Boldest Web3 & Blockchain Event",
+    description: "Join Africa's boldest Web3 & Blockchain summit in Ethiopia. Two days of hackathons, keynotes, music, partnerships & bold ideas. Register now for AfroChain 2025!",
+    images: [
+      {
+        url: '/afrochainwithwhitebg.png',
+        width: 1200,
+        height: 630,
+        alt: 'AfroChain Summit 2025 - Africa Web3 Blockchain Event',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "AfroChain Summit 2025 - Africa's Boldest Web3 & Blockchain Event",
+    description: "Join Africa's boldest Web3 & Blockchain summit in Ethiopia. Two days of hackathons, keynotes, music, partnerships & bold ideas. Register now for AfroChain 2025!",
+    images: ['/afrochainwithwhitebg.png'],
+    creator: '@afrochain',
+    site: '@afrochain',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +98,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#245a9a" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="AfroChain Summit" />
+        
         {/* Twitter conversion tracking base code */}
         <Script
           id="twitter-ads-tracking"
@@ -49,7 +122,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );

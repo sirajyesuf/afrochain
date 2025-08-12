@@ -2,6 +2,30 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import React from "react";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Exhibitors - AfroChain Summit 2025",
+  description: "Meet the innovators, builders, and organizations exhibiting at AfroChain 2025. Showcase your products, connect with investors, and network with Africa's blockchain community. Register as an exhibitor today!",
+  keywords: [
+    "AfroChain exhibitors",
+    "blockchain summit exhibitors",
+    "Web3 Africa exhibitors",
+    "blockchain conference exhibitors",
+    "Ethiopia blockchain exhibitors",
+    "register as exhibitor"
+  ],
+  openGraph: {
+    title: "Exhibitors - AfroChain Summit 2025",
+    description: "Meet the innovators, builders, and organizations exhibiting at AfroChain 2025. Showcase your products, connect with investors, and network with Africa's blockchain community.",
+    images: ['/web31.png'],
+  },
+  twitter: {
+    title: "Exhibitors - AfroChain Summit 2025",
+    description: "Meet the innovators, builders, and organizations exhibiting at AfroChain 2025. Showcase your products, connect with investors, and network with Africa's blockchain community.",
+    images: ['/web31.png'],
+  },
+};
 
 export default function ExhibitorsPage() {
   return (
@@ -9,11 +33,11 @@ export default function ExhibitorsPage() {
       <Header />
       <main className="min-h-screen bg-black flex flex-col">
         {/* Hero Section */}
-        <section className="relative flex items-center justify-center min-h-[60vh] w-full overflow-hidden">
+        <section className="relative flex items-center justify-center min-h-[60vh] w-full overflow-hidden" aria-label="Exhibitors Hero">
           {/* Big Web3 Image */}
           <Image
             src="/web31.png"
-            alt="Web3 Network"
+            alt="Web3 Network - Blockchain Technology Network"
             fill
             className="object-cover object-center opacity-80"
             priority
@@ -48,7 +72,7 @@ export default function ExhibitorsPage() {
           </div>
         </section>
         {/* Exhibitor Benefit Section */}
-        <section className="bg-white py-16">
+        <section className="bg-white py-16" aria-label="Exhibitor Benefits">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#245a9a] mb-2">Exhibitor Benefits</h2>
             <div className="w-16 h-1 bg-[#245a9a] rounded-full mb-6"></div>
@@ -84,7 +108,7 @@ export default function ExhibitorsPage() {
           </div>
         </section>
         {/* Exhibitors List Placeholder */}
-        <section className="flex-1 bg-white py-16">
+        <section className="flex-1 bg-white py-16" aria-label="Exhibitors List">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4 text-[#245a9a]">Exhibitors Coming Soon</h2>
             <p className="text-[#245a9a]/80">Stay tuned for the full list of AfroChain 2025 exhibitors.</p>

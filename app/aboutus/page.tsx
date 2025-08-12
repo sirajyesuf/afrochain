@@ -1,19 +1,44 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
 import AboutUs from '../components/AboutUs';
 import FAQ from '../components/FAQ';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
+export const metadata: Metadata = {
+  title: "About AfroChain Summit 2025",
+  description: "Discover the mission, values, and impact of AfroChain Summit - Africa's boldest Web3 & Blockchain event. Learn about our organizers, Kese Events, and how we're shaping Africa's on-chain future.",
+  keywords: [
+    "AfroChain about",
+    "blockchain summit mission",
+    "Web3 Africa vision",
+    "Kese Events",
+    "Ethiopia blockchain",
+    "Africa Web3 community"
+  ],
+  openGraph: {
+    title: "About AfroChain Summit 2025",
+    description: "Discover the mission, values, and impact of AfroChain Summit - Africa's boldest Web3 & Blockchain event.",
+    images: ['/5.jpg'],
+  },
+  twitter: {
+    title: "About AfroChain Summit 2025",
+    description: "Discover the mission, values, and impact of AfroChain Summit - Africa's boldest Web3 & Blockchain event.",
+    images: ['/5.jpg'],
+  },
+};
+
 export default function AboutUsPage() {
   return (
     <>
       <Header />
       {/* Redesigned Full-Screen Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden" aria-label="About AfroChain Hero">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src="/5.jpg"
-            alt="About AfroChain Summit"
+            alt="About AfroChain Summit - Africa's Web3 Blockchain Event"
             layout="fill"
             objectFit="cover"
             priority
@@ -42,13 +67,13 @@ export default function AboutUsPage() {
       </section>
       <AboutUs />
       {/* Redesigned Organized By Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-white" aria-label="Organized By Section">
         <div className="max-w-3xl mx-auto rounded-2xl shadow-none bg-white p-8 md:p-14 flex flex-col items-center border border-[#245a9a]/20">
           <div className="flex flex-col items-center w-full">
             <div className="bg-[#245a9a]/10 rounded-full p-4 shadow mb-6">
               <Image
                 src="/keseevents-logo.png"
-                alt="Kese Events Logo"
+                alt="Kese Events Logo - Event Management & Live Streaming"
                 width={120}
                 height={120}
                 className="rounded-full object-contain"

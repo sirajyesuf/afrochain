@@ -3,13 +3,37 @@ import Header from '../components/Header';
 import PartnersSponsorSection from '../components/Partners';
 import Image from 'next/image';
 import Footer from '../components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Partners & Sponsors - AfroChain Summit 2025",
+  description: "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa. Become a partner today!",
+  keywords: [
+    "AfroChain partners",
+    "blockchain summit sponsors",
+    "Web3 Africa partners",
+    "blockchain conference sponsors",
+    "Ethiopia blockchain partners",
+    "become a sponsor"
+  ],
+  openGraph: {
+    title: "Partners & Sponsors - AfroChain Summit 2025",
+    description: "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa.",
+    images: ['/keseevents-logo.png', '/afrochainwithwhitebg.png'],
+  },
+  twitter: {
+    title: "Partners & Sponsors - AfroChain Summit 2025",
+    description: "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa.",
+    images: ['/keseevents-logo.png', '/afrochainwithwhitebg.png'],
+  },
+};
 
 export default function PartnersPage() {
   return (
     <>
       <Header />
       {/* Hero Section for Partners Page */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]" aria-label="Partners Hero">
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40"></div>
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-20 text-center">
@@ -38,14 +62,14 @@ export default function PartnersPage() {
           <div className="flex flex-row items-center justify-center gap-6 mt-8">
             <Image
               src="/keseevents-logo.png"
-              alt="Kese Events Logo"
+              alt="Kese Events Logo - Event Management & Live Streaming"
               width={80}
               height={64}
               className="w-16 h-16 md:w-20 md:h-20 border-2 border-[#245a9a] rounded-lg p-[1px] bg-white"
             />
             <Image
               src="/afrochainwithwhitebg.png"
-              alt="AfroChain Logo"
+              alt="AfroChain Logo - Africa's Web3 Blockchain Summit"
               width={80}
               height={64}
               className="w-16 h-16 md:w-20 md:h-20 border-2 border-[#245a9a] rounded-lg p-[1px] bg-white"
