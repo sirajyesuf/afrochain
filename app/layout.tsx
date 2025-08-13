@@ -117,6 +117,45 @@ export default function RootLayout({
             `,
           }}
         />
+
+        {/* Twitter Event Tracking Script */}
+        <Script
+          id="twitter-event-tracking"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              // Insert Twitter Event ID
+              twq('event', 'tw-qb75c-qb75e', {
+                value: null, // use this to pass the value of the conversion (e.g. 5.00)
+                contents: [ // use this to pass an array of products or content
+                    // add all items to the array
+                    // use this for the first item
+                    {
+                      content_type: null,
+                      content_id: null,
+                      content_name: null,
+                      content_price: null,
+                      num_items: null,
+                      content_group_id: null
+                    },
+                    // use this for the second item
+                    {
+                      content_type: null,
+                      content_id: null,
+                      content_name: null,
+                      content_price: null,
+                      num_items: null,
+                      content_group_id: null
+                    }], 
+                status: null, // use this to pass the status of a sign up or subscription, (e.g. 'started' or 'completed')
+                conversion_id: null, // use this to pass a unique ID for the conversion event for deduplication (e.g. order id '1a2b3c')
+                email_address: null // use this to pass a user's email address
+              });
+            `,
+          }}
+        />
+
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
