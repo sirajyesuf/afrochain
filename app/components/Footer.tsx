@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Mail, MapPin, Facebook, Linkedin, Twitter, Send } from "lucide-react"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import { Mail, MapPin, Facebook, Linkedin, Twitter, Send } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState("2025")
+  const [currentYear, setCurrentYear] = useState("2025");
 
   useEffect(() => {
-    setCurrentYear(new Date().getFullYear().toString())
-  }, [])
+    setCurrentYear(new Date().getFullYear().toString());
+  }, []);
 
   return (
     <footer className="bg-[#014dbd] border-none  font-sans">
@@ -19,22 +19,29 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-8">
               <Link href="/">
-                <h3 className="text-3xl font-extrabold text-white mb-3 tracking-tight">AfroChain</h3>
+                <h3 className="text-3xl font-extrabold text-white mb-3 tracking-tight">
+                  AfroChain
+                </h3>
               </Link>
               <p className="text-white text-base leading-relaxed max-w-md font-medium">
-                The premier blockchain and Web3 conference in East Africa, bringing together innovators, 
-                developers, and thought leaders to shape the future of decentralized technology.
+                The premier blockchain and Web3 conference in East Africa,
+                bringing together innovators, developers, and thought leaders to
+                shape the future of decentralized technology.
               </p>
             </div>
             {/* Contact Info */}
             <div className="space-y-3 mt-6">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-white" />
-                <span className="text-base text-white font-semibold">info@afrochain.com</span>
+                <span className="text-base text-white font-semibold">
+                  afrochaineth@gmail.com
+                </span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-white" />
-                <span className="text-base text-white font-semibold">Addis Ababa, Ethiopia</span>
+                <span className="text-base text-white font-semibold">
+                  Addis Ababa, Ethiopia
+                </span>
               </div>
             </div>
           </div>
@@ -43,37 +50,58 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-5">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/aboutus" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/aboutus"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/#speakers" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/#speakers"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   Speakers
                 </Link>
               </li>
               <li>
-                <Link href="/#venue" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/#venue"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   Venue
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/partners"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   Partners
                 </Link>
               </li>
               <li>
-                <Link href="/#hackathon" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/#hackathon"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   Hackathon
                 </Link>
               </li>
               <li>
-                <Link href="/contactus" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/contactus"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/exhibitors" className="text-base text-white font-medium hover:underline focus:underline transition">
+                <Link
+                  href="/exhibitors"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
                   Exhibitors
                 </Link>
               </li>
@@ -137,5 +165,5 @@ export default function Footer() {
       {/* White gradient divider above footer */}
       <div className="w-full h-4 bg-gradient-to-t from-[#014bd] to-white/0"></div>
     </footer>
-  )
-} 
+  );
+}
