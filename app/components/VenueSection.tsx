@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import React from 'react';
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { MapPin, Calendar, Building, ExternalLink } from "lucide-react"
+import React from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { MapPin, Calendar, Building, ExternalLink } from "lucide-react";
 
 export default function VenueSection() {
   const handleMapClick = () => {
@@ -11,16 +11,18 @@ export default function VenueSection() {
       "https://maps.app.goo.gl/NtfA1ZrZszkyU1eFA",
       "_blank",
       "noopener,noreferrer",
-    )
-  }
+    );
+  };
 
   return (
-    <div  className="bg-white py-16 lg:py-24 relative overflow-hidden">
+    <div className="bg-white py-16 lg:py-24 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#245a9a] mb-4">Venue</h2>
+            <h2 className="text-5xl lg:text-6xl font-bold text-[#245a9a] mb-4">
+              Venue
+            </h2>
             <div className="w-24 h-1 bg-[#dbe900] mx-auto rounded-full"></div>
           </div>
 
@@ -54,8 +56,12 @@ export default function VenueSection() {
                       <Calendar className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">Event Dates</p>
-                      <p className="text-xl font-bold text-[#245a9a]">August 30–31, 2025</p>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                        Event Dates
+                      </p>
+                      <p className="text-xl font-bold text-[#245a9a]">
+                        October 04–05, 2025
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -66,8 +72,12 @@ export default function VenueSection() {
                       <Building className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">Venue</p>
-                      <p className="text-xl font-bold text-[#245a9a]">Addis Ababa Science Museum</p>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                        Venue
+                      </p>
+                      <p className="text-xl font-bold text-[#245a9a]">
+                        Addis Ababa Science Museum
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -78,8 +88,12 @@ export default function VenueSection() {
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">Location</p>
-                      <p className="text-xl font-bold text-[#245a9a]">Addis Ababa, Ethiopia</p>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                        Location
+                      </p>
+                      <p className="text-xl font-bold text-[#245a9a]">
+                        Addis Ababa, Ethiopia
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -102,5 +116,5 @@ export default function VenueSection() {
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}
