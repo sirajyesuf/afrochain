@@ -151,7 +151,7 @@ const Hero = () => {
                 Become a Sponsor
               </a>
               <a
-                href="#"
+                href="https://forms.gle/vrpvDxoufARBNnPLA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"

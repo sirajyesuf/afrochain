@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Component() {
   return (
@@ -77,30 +77,50 @@ export default function Component() {
           {/* Content Section */}
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
-              <p className="text-lg text-[#245a9a] font-medium">Where Collaboration Transforms Vision into Reality.</p>
+              <p className="text-lg text-[#245a9a] font-medium">
+                Where Collaboration Transforms Vision into Reality.
+              </p>
 
-              <h1 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">About AfroChain</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
+                About AfroChain
+              </h1>
               <div className="w-16 h-0.5 bg-[#245a9a] mb-2"></div>
             </div>
 
             <div className="space-y-6">
               <p className="text-[#245a9a]/90 leading-relaxed text-lg">
-                AfroChain 2025 is Ethiopia&apos;s flagship blockchain summit — a two-day experience blending tech, culture, policy, and community. Powered by Kese Events and supported by leading partners, AfroChain brings together builders, dreamers, and doers shaping the decentralized future of Africa.
+                AfroChain 2025 is Ethiopia&apos;s flagship blockchain summit — a
+                two-day experience blending tech, culture, policy, and
+                community. Powered by Kese Events and supported by leading
+                partners, AfroChain brings together builders, dreamers, and
+                doers shaping the decentralized future of Africa.
               </p>
               <p className="text-[#245a9a]/90 leading-relaxed text-lg">
-                Whether you&apos;re a developer, founder, policymaker, investor, or creator — 
-                <span className="font-bold text-[#245a9a]">this is where Africa builds on-chain.</span>
+                Whether you&apos;re a developer, founder, policymaker, investor,
+                or creator —
+                <span className="font-bold text-[#245a9a]">
+                  this is where Africa builds on-chain.
+                </span>
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200 text-base">
+                {/*<button className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-6 py-3 rounded-md font-medium transition-colors duration-200 text-base">
                   Become A Partner
-                </button>
+                </button>*/}
+
+                <a
+                  href="https://forms.gle/vrpvDxoufARBNnPLA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#245a9a] text-white px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 hover:bg-[#245a9a]/90 flex items-center justify-center"
+                >
+                  Become A Partner
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

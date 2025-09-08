@@ -94,7 +94,7 @@ const Hackathon = () => {
                 </a>
 
                 <a
-                  href="mailto:sponsor@afrochain.com?subject=Hackathon Sponsorship Inquiry"
+                  href="https://forms.gle/vrpvDxoufARBNnPLA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#245a9a] text-white px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 hover:bg-[#245a9a]/90 flex items-center justify-center"
