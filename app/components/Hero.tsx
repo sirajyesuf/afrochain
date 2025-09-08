@@ -27,6 +27,10 @@ const heroLogos = [
     src: "/ethiopianblockchain.png",
     alt: "Ethiopian Blockchain Association - Local Blockchain Community",
   },
+  {
+    src: "/et-logo.png",
+    alt: "ethiopia airlines logo",
+  },
 ];
 
 const Hero = () => {

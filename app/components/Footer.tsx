@@ -156,9 +156,16 @@ export default function Footer() {
             <p className="text-base text-white font-medium">
               © {currentYear} AfroChain. All rights reserved.
             </p>
-            <p className="text-base text-white font-medium">
-              Made with ❤️ in Ethiopia
-            </p>
+            {/*<p className="text-sm opacity-90 text-white">
+              Powered by <span className="font-semibold">Santa Trading</span>
+            </p>*/}
+            
+            <a href="https://santatradingplc.com/" target="_blank" rel="noopener noreferrer" className="inline-block">
+              <h3 className="text-lg font-semibold mb-2 hover:text-blue-200 transition-colors cursor-pointer">
+                Powered by Santa Trading
+              </h3>
+            </a>
+            
           </div>
         </div>
       </div>
@@ -167,3 +174,4 @@ export default function Footer() {
     </footer>
   );
 }
+
