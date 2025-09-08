@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const Hackathon = () => {
   return (
-    <section  className="py-16 relative" style={{ backgroundColor: '#eaf2fb' }}>
+    <section className="py-16 relative" style={{ backgroundColor: "#eaf2fb" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -11,7 +11,8 @@ const Hackathon = () => {
             🚀 AfroChain Hackathon 2025
           </h2>
           <p className="text-lg text-[#245a9a]/80 max-w-2xl mx-auto">
-            Join 100+ developers in building the future of Web3 and blockchain solutions
+            Join 100+ developers in building the future of Web3 and blockchain
+            solutions
           </p>
         </div>
 
@@ -22,26 +23,40 @@ const Hackathon = () => {
               {/* Background Pattern */}
               <div className="absolute top-4 right-4 w-16 h-16 bg-gray-100 rounded-full"></div>
               {/* <div className="absolute bottom-4 left-4 w-12 h-12 bg-gray-50 rounded-full"></div> */}
-              
+
               <div className="relative z-10 space-y-8">
                 <div className="text-6xl mb-4">🚀</div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">100+ Developers</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    100+ Developers
+                  </h3>
                   <p className="text-gray-600">Building the future of Web3</p>
                 </div>
-                
+
                 <div className="grid grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">300K+ ETB</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">In Prizes</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      300K+ ETB
+                    </div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wide">
+                      In Prizes
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">48h</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">Build Time</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      48h
+                    </div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wide">
+                      Build Time
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">10+</div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">Partners</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-1">
+                      10+
+                    </div>
+                    <div className="text-xs text-gray-500 uppercase tracking-wide">
+                      Partners
+                    </div>
                   </div>
                 </div>
               </div>
@@ -58,26 +73,29 @@ const Hackathon = () => {
 
             <div className="space-y-6">
               <p className="text-[#245a9a]/90 leading-relaxed text-lg">
-                The AfroChain Hackathon, in collaboration with Xerxis Web3 Devs and our strategic partners, brings
-                together 100+ developers to create innovative blockchain solutions. Participants will leverage
-                cutting-edge tools like Lisk and Cardano to build the next generation of decentralized applications.
-                Join us for an intensive development experience featuring substantial prizes, expert mentorship, and
-                unparalleled visibility in the Web3 ecosystem.
+                The AfroChain Hackathon, in collaboration with Xerxis Web3 Devs
+                and our strategic partners, brings together 100+ developers to
+                create innovative blockchain solutions. Participants will
+                leverage cutting-edge tools like Lisk and Cardano to build the
+                next generation of decentralized applications. Join us for an
+                intensive development experience featuring substantial prizes,
+                expert mentorship, and unparalleled visibility in the Web3
+                ecosystem.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="https://forms.gle/JyExpoRFWumUkzWW9" 
-                  target="_blank" 
+                <a
+                  href="https://forms.gle/vrpvDxoufARBNnPLA"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#245a9a] text-white px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 hover:bg-[#245a9a]/90 flex items-center justify-center"
                 >
                   Register to Build
                 </a>
 
-                <a 
-                  href="mailto:sponsor@afrochain.com?subject=Hackathon Sponsorship Inquiry" 
-                  target="_blank" 
+                <a
+                  href="mailto:sponsor@afrochain.com?subject=Hackathon Sponsorship Inquiry"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-[#245a9a] text-white px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 hover:bg-[#245a9a]/90 flex items-center justify-center"
                 >
@@ -88,7 +106,9 @@ const Hackathon = () => {
 
             {/* Tech Stack */}
             <div className="mt-8">
-              <h4 className="text-lg font-semibold text-[#245a9a] mb-2">Powered by:</h4>
+              <h4 className="text-lg font-semibold text-[#245a9a] mb-2">
+                Powered by:
+              </h4>
               <div className="flex flex-wrap gap-6 items-center">
                 {/* <div className="bg-white p-3 rounded-lg border border-gray-200">
                   <Image
@@ -126,4 +146,4 @@ const Hackathon = () => {
   );
 };
 
-export default Hackathon; 
+export default Hackathon;

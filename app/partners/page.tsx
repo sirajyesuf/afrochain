@@ -1,30 +1,33 @@
-import React from 'react';
-import Header from '@/app/components/Header';
-import PartnersSponsorSection from '@/app/components/Partners';
-import Image from 'next/image';
-import Footer from '@/app/components/Footer';
-import { Metadata } from 'next';
+import React from "react";
+import Header from "@/app/components/Header";
+import PartnersSponsorSection from "@/app/components/Partners";
+import Image from "next/image";
+import Footer from "@/app/components/Footer";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Partners & Sponsors - AfroChain Summit 2025",
-  description: "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa. Become a partner today!",
+  description:
+    "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa. Become a partner today!",
   keywords: [
     "AfroChain partners",
     "blockchain summit sponsors",
     "Web3 Africa partners",
     "blockchain conference sponsors",
     "Ethiopia blockchain partners",
-    "become a sponsor"
+    "become a sponsor",
   ],
   openGraph: {
     title: "Partners & Sponsors - AfroChain Summit 2025",
-    description: "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa.",
-    images: ['/keseevents-logo.png', '/afrochainwithwhitebg.png'],
+    description:
+      "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa.",
+    images: ["/keseevents-logo.png", "/afrochainwithwhitebg.png"],
   },
   twitter: {
     title: "Partners & Sponsors - AfroChain Summit 2025",
-    description: "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa.",
-    images: ['/keseevents-logo.png', '/afrochainwithwhitebg.png'],
+    description:
+      "Discover our partners and sponsors who make AfroChain possible. Connect with innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa.",
+    images: ["/keseevents-logo.png", "/afrochainwithwhitebg.png"],
   },
 };
 
@@ -33,7 +36,10 @@ export default function PartnersPage() {
     <>
       <Header />
       {/* Hero Section for Partners Page */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]" aria-label="Partners Hero">
+      <section
+        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]"
+        aria-label="Partners Hero"
+      >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40"></div>
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-20 text-center">
@@ -41,11 +47,15 @@ export default function PartnersPage() {
             🤝 Our Partners & Sponsors
           </h1>
           <p className="text-lg md:text-xl text-gray-200 font-light mb-6 max-w-2xl mx-auto">
-            We are grateful for the support and collaboration of our partners and sponsors who make Afrochain possible. Discover the innovators, builders, and organizations shaping the future of Web3 and blockchain in Africa. Explore their projects, connect, and get inspired!
+            We are grateful for the support and collaboration of our partners
+            and sponsors who make Afrochain possible. Discover the innovators,
+            builders, and organizations shaping the future of Web3 and
+            blockchain in Africa. Explore their projects, connect, and get
+            inspired!
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
             <a
-              href="https://forms.gle/yxBFYDFu6tMWGQvC9"
+              href="https://forms.gle/vrpvDxoufARBNnPLA"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white font-bold py-2 px-6 rounded-lg border-2 border-[#245a9a] transition-colors duration-200 text-base shadow"

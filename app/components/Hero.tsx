@@ -1,25 +1,40 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
-import '../globals.css';
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import "../globals.css";
 
 const heroLogos = [
-  { src: "/keseevents-logo.png", alt: "Kese Events - Event Management & Live Streaming" },
-  { src: "/afrochainwithwhitebg.png", alt: "AfroChain 2025 - Africa's Web3 Blockchain Summit" },
+  {
+    src: "/keseevents-logo.png",
+    alt: "Kese Events - Event Management & Live Streaming",
+  },
+  {
+    src: "/afrochainwithwhitebg.png",
+    alt: "AfroChain 2025 - Africa's Web3 Blockchain Summit",
+  },
   { src: "/tether.png", alt: "Tether USDT - Stablecoin Cryptocurrency" },
   { src: "/sorted.png", alt: "Sorted Wallet - Digital Asset Management" },
-  {src:"/santa.jpeg", alt:"Santa Trading PLC - Financial Services"},
-  {src:"/yeneta.jpeg", alt:"Yeneta Blockchain Academy - Blockchain Education"},
-  {src:"/africablockchain.png", alt:"Africa Blockchain Institute - Blockchain Research & Education"},
-  {src:"/ethiopianblockchain.png", alt:"Ethiopian Blockchain Association - Local Blockchain Community"},
+  { src: "/santa.jpeg", alt: "Santa Trading PLC - Financial Services" },
+  {
+    src: "/yeneta.jpeg",
+    alt: "Yeneta Blockchain Academy - Blockchain Education",
+  },
+  {
+    src: "/africablockchain.png",
+    alt: "Africa Blockchain Institute - Blockchain Research & Education",
+  },
+  {
+    src: "/ethiopianblockchain.png",
+    alt: "Ethiopian Blockchain Association - Local Blockchain Community",
+  },
 ];
 
 const Hero = () => {
   // Video URLs from uploadthing
   const videoUrls = [
-    'https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pxnWGxmQSYdZWIlTk4D9uAsXHMO6hy5Nng8BR',
-    'https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4prw5nmxTPKVGmvRrXaC4HeNUSkAEOIDb5zTYh',
-    'https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pygdpS9OVn1ChkmXY5LBt3Du7oT2e9izwcMRA'
+    "https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pxnWGxmQSYdZWIlTk4D9uAsXHMO6hy5Nng8BR",
+    "https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4prw5nmxTPKVGmvRrXaC4HeNUSkAEOIDb5zTYh",
+    "https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pygdpS9OVn1ChkmXY5LBt3Du7oT2e9izwcMRA",
   ];
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -39,10 +54,15 @@ const Hero = () => {
   }, [videoUrls.length]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero Section">
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      aria-label="Hero Section"
+    >
       <div className="absolute top-0 left-0 w-full h-full z-0">
         {/* Video container with transition effect */}
-        <div className={`absolute inset-0 transition-opacity duration-500 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
+        <div
+          className={`absolute inset-0 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
+        >
           <video
             key={currentVideoIndex}
             className="absolute top-1/2 left-1/2 w-screen h-full object-cover -translate-x-1/2 -translate-y-1/2"
@@ -56,9 +76,13 @@ const Hero = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        
+
         {/* Video indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20" role="tablist" aria-label="Video navigation">
+        <div
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20"
+          role="tablist"
+          aria-label="Video navigation"
+        >
           {videoUrls.map((_, index) => (
             <button
               key={index}
@@ -70,9 +94,9 @@ const Hero = () => {
                 }, 500);
               }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentVideoIndex 
-                  ? 'bg-white w-8' 
-                  : 'bg-white/50 hover:bg-white/75'
+                index === currentVideoIndex
+                  ? "bg-white w-8"
+                  : "bg-white/50 hover:bg-white/75"
               }`}
               aria-label={`Go to video ${index + 1}`}
               aria-selected={index === currentVideoIndex}
@@ -81,7 +105,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      
+
       {/* Overlay for better text readability - stronger on left, lighter on right */}
       <div className="absolute inset-0 bg-gradient-to-r from-[#245a9a]/80 via-[#245a9a]/60 to-[#245a9a]/20"></div>
 
@@ -91,37 +115,40 @@ const Hero = () => {
           <div className="text-left order-2 lg:order-1">
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight drop-shadow-lg">
-              🌍 Africa&apos;s Boldest <span className="text-yellow-400">Web3 & Blockchain</span> Summit.
+              🌍 Africa&apos;s Boldest{" "}
+              <span className="text-yellow-400">Web3 & Blockchain</span> Summit.
             </h1>
 
             {/* Subtitle */}
             <p className="text-base sm:text-lg md:text-xl  text-white font-light tracking-wide mb-6 sm:mb-8 max-w-5xl">
-              Join the pioneers building Africa&apos;s on-chain future. Two days of hackathons, keynotes, music, partnerships & bold ideas — right from the heart of Ethiopia.
+              Join the pioneers building Africa&apos;s on-chain future. Two days
+              of hackathons, keynotes, music, partnerships & bold ideas — right
+              from the heart of Ethiopia.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <a 
-                href="https://forms.gle/Z1ppaNhjXZWVsqTT8" 
-                target="_blank" 
+              <a
+                href="https://forms.gle/vrpvDxoufARBNnPLA"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base border-2 border-white hover:bg-white hover:text-[#245a9a]"
                 aria-label="Register for AfroChain Summit 2025"
               >
                 Register for Event
               </a>
-              <a 
-                href="https://forms.gle/yxBFYDFu6tMWGQvC9" 
-                target="_blank" 
+              <a
+                href="https://forms.gle/vrpvDxoufARBNnPLA"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
                 aria-label="Become a sponsor for AfroChain Summit 2025"
               >
                 Become a Sponsor
               </a>
-              <a 
-                href="#" 
-                target="_blank" 
+              <a
+                href="#"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
                 aria-label="Apply to speak at AfroChain Summit 2025"
@@ -153,7 +180,10 @@ const Hero = () => {
               </div>
             </div>
             {/* Desktop: Grid */}
-            <div className="hidden sm:flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 rounded-lg p-2 sm:p-4 justify-center" aria-label="Partner and sponsor logos">
+            <div
+              className="hidden sm:flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 rounded-lg p-2 sm:p-4 justify-center"
+              aria-label="Partner and sponsor logos"
+            >
               {heroLogos.map((logo, idx) => (
                 <div
                   key={idx}
