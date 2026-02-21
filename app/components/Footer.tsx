@@ -12,7 +12,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#014dbd] border-none  font-sans">
+    <footer className="bg-[#0f2f56] border-t border-white/10 font-sans">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand Section */}
@@ -173,8 +173,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* White gradient divider above footer */}
-      <div className="w-full h-4 bg-gradient-to-t from-[#014bd] to-white/0"></div>
+      {/* Soft bottom edge */}
+      <div className="w-full h-2 bg-gradient-to-t from-[#0f2f56] to-transparent" aria-hidden />
     </footer>
   );
 }
