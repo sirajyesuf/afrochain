@@ -10,7 +10,7 @@ export default function AboutUs() {
 
       <div className="container relative mx-auto px-4">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-sm border border-[#245a9a]/15">
+          <div className="grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-none border border-[#245a9a]/15">
             <div className="lg:col-span-3 bg-[#0f2f56] p-7 md:p-10 text-white">
               <p className="text-xs font-semibold tracking-[0.18em] uppercase text-white/70">
                 About AfroChain 2026
@@ -36,12 +36,12 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-sm border border-[#245a9a]/15">
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-none border border-[#245a9a]/15">
             <div className="lg:col-span-3 bg-white p-7 md:p-10">
               <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#245a9a]/70">
                 Why Ethiopia, Why Now
               </p>
-              <h3 className="mt-3 text-3xl md:text-5xl font-bold leading-tight text-[#245a9a]">
+              <h3 className="mt-3 text-3xl md:text-4xl font-bold leading-tight text-[#245a9a]">
                 Building Institutional Entry Points Into Africa&apos;s Next Major
                 Digital Economy
               </h3>
@@ -84,60 +84,60 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-sm border border-[#245a9a]/15">
-            <div className="lg:col-span-3 bg-white p-7 md:p-10">
-              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#245a9a]/70">
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-5  rounded-3xl overflow-hidden shadow-none border border-[#245a9a]/15">
+            <div className="lg:col-span-3 bg-[#0f2f56] p-7 md:p-10">
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-white/70">
                 What AfroChain Unlocks
               </p>
-              <h3 className="mt-3 text-3xl md:text-5xl font-bold leading-tight text-[#245a9a]">
+              <h3 className="mt-3 text-3xl md:text-5xl font-bold leading-tight text-white">
                 Three Access Lanes, One Institutional Platform
               </h3>
-              <p className="mt-4 text-[#245a9a]/90 leading-relaxed">
+              <p className="mt-4 text-white/90 leading-relaxed">
                 AfroChain delivers role-specific value for builders, investors,
                 and international organizations entering Ethiopia&apos;s evolving
                 digital economy.
               </p>
             </div>
-            <div className="lg:col-span-2 bg-[#0f2f56] p-7 md:p-10 text-white">
+            <div className="lg:col-span-2 bg-white p-7 md:p-10 text-[#245a9a]">
               <div className="grid grid-cols-1 gap-5">
-              <article className="rounded-xl border border-white/20 bg-white/10 p-5">
+              <article className="rounded-xl border border-[#245a9a]/20 bg-[#245a9a]/5 p-5">
                 <div className="flex items-center justify-between">
                   <h4 className="text-lg font-bold">For Builders</h4>
-                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-white/20 px-2 text-xs font-bold">
+                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-[#245a9a]/20 px-2 text-xs font-bold">
                     01
                   </span>
                 </div>
-                <ul className="mt-4 space-y-2 text-white/90">
+                <ul className="mt-4 space-y-2 text-[#245a9a]/90">
                   <li>Access to national priorities</li>
                   <li>Infrastructure-focused hackathons</li>
                   <li>Exposure to regulators and institutions</li>
                 </ul>
               </article>
 
-              <article className="rounded-xl border border-white/20 bg-white/10 p-5">
+              <article className="rounded-xl border border-[#245a9a]/20 bg-[#245a9a]/5 p-5">
                 <div className="flex items-center justify-between">
                   <h4 className="text-lg font-bold">For Investors</h4>
-                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-white/20 px-2 text-xs font-bold">
+                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-[#245a9a]/20 px-2 text-xs font-bold">
                     02
                   </span>
                 </div>
-                <ul className="mt-4 space-y-2 text-white/90">
+                <ul className="mt-4 space-y-2 text-[#245a9a]/90">
                   <li>Curated deal flow</li>
                   <li>Early-stage African startup access</li>
                   <li>Institutional roundtables</li>
                 </ul>
               </article>
 
-              <article className="rounded-xl border border-white/20 bg-white/10 p-5">
+              <article className="rounded-xl border border-[#245a9a]/20 bg-[#245a9a]/5 p-5">
                 <div className="flex items-center justify-between">
                   <h4 className="text-lg font-bold">
                     For Global Organizations
                   </h4>
-                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-white/20 px-2 text-xs font-bold">
+                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-[#245a9a]/20 px-2 text-xs font-bold">
                     03
                   </span>
                 </div>
-                <ul className="mt-4 space-y-2 text-white/90">
+                <ul className="mt-4 space-y-2 text-[#245a9a]/90">
                   <li>Market entry clarity</li>
                   <li>Policy-informed ecosystem access</li>
                   <li>Strategic partnership opportunities</li>
