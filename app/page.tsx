@@ -1,8 +1,10 @@
 import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
+import Pillars from '@/app/components/Pillars';
+import MarketEntryCapital from '@/app/components/MarketEntryCapital';
 import Stats from '@/app/components/Stats';
 import AboutUs from '@/app/components/AboutUs';
-import Launchpad from '@/app/components/Launchpad';
+import NextChainHub from '@/app/components/NextChainHub';
 import Hackathon from '@/app/components/Hackathon';
 import SpeakersSection from '@/app/components/Speakers';
 import VenueSection from '@/app/components/VenueSection';
@@ -14,10 +16,12 @@ export default function HomePage() {
     <>
       <Header />
       <Hero />
+      <Pillars />
+      <MarketEntryCapital />
       <Stats />
       <AboutUs />
       <section id="launchpad" aria-label="Launchpad Section">
-        <Launchpad />
+        <NextChainHub />
       </section>
       <section id="hackathon" aria-label="Hackathon Section">
         <Hackathon />

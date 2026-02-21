@@ -1,207 +1,98 @@
-"use client";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import "../globals.css";
-
-const heroLogos = [
-  {
-    src: "/keseevents-logo.png",
-    alt: "Kese Events - Event Management & Live Streaming",
-  },
-  {
-    src: "/afrochainwithwhitebg.png",
-    alt: "AfroChain 2025 - Africa's Web3 Blockchain Summit",
-  },
-  { src: "/tether.png", alt: "Tether USDT - Stablecoin Cryptocurrency" },
-  { src: "/sorted.png", alt: "Sorted Wallet - Digital Asset Management" },
-  { src: "/santa.jpeg", alt: "Santa Trading PLC - Financial Services" },
-  {
-    src: "/yeneta.jpeg",
-    alt: "Yeneta Blockchain Academy - Blockchain Education",
-  },
-  {
-    src: "/africablockchain.png",
-    alt: "Africa Blockchain Institute - Blockchain Research & Education",
-  },
-  {
-    src: "/ethiopianblockchain.png",
-    alt: "Ethiopian Blockchain Association - Local Blockchain Community",
-  },
-  {
-    src: "/et-logo.png",
-    alt: "ethiopia airlines logo",
-  },
-];
 
 const Hero = () => {
-  // Video URLs from uploadthing
-  const videoUrls = [
-    "https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pxnWGxmQSYdZWIlTk4D9uAsXHMO6hy5Nng8BR",
-    "https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4prw5nmxTPKVGmvRrXaC4HeNUSkAEOIDb5zTYh",
-    "https://muyc54jxq7.ufs.sh/f/dSfsdchAUJ4pygdpS9OVn1ChkmXY5LBt3Du7oT2e9izwcMRA",
-  ];
-
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  useEffect(() => {
-    // Change video every 10 seconds
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videoUrls.length);
-        setIsTransitioning(false);
-      }, 500); // Fade transition duration
-    }, 10000); // Change video every 10 seconds
-
-    return () => clearInterval(interval);
-  }, [videoUrls.length]);
-
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      aria-label="Hero Section"
+      aria-label="AfroChain 2026 Hero"
     >
-      <div className="absolute top-0 left-0 w-full h-full z-0">
-        {/* Video container with transition effect */}
-        <div
-          className={`absolute inset-0 transition-opacity duration-500 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
-        >
-          <video
-            key={currentVideoIndex}
-            className="absolute top-1/2 left-1/2 w-screen h-full object-cover -translate-x-1/2 -translate-y-1/2"
-            autoPlay
-            muted
-            loop
-            playsInline
-            aria-label={`AfroChain Summit promotional video ${currentVideoIndex + 1}`}
-          >
-            <source src={videoUrls[currentVideoIndex]} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        {/* Video indicators */}
-        <div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-20"
-          role="tablist"
-          aria-label="Video navigation"
-        >
-          {videoUrls.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setIsTransitioning(true);
-                setTimeout(() => {
-                  setCurrentVideoIndex(index);
-                  setIsTransitioning(false);
-                }, 500);
-              }}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentVideoIndex
-                  ? "bg-white w-8"
-                  : "bg-white/50 hover:bg-white/75"
-              }`}
-              aria-label={`Go to video ${index + 1}`}
-              aria-selected={index === currentVideoIndex}
-              role="tab"
-            />
-          ))}
-        </div>
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/web31.png"
+          alt="Digital infrastructure and network visualization"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f2f56]/95 via-[#245a9a]/85 to-[#245a9a]/60" />
       </div>
 
-      {/* Overlay for better text readability - stronger on left, lighter on right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#245a9a]/80 via-[#245a9a]/60 to-[#245a9a]/20"></div>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-28">
+        <div className="max-w-5xl">
+          <p className="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-4 py-2 text-xs sm:text-sm font-semibold tracking-[0.16em] text-white/95 uppercase">
+            AfroChain 2026 | Addis Ababa, Ethiopia
+          </p>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="border-none border-red-500">
-          {/* Left side - Text content */}
-          <div className="text-left order-2 lg:order-1">
-            {/* Main Heading */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight drop-shadow-lg">
-              🌍 Africa&apos;s Boldest{" "}
-              <span className="text-yellow-400">Web3 & Blockchain</span> Summit.
-            </h1>
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight drop-shadow-lg">
+            Africa&apos;s Strategic Gateway for{" "}
+            <span className="text-[#dbe900]">Blockchain, AI, and Finance</span>
+          </h1>
 
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg md:text-xl  text-white font-light tracking-wide mb-6 sm:mb-8 max-w-5xl">
-              Join the pioneers building Africa&apos;s on-chain future. Two days
-              of hackathons, keynotes, music, partnerships & bold ideas — right
-              from the heart of Ethiopia.
-            </p>
+          <p className="mt-6 text-base sm:text-lg md:text-xl text-white/90 font-light tracking-wide max-w-4xl">
+            AfroChain 2026 is an independent platform connecting policymakers,
+            infrastructure builders, investors, and global institutions to
+            Ethiopia&apos;s next phase of digital and financial modernization.
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <a
-                href="https://forms.gle/vrpvDxoufARBNnPLA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base border-2 border-white hover:bg-white hover:text-[#245a9a]"
-                aria-label="Register for AfroChain Summit 2025"
-              >
-                Register for Event
-              </a>
-              <a
-                href="https://forms.gle/vrpvDxoufARBNnPLA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
-                aria-label="Become a sponsor for AfroChain Summit 2025"
-              >
-                Become a Sponsor
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-transparent text-white font-bold py-2 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
-                aria-label="Apply to speak at AfroChain Summit 2025"
-              >
-                Apply to Speak
-              </a>
-            </div>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href="#blockchain"
+              className="rounded-full border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white hover:text-[#245a9a] transition-colors duration-200"
+            >
+              Blockchain
+            </a>
+            <a
+              href="#ai"
+              className="rounded-full border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white hover:text-[#245a9a] transition-colors duration-200"
+            >
+              Artificial Intelligence
+            </a>
+            <a
+              href="#finance"
+              className="rounded-full border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white hover:text-[#245a9a] transition-colors duration-200"
+            >
+              Finance
+            </a>
           </div>
 
-          {/* Right side - Logos */}
-          <div className="flex flex-col items-start justify-start lg:justify-end order-1 lg:order-2 mb-8 lg:mb-0 w-full">
-            {/* Mobile: Marquee */}
-            <div className="block sm:hidden w-full overflow-x-hidden">
-              <div className="marquee" aria-label="Partner and sponsor logos">
-                {[...heroLogos, ...heroLogos].map((logo, idx) => (
-                  <div
-                    key={idx}
-                    className="w-24 h-20 flex-shrink-0 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200 mx-2"
-                  >
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      width={100}
-                      height={60}
-                      className="object-contain max-h-16"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            {/* Desktop: Grid */}
-            <div
-              className="hidden sm:flex flex-wrap items-center gap-3 sm:gap-4 md:gap-6 rounded-lg p-2 sm:p-4 justify-center"
-              aria-label="Partner and sponsor logos"
+          <div className="mt-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+            <a
+              href="/contactus"
+              className="bg-white text-[#245a9a] font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base border-2 border-white hover:bg-transparent hover:text-white"
+              aria-label="Request market entry briefing"
             >
-              {heroLogos.map((logo, idx) => (
-                <div
-                  key={idx}
-                  className="w-24 h-20 flex items-center justify-center bg-white rounded-lg shadow border border-gray-200"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              ))}
+              Request Market Entry Briefing
+            </a>
+            <a
+              href="https://forms.gle/vrpvDxoufARBNnPLA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
+              aria-label="Join AfroChain 2026"
+            >
+              Join AfroChain 2026
+            </a>
+            <a
+              href="/partners"
+              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
+              aria-label="Partner with AfroChain"
+            >
+              Partner with AfroChain
+            </a>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
+              Government Vision
+            </div>
+            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
+              Private Sector Execution
+            </div>
+            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
+              Global Capital
+            </div>
+            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
+              African Innovation
             </div>
           </div>
         </div>
