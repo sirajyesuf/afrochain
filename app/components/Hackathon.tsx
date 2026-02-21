@@ -72,12 +72,6 @@ const Hackathon = () => {
                   </p>
                 </div>
               </div>
-
-              <div className="mt-3">
-                <p className="flex flex-wrap w-fit rounded-full border border-[#245a9a]/25 px-4 py-2 text-[#245a9a] font-semibold">
-                  Build Bold. Build On-Chain.
-                </p>
-              </div>
             </div>
           </div>
         </div>
