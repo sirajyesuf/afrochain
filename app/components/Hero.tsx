@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -57,43 +58,23 @@ const Hero = () => {
 
           <div className="mt-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
             <a
-              href="/contactus"
-              className="bg-white text-[#245a9a] font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg transition-colors duration-200 text-sm sm:text-base border-2 border-white hover:bg-transparent hover:text-white"
-              aria-label="Request market entry briefing"
-            >
-              Request Market Entry Briefing
-            </a>
-            <a
               href="https://forms.gle/vrpvDxoufARBNnPLA"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
+              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a] inline-flex items-center gap-2"
               aria-label="Join AfroChain 2026"
             >
               Join AfroChain 2026
+              <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
               href="/partners"
-              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a]"
+              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a] inline-flex items-center gap-2"
               aria-label="Partner with AfroChain"
             >
               Partner with AfroChain
+              <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
-              Government Vision
-            </div>
-            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
-              Private Sector Execution
-            </div>
-            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
-              Global Capital
-            </div>
-            <div className="rounded-lg border border-white/30 bg-white/10 px-4 py-3 text-sm font-medium text-white">
-              African Innovation
-            </div>
           </div>
         </div>
       </div>

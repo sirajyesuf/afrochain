@@ -119,7 +119,7 @@ Email: ${form.email}`,
 
           <div className="mt-10 rounded-2xl border border-[#245a9a]/20 bg-white p-6 lg:p-8">
             <h3 className="text-2xl font-bold text-[#245a9a]">
-              Request Market Entry Briefing
+              Request Institutional Briefing
             </h3>
             <p className="mt-2 text-[#245a9a]/80">
               Submit your details to initiate an institutional briefing with the
@@ -236,7 +236,7 @@ Email: ${form.email}`,
                   type="submit"
                   className="inline-flex items-center justify-center rounded-lg bg-[#245a9a] px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678]"
                 >
-                  Request Market Entry Briefing
+                  Request Institutional Briefing
                 </button>
               </div>
             </form>

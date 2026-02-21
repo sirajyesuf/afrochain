@@ -2,7 +2,6 @@ import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
 import Pillars from '@/app/components/Pillars';
 import MarketEntryCapital from '@/app/components/MarketEntryCapital';
-import Stats from '@/app/components/Stats';
 import AboutUs from '@/app/components/AboutUs';
 import NextChainHub from '@/app/components/NextChainHub';
 import Hackathon from '@/app/components/Hackathon';
@@ -18,7 +17,7 @@ export default function HomePage() {
       <Hero />
       <Pillars />
       <MarketEntryCapital />
-      <Stats />
+      {/* <Stats /> */}
       <AboutUs />
       <section id="launchpad" aria-label="Launchpad Section">
         <NextChainHub />

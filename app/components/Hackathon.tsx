@@ -1,143 +1,112 @@
-import React from "react";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
+
+const poweredByLogos = [
+  { src: "/xerxist.png", alt: "Xerxis Web3" },
+  { src: "/lisk.png", alt: "Lisk" },
+  { src: "/cardano.png", alt: "Cardano" },
+];
 
 const Hackathon = () => {
   return (
-    <section className="py-16 relative" style={{ backgroundColor: "#eaf2fb" }}>
+    <section
+      className="bg-[#eaf2fb] py-16 lg:py-24"
+      aria-labelledby="hackathon-title"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#245a9a] mb-4">
-            🚀 AfroChain Hackathon 2025
-          </h2>
-          <p className="text-lg text-[#245a9a]/80 max-w-2xl mx-auto">
-            Join 100+ developers in building the future of Web3 and blockchain
-            solutions
-          </p>
-        </div>
+        <div className="rounded-3xl border border-[#245a9a]/20 bg-white p-6 lg:p-10">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+            <div className="lg:col-span-3">
+              <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#245a9a]/75">
+                Program
+              </p>
+              <h2
+                id="hackathon-title"
+                className="mt-2 text-3xl md:text-5xl font-bold text-[#245a9a] leading-tight"
+              >
+                AfroChain Hackathon
+              </h2>
+              <p className="mt-5 text-base md:text-lg text-[#245a9a]/90 leading-relaxed max-w-3xl">
+                A high-intensity builder sprint for teams delivering practical
+                blockchain and Web3 solutions aligned with digital economy
+                priorities in Ethiopia and across Africa.
+              </p>
+              <p className="mt-4 text-[#245a9a]/85 leading-relaxed max-w-3xl">
+                Build with mentors, ecosystem operators, and institutional
+                stakeholders to move from concept to deployable products.
+              </p>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left side - Stats */}
-          <div className="order-2 lg:order-1">
-            <div className="bg-white rounded-3xl p-8 text-center relative overflow-hidden border-2 border-gray-200 shadow-none">
-              {/* Background Pattern */}
-              <div className="absolute top-4 right-4 w-16 h-16 bg-gray-100 rounded-full"></div>
-              {/* <div className="absolute bottom-4 left-4 w-12 h-12 bg-gray-50 rounded-full"></div> */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://forms.gle/vrpvDxoufARBNnPLA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#245a9a] px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678]"
+                >
+                  Register to Build
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+                <a
+                  href="https://forms.gle/vrpvDxoufARBNnPLA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#245a9a] bg-white px-6 py-3 text-sm font-semibold text-[#245a9a] transition-colors duration-200 hover:bg-[#245a9a] hover:text-white"
+                >
+                  Sponsor the Hackathon
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
 
-              <div className="relative z-10 space-y-8">
-                <div className="text-6xl mb-4">🚀</div>
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    100+ Developers
-                  </h3>
-                  <p className="text-gray-600">Building the future of Web3</p>
+            <div className="lg:col-span-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="rounded-xl border border-[#245a9a]/15 bg-[#f6f9ff] p-5">
+                  <p className="text-3xl font-bold text-[#245a9a]">100+</p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-[#245a9a]/70">
+                    Developers
+                  </p>
                 </div>
-
-                <div className="grid grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">
-                      300K+ ETB
-                    </div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">
-                      In Prizes
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">
-                      48h
-                    </div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">
-                      Build Time
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-gray-900 mb-1">
-                      10+
-                    </div>
-                    <div className="text-xs text-gray-500 uppercase tracking-wide">
-                      Partners
-                    </div>
-                  </div>
+                <div className="rounded-xl border border-[#245a9a]/15 bg-[#f6f9ff] p-5">
+                  <p className="text-3xl font-bold text-[#245a9a]">48h</p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-[#245a9a]/70">
+                    Build Window
+                  </p>
                 </div>
+                <div className="rounded-xl border border-[#245a9a]/15 bg-[#f6f9ff] p-5 sm:col-span-2">
+                  <p className="text-3xl font-bold text-[#245a9a]">300K+ ETB</p>
+                  <p className="mt-1 text-xs uppercase tracking-wider text-[#245a9a]/70">
+                    Prize Pool
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-3">
+                <p className="inline-flex rounded-full border border-[#245a9a]/25 px-4 py-2 text-[#245a9a] font-semibold">
+                  Build Bold. Build On-Chain.
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Right side - Content */}
-          <div className="order-1 lg:order-2 space-y-6 lg:space-y-8">
-            <div className="text-center lg:text-left">
-              <h2 className="text-4xl lg:text-4xl font-bold text-[#245a9a] leading-tight">
-                Build Bold. Build On-Chain.
-              </h2>
-            </div>
-
-            <div className="space-y-6">
-              <p className="text-[#245a9a]/90 leading-relaxed text-lg">
-                The AfroChain Hackathon, in collaboration with Xerxis Web3 Devs
-                and our strategic partners, brings together 100+ developers to
-                create innovative blockchain solutions. Participants will
-                leverage cutting-edge tools like Lisk and Cardano to build the
-                next generation of decentralized applications. Join us for an
-                intensive development experience featuring substantial prizes,
-                expert mentorship, and unparalleled visibility in the Web3
-                ecosystem.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="https://forms.gle/vrpvDxoufARBNnPLA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#245a9a] text-white px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 hover:bg-[#245a9a]/90 flex items-center justify-center"
+          <div className="mt-10 border-t border-[#245a9a]/15 pt-7">
+            <p className="text-sm font-semibold text-[#245a9a] uppercase tracking-wider">
+              Powered by
+            </p>
+            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
+              {poweredByLogos.map((logo) => (
+                <div
+                  key={logo.src}
+                  className="rounded-lg border border-[#245a9a]/15 bg-[#f6f9ff] p-2 flex items-center justify-center h-16"
                 >
-                  Register to Build
-                </a>
-
-                <a
-                  href="https://forms.gle/vrpvDxoufARBNnPLA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#245a9a] text-white px-6 py-3 rounded-xl font-semibold text-base transition-all duration-300 transform hover:scale-105 hover:bg-[#245a9a]/90 flex items-center justify-center"
-                >
-                  Sponsor the Hackathon
-                </a>
-              </div>
-            </div>
-
-            {/* Tech Stack */}
-            <div className="mt-8">
-              <h4 className="text-lg font-semibold text-[#245a9a] mb-2">
-                Powered by:
-              </h4>
-              <div className="flex flex-wrap gap-6 items-center">
-                {/* <div className="bg-white p-3 rounded-lg border border-gray-200">
                   <Image
-                    src="/lisk.png"
-                    alt="Lisk"
-                    width={80}
-                    height={40}
-                    className="h-8 w-auto object-contain"
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={90}
+                    height={44}
+                    className="max-h-9 w-auto object-contain"
                   />
                 </div>
-                <div className="bg-white p-3 rounded-lg border border-gray-200">
-                  <Image
-                    src="/cardano.png"
-                    alt="Cardano"
-                    width={100}
-                    height={40}
-                    className="h-8 w-auto object-contain"
-                  />
-                </div> */}
-                <div className="bg-[#eaf2fb] border-none border-yellow-200 p-2">
-                  <Image
-                    src="/xerxist.png"
-                    alt="Xerxis Web3"
-                    width={100}
-                    height={100}
-                    className="h-12 w-16  object-contain"
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
