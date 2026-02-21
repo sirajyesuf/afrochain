@@ -9,11 +9,12 @@ const Hero = () => {
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/web31.png"
+          src="https://source.unsplash.com/7hA2wqBcSF8/1920x1080"
           alt="Digital infrastructure and network visualization"
           fill
           priority
           className="object-cover object-center"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f2f56]/95 via-[#245a9a]/85 to-[#245a9a]/60" />
       </div>
