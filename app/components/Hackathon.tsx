@@ -1,11 +1,4 @@
-import Image from "next/image";
 import { ExternalLink } from "lucide-react";
-
-const poweredByLogos = [
-  { src: "/xerxist.png", alt: "Xerxis Web3" },
-  { src: "/lisk.png", alt: "Lisk" },
-  { src: "/cardano.png", alt: "Cardano" },
-];
 
 const Hackathon = () => {
   return (
@@ -81,32 +74,10 @@ const Hackathon = () => {
               </div>
 
               <div className="mt-3">
-                <p className="inline-flex rounded-full border border-[#245a9a]/25 px-4 py-2 text-[#245a9a] font-semibold">
+                <p className="flex flex-wrap w-fit rounded-full border border-[#245a9a]/25 px-4 py-2 text-[#245a9a] font-semibold">
                   Build Bold. Build On-Chain.
                 </p>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-10 border-t border-[#245a9a]/15 pt-7">
-            <p className="text-sm font-semibold text-[#245a9a] uppercase tracking-wider">
-              Powered by
-            </p>
-            <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-2">
-              {poweredByLogos.map((logo) => (
-                <div
-                  key={logo.src}
-                  className="rounded-lg border border-[#245a9a]/15 bg-[#f6f9ff] p-2 flex items-center justify-center h-16"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={90}
-                    height={44}
-                    className="max-h-9 w-auto object-contain"
-                  />
-                </div>
-              ))}
             </div>
           </div>
         </div>

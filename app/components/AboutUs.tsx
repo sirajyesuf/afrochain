@@ -17,7 +17,7 @@ export default function AboutUs() {
               </p>
               <h2
                 id="about-afrochain-title"
-                className="mt-3 text-3xl md:text-5xl font-bold leading-tight"
+                className="mt-3 text-3xl md:text-4xl font-bold leading-tight"
               >
                 Building Institutional Pathways into Ethiopia and Africa
               </h2>
@@ -36,12 +36,12 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <article className="lg:col-span-2 rounded-2xl border border-[#245a9a]/15 bg-white p-6 lg:p-8">
-              <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#245a9a]/75">
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-sm border border-[#245a9a]/15">
+            <div className="lg:col-span-3 bg-white p-7 md:p-10">
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#245a9a]/70">
                 Why Ethiopia, Why Now
               </p>
-              <h3 className="mt-2 text-2xl md:text-3xl font-bold leading-tight text-[#245a9a]">
+              <h3 className="mt-3 text-3xl md:text-5xl font-bold leading-tight text-[#245a9a]">
                 Building Institutional Entry Points Into Africa&apos;s Next Major
                 Digital Economy
               </h3>
@@ -55,95 +55,95 @@ export default function AboutUs() {
                 for capital flow, foreign participation, and cross-border
                 financial activity.
               </p>
-              <div className="mt-5 rounded-lg bg-[#f4f8ff] px-4 py-3">
+              {/* <div className="mt-5 rounded-lg bg-[#f4f8ff] px-4 py-3">
                 <p className="text-[#245a9a] font-semibold">
                   AfroChain 2026 sits at the intersection of policy direction and
                   global execution.
                 </p>
-              </div>
-            </article>
-
-            <div className="space-y-5">
-              <div className="rounded-xl bg-white border border-[#245a9a]/15 p-6">
-                <p className="text-xs uppercase tracking-[0.16em] text-[#245a9a]/70">
+              </div> */}
+            </div>
+            <div className="lg:col-span-2 bg-[#0f2f56] p-7 md:p-10 text-white space-y-5">
+              <div className="rounded-xl border border-none p-6">
+                <p className="text-xs font-semibold tracking-[0.18em] uppercase text-white/70">
                   Access Model
                 </p>
-                <p className="mt-2 text-2xl font-bold text-[#245a9a] leading-tight">
+                <p className="mt-2 text-2xl font-bold leading-tight">
                   AfroChain is a gateway, not an exhibition.
                 </p>
-                <p className="mt-3 text-[#245a9a]/85 leading-relaxed">
+                <p className="mt-3 text-white/85 leading-relaxed">
                   A single platform connecting policy stakeholders, institutions,
                   investors, and execution partners.
                 </p>
               </div>
-              <div className="rounded-xl bg-[#245a9a] p-6">
+              {/* <div className="rounded-xl border-none p-6">
                 <p className="text-white/85 leading-relaxed">
                   A strategic platform connecting policy, institutions, and
                   execution partners across Ethiopia and the African market.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 
-          <div className="mt-12 rounded-2xl bg-white border border-[#245a9a]/15 p-6 lg:p-8">
-            <div className="max-w-3xl">
-              <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#245a9a]/70">
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-sm border border-[#245a9a]/15">
+            <div className="lg:col-span-3 bg-white p-7 md:p-10">
+              <p className="text-xs font-semibold tracking-[0.18em] uppercase text-[#245a9a]/70">
                 What AfroChain Unlocks
               </p>
-              <h3 className="mt-2 text-2xl md:text-3xl font-bold text-[#245a9a]">
+              <h3 className="mt-3 text-3xl md:text-5xl font-bold leading-tight text-[#245a9a]">
                 Three Access Lanes, One Institutional Platform
               </h3>
-              <p className="mt-3 text-[#245a9a]/85 leading-relaxed">
+              <p className="mt-4 text-[#245a9a]/90 leading-relaxed">
                 AfroChain delivers role-specific value for builders, investors,
                 and international organizations entering Ethiopia&apos;s evolving
                 digital economy.
               </p>
             </div>
-
-            <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <article className="rounded-xl border border-[#245a9a]/20 bg-[#f8fbff] p-5">
+            <div className="lg:col-span-2 bg-[#0f2f56] p-7 md:p-10 text-white">
+              <div className="grid grid-cols-1 gap-5">
+              <article className="rounded-xl border border-white/20 bg-white/10 p-5">
                 <div className="flex items-center justify-between">
-                  <h4 className="text-lg font-bold text-[#245a9a]">For Builders</h4>
-                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-[#245a9a] px-2 text-xs font-bold text-white">
+                  <h4 className="text-lg font-bold">For Builders</h4>
+                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-white/20 px-2 text-xs font-bold">
                     01
                   </span>
                 </div>
-                <ul className="mt-4 space-y-2 text-[#245a9a]/90">
+                <ul className="mt-4 space-y-2 text-white/90">
                   <li>Access to national priorities</li>
                   <li>Infrastructure-focused hackathons</li>
                   <li>Exposure to regulators and institutions</li>
                 </ul>
               </article>
 
-              <article className="rounded-xl border border-[#245a9a]/20 bg-[#f8fbff] p-5">
+              <article className="rounded-xl border border-white/20 bg-white/10 p-5">
                 <div className="flex items-center justify-between">
-                  <h4 className="text-lg font-bold text-[#245a9a]">For Investors</h4>
-                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-[#245a9a] px-2 text-xs font-bold text-white">
+                  <h4 className="text-lg font-bold">For Investors</h4>
+                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-white/20 px-2 text-xs font-bold">
                     02
                   </span>
                 </div>
-                <ul className="mt-4 space-y-2 text-[#245a9a]/90">
+                <ul className="mt-4 space-y-2 text-white/90">
                   <li>Curated deal flow</li>
                   <li>Early-stage African startup access</li>
                   <li>Institutional roundtables</li>
                 </ul>
               </article>
 
-              <article className="rounded-xl border border-[#245a9a]/20 bg-[#f8fbff] p-5">
+              <article className="rounded-xl border border-white/20 bg-white/10 p-5">
                 <div className="flex items-center justify-between">
-                  <h4 className="text-lg font-bold text-[#245a9a]">
+                  <h4 className="text-lg font-bold">
                     For Global Organizations
                   </h4>
-                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-[#245a9a] px-2 text-xs font-bold text-white">
+                  <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-md bg-white/20 px-2 text-xs font-bold">
                     03
                   </span>
                 </div>
-                <ul className="mt-4 space-y-2 text-[#245a9a]/90">
+                <ul className="mt-4 space-y-2 text-white/90">
                   <li>Market entry clarity</li>
                   <li>Policy-informed ecosystem access</li>
                   <li>Strategic partnership opportunities</li>
                 </ul>
               </article>
+              </div>
             </div>
           </div>
 
