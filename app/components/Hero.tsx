@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <Image
           src="https://source.unsplash.com/7hA2wqBcSF8/1920x1080"
-          alt="Digital infrastructure and network visualization"
+          alt=""
           fill
           priority
           className="object-cover object-center"
