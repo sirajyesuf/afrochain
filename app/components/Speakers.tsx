@@ -51,15 +51,17 @@ export default function SpeakersSection() {
       <style jsx>{`
   @keyframes scroll {
     0% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translate3d(-50%, 0, 0);
     }
   }
   
   .animate-scroll {
-    animation: scroll 10s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    animation: scroll 25s linear infinite;
   }
   
   .animate-scroll:hover {
@@ -75,25 +77,25 @@ export default function SpeakersSection() {
           <div className="relative overflow-hidden mb-8">
             <div className="flex animate-scroll whitespace-nowrap">
               <div className="flex items-center space-x-8 text-4xl lg:text-6xl xl:text-7xl font-bold">
-                <span className="text-gray-300">ng.</span>
-                <span className="text-[#245a9a]">Web3.</span>
+                <span className="text-[#245a9a]">AI.</span>
+                <span className="text-[#245a9a]">Finance.</span>
                 <span className="text-[#245a9a]">Blockchain.</span>
+                <span className="text-[#245a9a]">Web3.</span>
                 <span className="text-[#245a9a]">DeFi.</span>
                 <span className="text-[#245a9a]">NFTs.</span>
                 <span className="text-[#245a9a]">Innovation.</span>
                 <span className="text-[#245a9a]">Fintech.</span>
                 <span className="text-[#245a9a]">Smart Contracts.</span>
-                <span className="text-[#245a9a]">Sustainability.</span>
                 <span className="text-[#245a9a]">Digital Identity.</span>
-                <span className="text-gray-300">ng.</span>
-                <span className="text-[#245a9a]">Web3.</span>
+                <span className="text-[#245a9a]">AI.</span>
+                <span className="text-[#245a9a]">Finance.</span>
                 <span className="text-[#245a9a]">Blockchain.</span>
+                <span className="text-[#245a9a]">Web3.</span>
                 <span className="text-[#245a9a]">DeFi.</span>
                 <span className="text-[#245a9a]">NFTs.</span>
                 <span className="text-[#245a9a]">Innovation.</span>
                 <span className="text-[#245a9a]">Fintech.</span>
                 <span className="text-[#245a9a]">Smart Contracts.</span>
-                <span className="text-[#245a9a]">Sustainability.</span>
                 <span className="text-[#245a9a]">Digital Identity.</span>
               </div>
             </div>
