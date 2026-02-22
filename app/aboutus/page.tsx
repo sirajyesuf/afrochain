@@ -6,24 +6,28 @@ import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 
 export const metadata: Metadata = {
-  title: "About AfroChain Summit 2025",
-  description: "Discover the mission, values, and impact of AfroChain Summit - Africa's boldest Web3 & Blockchain event. Learn about our organizers, Kese Events, and how we're shaping Africa's on-chain future.",
+  title: "About AfroChain Summit 2026",
+  description:
+    "Learn the mission behind AfroChain Summit 2026 and how we are connecting Blockchain, AI, and Finance leaders to accelerate practical innovation across Ethiopia and Africa.",
   keywords: [
     "AfroChain about",
+    "afrochain summit 2026",
     "blockchain summit mission",
-    "Web3 Africa vision",
+    "ai and finance innovation africa",
     "Kese Events",
     "Ethiopia blockchain",
-    "Africa Web3 community"
+    "Africa Web3 community",
   ],
   openGraph: {
-    title: "About AfroChain Summit 2025",
-    description: "Discover the mission, values, and impact of AfroChain Summit - Africa's boldest Web3 & Blockchain event.",
+    title: "About AfroChain Summit 2026",
+    description:
+      "Learn the mission behind AfroChain Summit 2026 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
     images: ['/5.jpg'],
   },
   twitter: {
-    title: "About AfroChain Summit 2025",
-    description: "Discover the mission, values, and impact of AfroChain Summit - Africa's boldest Web3 & Blockchain event.",
+    title: "About AfroChain Summit 2026",
+    description:
+      "Learn the mission behind AfroChain Summit 2026 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
     images: ['/5.jpg'],
   },
 };

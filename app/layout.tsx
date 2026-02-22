@@ -20,21 +20,22 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AfroChain Summit 2025 - Africa's Boldest Web3 & Blockchain Event",
-    template: "%s | AfroChain Summit 2025"
+    default: "AfroChain Summit 2026 - Blockchain, AI & Finance in Africa",
+    template: "%s | AfroChain Summit 2026"
   },
-  description: "Join Africa's boldest Web3 & Blockchain summit in Ethiopia. Two days of hackathons, keynotes, music, partnerships & bold ideas. Register now for AfroChain 2025!",
+  description:
+    "Join AfroChain Summit 2026 in Ethiopia for actionable conversations and partnerships across Blockchain, AI, and Finance. Connect with builders, institutions, policymakers, and investors shaping Africa's digital economy.",
   keywords: [
-    "blockchain conference",
-    "Web3 summit",
-    "Africa blockchain",
-    "Ethiopia blockchain",
-    "blockchain education",
-    "Web3 Africa",
-    "blockchain hackathon",
-    "cryptocurrency conference",
-    "DeFi summit",
-    "blockchain networking"
+    "afrochain summit 2026",
+    "blockchain summit africa",
+    "ai summit africa",
+    "fintech summit africa",
+    "ethiopia blockchain conference",
+    "web3 africa",
+    "digital finance africa",
+    "cross-border payments africa",
+    "stablecoins africa",
+    "africa innovation summit"
   ],
   authors: [{ name: "AfroChain Team" }],
   creator: "AfroChain",
@@ -51,23 +52,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://afrochain.com',
-    siteName: 'AfroChain Summit 2025',
-    title: "AfroChain Summit 2025 - Africa's Boldest Web3 & Blockchain Event",
-    description: "Join Africa's boldest Web3 & Blockchain summit in Ethiopia. Two days of hackathons, keynotes, music, partnerships & bold ideas. Register now for AfroChain 2025!",
+    url: 'https://afrochainsummit.com',
+    siteName: 'AfroChain Summit 2026',
+    title: "AfroChain Summit 2026 - Blockchain, AI & Finance in Africa",
+    description:
+      "Join AfroChain Summit 2026 in Ethiopia for actionable conversations and partnerships across Blockchain, AI, and Finance.",
     images: [
       {
         url: '/afrochainwithwhitebg.png',
         width: 1200,
         height: 630,
-        alt: 'AfroChain Summit 2025 - Africa Web3 Blockchain Event',
+        alt: 'AfroChain Summit 2026 - Blockchain, AI and Finance in Africa',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AfroChain Summit 2025 - Africa's Boldest Web3 & Blockchain Event",
-    description: "Join Africa's boldest Web3 & Blockchain summit in Ethiopia. Two days of hackathons, keynotes, music, partnerships & bold ideas. Register now for AfroChain 2025!",
+    title: "AfroChain Summit 2026 - Blockchain, AI & Finance in Africa",
+    description:
+      "Join AfroChain Summit 2026 in Ethiopia for actionable conversations and partnerships across Blockchain, AI, and Finance.",
     images: ['/afrochainwithwhitebg.png'],
     creator: '@afrochain',
     site: '@afrochain',

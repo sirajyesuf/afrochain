@@ -5,27 +5,30 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Exhibitors - AfroChain Summit 2025",
+  title: "Exhibitors - AfroChain Summit 2026",
   description:
-    "Meet the innovators, builders, and organizations exhibiting at AfroChain 2025. Showcase your products, connect with investors, and network with Africa's blockchain community. Register as an exhibitor today!",
+    "Exhibit at AfroChain Summit 2026 and showcase solutions in Blockchain, AI, and Finance to investors, institutions, and builders from across Africa.",
   keywords: [
     "AfroChain exhibitors",
+    "AfroChain Summit 2026 exhibitors",
     "blockchain summit exhibitors",
+    "ai summit exhibitors africa",
+    "fintech summit exhibitors africa",
     "Web3 Africa exhibitors",
     "blockchain conference exhibitors",
     "Ethiopia blockchain exhibitors",
     "register as exhibitor",
   ],
   openGraph: {
-    title: "Exhibitors - AfroChain Summit 2025",
+    title: "Exhibitors - AfroChain Summit 2026",
     description:
-      "Meet the innovators, builders, and organizations exhibiting at AfroChain 2025. Showcase your products, connect with investors, and network with Africa's blockchain community.",
+      "Exhibit at AfroChain Summit 2026 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
     images: ["/web31.png"],
   },
   twitter: {
-    title: "Exhibitors - AfroChain Summit 2025",
+    title: "Exhibitors - AfroChain Summit 2026",
     description:
-      "Meet the innovators, builders, and organizations exhibiting at AfroChain 2025. Showcase your products, connect with investors, and network with Africa's blockchain community.",
+      "Exhibit at AfroChain Summit 2026 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
     images: ["/web31.png"],
   },
 };
