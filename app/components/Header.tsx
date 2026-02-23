@@ -68,17 +68,11 @@ const Header = () => {
             <div className="flex-shrink-0 flex items-center gap-4">
               {/* Date Badge */}
               <div
-                className="flex items-center gap-2 py-1 pr-2.5 pl-2 border-l-2 border-[#dbe900] bg-white/[0.06] rounded-r"
+                className="inline-flex items-center gap-1.5 py-1 pr-2.5 pl-2 border-l-2 border-[#dbe900] bg-white/[0.06] rounded-r text-white text-sm"
                 suppressHydrationWarning
               >
-                <div className="flex flex-col leading-tight">
-                  <span className="text-[10px] font-semibold uppercase tracking-wider text-white/90">
-                    June
-                  </span>
-                  <span className="text-sm font-bold text-white tabular-nums">
-                    2026
-                  </span>
-                </div>
+                <span className="font-semibold uppercase tracking-wider">June</span>
+                <span className="tabular-nums">2026</span>
               </div>
               {/* Logo and Title */}
               <Link
