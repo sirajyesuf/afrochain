@@ -68,10 +68,10 @@ const Header = () => {
             <div className="flex-shrink-0 flex items-center gap-4">
               {/* Date Badge */}
               <div className="text-white text-center" suppressHydrationWarning>
-                <div className="text-2xl font-bold leading-none">04</div>
+                {/* <div className="text-2xl font-bold leading-none">04</div>
                 <div className="text-2xl font-bold leading-none">05</div>
                 <div className="text-xs uppercase tracking-wide">OCT</div>
-                <div className="text-xs">2025</div>
+                <div className="text-xs">2025</div> */}
               </div>
               {/* Logo and Title */}
               <Link
