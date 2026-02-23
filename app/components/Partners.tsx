@@ -54,7 +54,7 @@ export default function PartnersSponsorSection() {
           <div className="space-y-6">
             <div className="space-y-4">
               <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
-                Our Partners
+              Afrochain 2025 Partners
               </p>
               <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
                 Partnering For Positive Change
