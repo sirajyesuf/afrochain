@@ -5,7 +5,7 @@ import { Mail, MapPin, Facebook, Linkedin, Twitter, Send } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState("2025");
+  const [currentYear, setCurrentYear] = useState("2026");
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear().toString());
@@ -112,7 +112,7 @@ export default function Footer() {
             <h4 className="text-xl font-bold text-white mb-5">Connect</h4>
             <div className="flex gap-4 mt-2 mb-8">
               <a
-                href="https://t.me/afrochaineth2025"
+                href="https://t.me/afrochaineth2026"
                 aria-label="Telegram"
                 target="_blank"
                 rel="noopener noreferrer"

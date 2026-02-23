@@ -60,7 +60,7 @@ export default function VenueSection() {
                         Event Dates
                       </p>
                       <p className="text-xl font-bold text-[#245a9a]">
-                        October 04–05, 2025
+                        June, 2026
                       </p>
                     </div>
                   </div>

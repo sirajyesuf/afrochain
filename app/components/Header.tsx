@@ -67,11 +67,18 @@ const Header = () => {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center gap-4">
               {/* Date Badge */}
-              <div className="text-white text-center" suppressHydrationWarning>
-                {/* <div className="text-2xl font-bold leading-none">04</div>
-                <div className="text-2xl font-bold leading-none">05</div>
-                <div className="text-xs uppercase tracking-wide">OCT</div>
-                <div className="text-xs">2025</div> */}
+              <div
+                className="flex items-center gap-2 py-1 pr-2.5 pl-2 border-l-2 border-[#dbe900] bg-white/[0.06] rounded-r"
+                suppressHydrationWarning
+              >
+                <div className="flex flex-col leading-tight">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-white/90">
+                    June
+                  </span>
+                  <span className="text-sm font-bold text-white tabular-nums">
+                    2026
+                  </span>
+                </div>
               </div>
               {/* Logo and Title */}
               <Link
@@ -80,7 +87,7 @@ const Header = () => {
                 className="flex flex-col items-start focus:outline-none"
               >
                 <h1 className="text-white text-2xl font-bold">AFROCHAIN</h1>
-                <div className="text-white text-sm opacity-90">
+                <div className="text-white text-xs opacity-90">
                   ADDIS ABABA, ETHIOPIA
                 </div>
               </Link>

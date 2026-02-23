@@ -71,7 +71,7 @@ export default function SpeakersSection() {
       <div className="container mx-auto px-4">
         {/* Topics Header */}
         <div className="mb-12 lg:mb-16">
-          <p className="text-sm text-[#245a9a] mb-4">— Topics Covered In 2025.</p>
+          <p className="text-sm text-[#245a9a] mb-4">— Topics Covered In 2026.</p>
 
           {/* Horizontal Scrolling Topics */}
           <div className="relative overflow-hidden mb-8">
@@ -102,13 +102,13 @@ export default function SpeakersSection() {
           </div>
 
           <p className="text-lg text-[#245a9a] font-medium">
-            — Network With Game-Changers And Thought Leaders At AfroChain 2025.
+            — Network With Game-Changers And Thought Leaders At AfroChain 2026.
           </p>
         </div>
 
         {/* Featured Speakers */}
         <div className="mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#245a9a] mb-12">Featured Speakers of 2025</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#245a9a] mb-12">Featured Speakers of 2026</h2>
         </div>
 
         {/* Speakers Grid */}

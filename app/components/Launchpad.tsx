@@ -13,7 +13,7 @@ export default function Launchpad() {
             
             <div className="space-y-6">
               <p className="text-[#245a9a]/90 leading-relaxed text-lg max-w-3xl mx-auto">
-                AfroChain 2025 is also the official launchpad for NextChain Ethiopia, a year-round builder ecosystem tour across 15 universities, developer incubators, and policy hubs.
+                AfroChain 2026 is also the official launchpad for NextChain Ethiopia, a year-round builder ecosystem tour across 15 universities, developer incubators, and policy hubs.
               </p>
               <p className="text-[#245a9a] leading-relaxed text-lg font-semibold">
                 You&apos;ll meet the next 10,000 builders right here.
