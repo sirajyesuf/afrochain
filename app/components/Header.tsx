@@ -71,7 +71,7 @@ const Header = () => {
                 className="inline-flex items-center gap-1.5 py-1 pr-2.5 pl-2 border-l-2 border-[#dbe900] bg-white/[0.06] rounded-r text-white text-sm"
                 suppressHydrationWarning
               >
-                <span className="font-semibold uppercase tracking-wider">July</span>
+                <span className="font-semibold uppercase tracking-wider">Sep 17-19,</span>
                 <span className="tabular-nums">2026</span>
               </div>
               {/* Logo and Title */}
