@@ -93,12 +93,20 @@ export default function ContactSection() {
               </div>
               <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Call us</h3>
               <p className="text-[#245a9a]/70 mb-4">Mon-Fri from 8am to 5pm.</p>
-              <button
-                onClick={() => handlePhoneClick("+251911234567")}
-                className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
-              >
-                +251 911 234 567
-              </button>
+              <div className="flex flex-col items-center gap-2">
+                <button
+                  onClick={() => handlePhoneClick("+251913034049")}
+                  className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                >
+                  +251 913 034 049
+                </button>
+                <button
+                  onClick={() => handlePhoneClick("+251911039254")}
+                  className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                >
+                  +251 911 039 254
+                </button>
+              </div>
             </div>
           </div>
         </div>
