@@ -2,134 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-
-const partners = [
-  {
-    name: "Tether",
-    url: "https://tether.to",
-    logo: "/tether.png",
-  },
-  {
-    name: "Sorted Wallet",
-    url: "https://sortedwallet.com",
-    logo: "/sorted.png",
-  },
-  {
-    name: "Project Catalyst",
-    url: "https://projectcatalyst.io",
-    logo: "/projectcatalyst.png",
-  },
-  {
-    name: "MINT",
-    url: "https://mint.gov.et",
-    logo: "/MINT.png",
-  },
-  {
-    name: "Africa Blockchain Institute",
-    url: "https://africablockchaininstitute.org",
-    logo: "/africablockchain.png",
-  },
-  {
-    name: "santa trading plc",
-    url: "https://santatradingplc.com",
-    logo: "/santa.jpeg",
-  },
-  {
-    name: "yeneta blockchain academy",
-    url: "#",
-    logo: "/yeneta.jpeg",
-  },
-  {
-    name: "ethiopianairlines",
-    url: "https://www.ethiopianairlines.com",
-    logo: "/et-logo.png",
-  },
-  {
-    name: "Sputnik Africa",
-    url: "https://en.sputniknews.africa/",
-    logo: "/sputnic-africa.jpg",
-  },
-  {
-    name: "Startup World Cup",
-    url: "https://www.startupworldcup.io/addisababa-ethiopia-2026",
-    logo: "/startupworldcup.png",
-  },
-  {
-    name: "CoinGabbar",
-    url: "https://www.coingabbar.com/",
-    logo: "/coingabbar.png",
-  },
-  {
-    name: "Fintech Armenia",
-    url: "https://fintecharmenia.com/",
-    logo: "/Fintech Armenia Logo_full.png",
-  },
-  {
-    name: "AMB Crypto",
-    url: "https://ambcrypto.com/",
-    logo: "/ambcrypto.jpg",
-  },
-  {
-    name: "Club Satoshi",
-    url: "http://clubsatoshi.io/",
-    logo: "/ClubSatoshi.png",
-  },
-  {
-    name: "Cryip",
-    url: "http://www.cryip.com/",
-    logo: "/CryipLogo.png",
-  },
-  {
-    name: "Women in Blockchain",
-    url: "https://womeninblockchain.africa/",
-    logo: "/womeninblockchain.png",
-  },
-  {
-    name: "Cryptonewsz",
-    url: "https://www.cryptonewsz.com/",
-    logo: "/Cryptonewsz.png",
-  },
-  {
-    name: "Capital Bay",
-    url: "https://www.capitalbay.news/",
-    logo: "/CapitalbayNews.png",
-  },
-  {
-    name: "ICO Holder",
-    url: "https://icoholder.com/",
-    logo: "/ICOHOLDER_LOGO_black.png",
-  },
-  {
-    name: "Times of AI",
-    url: "https://www.timesofai.com/",
-    logo: "/TimesOfAI.png",
-  },
-  {
-    name: "Coinnewsspan",
-    url: "https://www.coinnewsspan.com/",
-    logo: "/Coinnewsspan.png",
-  },
-  {
-    name: "Times of Blockchain",
-    url: "https://www.timesofblockchain.com/",
-    logo: "/TimesofBlockchain.png",
-  },
-  {
-    name: "Blockchain Staffing Ninja",
-    url: "https://www.blockchainstaffingninja.com/",
-    logo: "/BSN.png",
-  },
-  {
-    name: "Blockchain Marketing Ninja",
-    url: "https://www.blockchainmarketingninja.com/",
-    logo: "/BMN.png",
-  },
-  {
-    name: "AI Staffing Ninja",
-    url: "https://www.aistaffingninja.com/",
-    logo: "/AISN.png",
-  },
-];
+import { partners } from "@/app/data/partners";
 
 export default function PartnersSponsorSection() {
   return (
@@ -177,24 +50,39 @@ export default function PartnersSponsorSection() {
         <div className="flex animate-scroll w-max">
           {[0, 1].map((copy) => (
             <div key={copy} className="flex items-center shrink-0">
-              {partners.map((partner) => (
-                <a
-                  key={`${copy}-${partner.name}`}
-                  href={partner.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={partner.name}
-                  className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white hover:border-[#dbe900] hover:shadow-md transition-all duration-300 grayscale opacity-70 hover:grayscale-0 hover:opacity-100"
-                >
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={120}
-                    height={60}
-                    className="object-contain max-h-10 lg:max-h-12"
-                  />
-                </a>
-              ))}
+              {partners.map((partner) => {
+                const tile = (
+                  <>
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={120}
+                      height={60}
+                      className="object-contain max-h-10 lg:max-h-12"
+                    />
+                  </>
+                );
+                return partner.url ? (
+                  <a
+                    key={`${copy}-${partner.name}`}
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={partner.name}
+                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white hover:border-[#dbe900] hover:shadow-md transition-all duration-300 grayscale opacity-70 hover:grayscale-0 hover:opacity-100"
+                  >
+                    {tile}
+                  </a>
+                ) : (
+                  <div
+                    key={`${copy}-${partner.name}`}
+                    title={partner.name}
+                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white grayscale opacity-70"
+                  >
+                    {tile}
+                  </div>
+                );
+              })}
             </div>
           ))}
         </div>

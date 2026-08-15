@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "@/app/components/Header";
-import PartnersSponsorSection from "@/app/components/Partners";
+import PartnersGrid from "@/app/components/PartnersGrid";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
+import { partners } from "@/app/data/partners";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -72,26 +73,50 @@ export default function PartnersPage() {
               Contact Us
             </a>
           </div>
-          <div className="flex flex-row items-center justify-center gap-6 mt-8">
-            <Image
-              src="/keseevents-logo.png"
-              alt="Kese Events Logo - Event Management & Live Streaming"
-              width={80}
-              height={64}
-              className="w-16 h-16 md:w-20 md:h-20 border-2 border-[#245a9a] rounded-lg p-[1px] bg-white"
-            />
-            <Image
-              src="/afrochainwithwhitebg.png"
-              alt="AfroChain Logo - Africa's Web3 Blockchain Summit"
-              width={80}
-              height={64}
-              className="w-16 h-16 md:w-20 md:h-20 border-2 border-[#245a9a] rounded-lg p-[1px] bg-white"
-            />
+          <div className="mt-10">
+            <p className="text-sm font-semibold text-[#dbe900] tracking-wider uppercase mb-4">
+              2026 Partners
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {partners
+                .filter((partner) => partner.year === "2026")
+                .map((partner) => {
+                  const tile = (
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={80}
+                      height={40}
+                      className="object-contain max-h-10 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                    />
+                  );
+                  return partner.url ? (
+                    <a
+                      key={partner.name}
+                      href={partner.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title={partner.name}
+                      className="group flex items-center justify-center w-24 h-14 rounded-lg bg-white p-2 shadow hover:shadow-lg hover:ring-2 hover:ring-[#dbe900] transition-all duration-300"
+                    >
+                      {tile}
+                    </a>
+                  ) : (
+                    <div
+                      key={partner.name}
+                      title={partner.name}
+                      className="group flex items-center justify-center w-24 h-14 rounded-lg bg-white p-2 shadow"
+                    >
+                      {tile}
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </div>
       </section>
       {/* Partners & Sponsors Section */}
-      <PartnersSponsorSection />
+      <PartnersGrid />
       <Footer />
     </>
   );
