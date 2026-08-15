@@ -1,6 +1,7 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
-import { Plus } from "lucide-react";
 
 const partners = [
   {
@@ -43,332 +44,159 @@ const partners = [
     url: "https://www.ethiopianairlines.com",
     logo: "/et-logo.png",
   },
+  {
+    name: "Sputnik Africa",
+    url: "https://en.sputniknews.africa/",
+    logo: "/sputnic-africa.jpg",
+  },
+  {
+    name: "Startup World Cup",
+    url: "https://www.startupworldcup.io/addisababa-ethiopia-2026",
+    logo: "/startupworldcup.png",
+  },
+  {
+    name: "CoinGabbar",
+    url: "https://www.coingabbar.com/",
+    logo: "/coingabbar.png",
+  },
+  {
+    name: "Fintech Armenia",
+    url: "https://fintecharmenia.com/",
+    logo: "/Fintech Armenia Logo_full.png",
+  },
+  {
+    name: "AMB Crypto",
+    url: "https://ambcrypto.com/",
+    logo: "/ambcrypto.jpg",
+  },
+  {
+    name: "Club Satoshi",
+    url: "http://clubsatoshi.io/",
+    logo: "/ClubSatoshi.png",
+  },
+  {
+    name: "Cryip",
+    url: "http://www.cryip.com/",
+    logo: "/CryipLogo.png",
+  },
+  {
+    name: "Women in Blockchain",
+    url: "https://womeninblockchain.africa/",
+    logo: "/womeninblockchain.png",
+  },
+  {
+    name: "Cryptonewsz",
+    url: "https://www.cryptonewsz.com/",
+    logo: "/Cryptonewsz.png",
+  },
+  {
+    name: "Capital Bay",
+    url: "https://www.capitalbay.news/",
+    logo: "/CapitalbayNews.png",
+  },
+  {
+    name: "ICO Holder",
+    url: "https://icoholder.com/",
+    logo: "/ICOHOLDER_LOGO_black.png",
+  },
+  {
+    name: "Times of AI",
+    url: "https://www.timesofai.com/",
+    logo: "/TimesOfAI.png",
+  },
+  {
+    name: "Coinnewsspan",
+    url: "https://www.coinnewsspan.com/",
+    logo: "/Coinnewsspan.png",
+  },
+  {
+    name: "Times of Blockchain",
+    url: "https://www.timesofblockchain.com/",
+    logo: "/TimesofBlockchain.png",
+  },
+  {
+    name: "Blockchain Staffing Ninja",
+    url: "https://www.blockchainstaffingninja.com/",
+    logo: "/BSN.png",
+  },
+  {
+    name: "Blockchain Marketing Ninja",
+    url: "https://www.blockchainmarketingninja.com/",
+    logo: "/BMN.png",
+  },
+  {
+    name: "AI Staffing Ninja",
+    url: "https://www.aistaffingninja.com/",
+    logo: "/AISN.png",
+  },
 ];
 
 export default function PartnersSponsorSection() {
   return (
     <div className="bg-white py-16 lg:py-24">
+      <style jsx>{`
+        @keyframes scroll {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+          100% {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+
+        .animate-scroll {
+          will-change: transform;
+          backface-visibility: hidden;
+          animation: scroll 40s linear infinite;
+        }
+
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* Left Content */}
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
-              Afrochain 2025 Partners
-              </p>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
-                Partnering For Positive Change
-              </h2>
-            </div>
-            <div className="space-y-2">
-              <p className="text-lg text-[#245a9a]/90 leading-relaxed">
-                Empowering Potential Through Collaboration And Innovation.
-              </p>
-              <p className="text-lg text-[#245a9a]/90 leading-relaxed">
-                Join Us To Make A Positive Impact.
-              </p>
-            </div>
-          </div>
+        {/* Header */}
+        <div className="text-center space-y-4 mb-12 lg:mb-16">
+          <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
+            Afrochain 2026 Partners
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
+            Partnering For Positive Change
+          </h2>
+          <p className="text-lg text-[#245a9a]/90 leading-relaxed max-w-2xl mx-auto">
+            Empowering Potential Through Collaboration And Innovation. Join Us
+            To Make A Positive Impact.
+          </p>
+        </div>
+      </div>
 
-          {/* Right Partners Grid */}
-          <div className="grid grid-cols-3 gap-4 lg:gap-6">
-            {/* Row 1 */}
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[0]?.logo}
-                    alt={partners[0]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              {/* Hover Link */}
-              <a
-                href={partners[0]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+      {/* Marquee */}
+      <div className="relative overflow-hidden py-2">
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 lg:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 lg:w-32 bg-gradient-to-l from-white to-transparent z-10" />
+        <div className="flex animate-scroll w-max">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex items-center shrink-0">
+              {partners.map((partner) => (
+                <a
+                  key={`${copy}-${partner.name}`}
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={partner.name}
+                  className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white hover:border-[#dbe900] hover:shadow-md transition-all duration-300 grayscale opacity-70 hover:grayscale-0 hover:opacity-100"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
                   <Image
-                    src={partners[4]?.logo}
-                    alt={partners[4]?.name}
-                    width={100}
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={120}
                     height={60}
-                    className="object-contain max-h-16"
+                    className="object-contain max-h-10 lg:max-h-12"
                   />
-                </div>
-              </div>
-              {/* Hover Link */}
-              <a
-                href={partners[4]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
+                </a>
+              ))}
             </div>
-
-            {/* Row 2 */}
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[1]?.logo}
-                    alt={partners[1]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              {/* Hover Link */}
-              <a
-                href={partners[1]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[2]?.logo}
-                    alt={partners[2]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              {/* Hover Link */}
-              <a
-                href={partners[2]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Santa Trading PLC */}
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[5]?.logo}
-                    alt={partners[5]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              {/* Hover Link */}
-              <a
-                href={partners[5]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Yeneta Blockchain Academy */}
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[6]?.logo}
-                    alt={partners[6]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              {/* Hover Link */}
-              <a
-                href={partners[6]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* Row 3 */}
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[3]?.logo}
-                    alt={partners[3]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              <a
-                href={partners[3]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            <div className="group relative">
-              <div className="bg-white border-2 border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 cursor-pointer rounded-lg">
-                <div className="p-6 lg:p-8 flex items-center justify-center h-24 lg:h-32">
-                  <Image
-                    src={partners[7]?.logo}
-                    alt={partners[7]?.name}
-                    width={100}
-                    height={60}
-                    className="object-contain max-h-16"
-                  />
-                </div>
-              </div>
-              <a
-                href={partners[7]?.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute top-2 right-2 w-8 h-8 bg-[#dbe900] hover:bg-[#dbe900]/80 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg
-                  className="w-4 h-4 text-[#245a9a]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-
-            {/* More Coming Soon Card */}
-            <div className="bg-white border-2 border-dashed border-[#dbe900] hover:border-[#dbe900]/80 hover:shadow-lg transition-all duration-300 rounded-lg">
-              <div className="p-8 lg:p-8 flex flex-col items-center justify-center h-24 lg:h-32 space-y-2">
-                <div className="w-12 h-12  rounded-full flex items-center justify-center">
-                  <div className="text-lg text-[#245a9a]">
-                    <Plus />
-                  </div>
-                </div>
-                <div className="text-sm font-medium text-[#245a9a] text-center">
-                  More Coming Soon
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
