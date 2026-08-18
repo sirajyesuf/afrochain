@@ -43,10 +43,10 @@ export default function ContactSection() {
               <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Chat to sales</h3>
               <p className="text-[#245a9a]/70 mb-4">Speak to our friendly team.</p>
               <button
-                onClick={() => handleEmailClick("sales@afrochain.com")}
+                onClick={() => handleEmailClick("afrochaineth@gmail.com")}
                 className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
               >
-                sales@afrochain.com
+                afrochaineth@gmail.com
               </button>
             </div>
 
@@ -60,10 +60,10 @@ export default function ContactSection() {
               <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Chat to support</h3>
               <p className="text-[#245a9a]/70 mb-4">We&apos;re here to help.</p>
               <button
-                onClick={() => handleEmailClick("support@afrochain.com")}
+                onClick={() => handleEmailClick("info@santatradingplc.com")}
                 className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
               >
-                support@afrochain.com
+                info@santatradingplc.com
               </button>
             </div>
 
