@@ -87,7 +87,7 @@ export default function PartnersPage() {
                       alt={partner.name}
                       width={80}
                       height={40}
-                      className="object-contain max-h-10 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                      className="object-contain max-h-10"
                     />
                   );
                   return partner.url ? (

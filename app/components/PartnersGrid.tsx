@@ -39,7 +39,7 @@ export default function PartnersGrid() {
                   alt={partner.name}
                   width={120}
                   height={60}
-                  className="object-contain max-h-14 lg:max-h-16 grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  className="object-contain max-h-14 lg:max-h-16"
                 />
               </div>
               <p className="mt-3 text-sm font-medium text-[#245a9a] text-center group-hover:text-[#245a9a]/90">
