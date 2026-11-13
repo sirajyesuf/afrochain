@@ -21,7 +21,7 @@ export default function VenueSection() {
           {/* Title */}
           <div className="text-center mb-16">
             <h2 className="text-5xl lg:text-6xl font-bold text-[#245a9a] mb-4">
-              Venue
+              Summit Venue
             </h2>
             <div className="w-24 h-1 bg-[#dbe900] mx-auto rounded-full"></div>
           </div>
@@ -57,10 +57,26 @@ export default function VenueSection() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
-                        Event Dates
+                        Summit Dates
                       </p>
                       <p className="text-xl font-bold text-[#245a9a]">
-                        Sep 17-19, 2026
+                        Mar 25-27, 2027
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
+                      <MapPin className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                        AfroChain Kenya
+                      </p>
+                      <p className="text-xl font-bold text-[#245a9a]">
+                        Apr 6-8, 2027
                       </p>
                     </div>
                   </div>

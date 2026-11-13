@@ -20,13 +20,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AfroChain Summit 2026 - Blockchain, AI & Finance in Africa",
-    template: "%s | AfroChain Summit 2026"
+    default: "AfroChain 2026–2027 - Blockchain, AI & Finance in Africa",
+    template: "%s | AfroChain 2026–2027"
   },
   description:
-    "Join AfroChain Summit 2026 in Ethiopia for actionable conversations and partnerships across Blockchain, AI, and Finance. Connect with builders, institutions, policymakers, and investors shaping Africa's digital economy.",
+    "AfroChain 2026–2027 is a four-event season across Africa: Executive Forum (Nov 2026), Investment Forum (Dec 2026), AfroChain Summit (Mar 2027), and AfroChain Kenya (Apr 2027). Connect with builders, institutions, policymakers, and investors shaping Africa's digital economy.",
   keywords: [
-    "afrochain summit 2026",
+    "afrochain 2026 2027",
+    "afrochain executive forum",
+    "afrochain investment forum",
+    "afrochain summit 2027",
+    "afrochain kenya",
     "blockchain summit africa",
     "ai summit africa",
     "fintech summit africa",
@@ -53,24 +57,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://afrochainsummit.com',
-    siteName: 'AfroChain Summit 2026',
-    title: "AfroChain Summit 2026 - Blockchain, AI & Finance in Africa",
+    siteName: 'AfroChain 2026–2027',
+    title: "AfroChain 2026–2027 - Blockchain, AI & Finance in Africa",
     description:
-      "Join AfroChain Summit 2026 in Ethiopia for actionable conversations and partnerships across Blockchain, AI, and Finance.",
+      "Four events. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official AfroChain 2026–2027 roadmap.",
     images: [
       {
         url: '/afrochainwithwhitebg.png',
         width: 1200,
         height: 630,
-        alt: 'AfroChain Summit 2026 - Blockchain, AI and Finance in Africa',
+        alt: 'AfroChain 2026–2027 - Blockchain, AI and Finance in Africa',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AfroChain Summit 2026 - Blockchain, AI & Finance in Africa",
+    title: "AfroChain 2026–2027 - Blockchain, AI & Finance in Africa",
     description:
-      "Join AfroChain Summit 2026 in Ethiopia for actionable conversations and partnerships across Blockchain, AI, and Finance.",
+      "Four events. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official AfroChain 2026–2027 roadmap.",
     images: ['/afrochainwithwhitebg.png'],
     creator: '@afrochain',
     site: '@afrochain',
@@ -164,7 +168,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <main>
+        <main id="main-content">
           {children}
         </main>
       </body>

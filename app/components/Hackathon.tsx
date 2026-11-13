@@ -11,7 +11,7 @@ const Hackathon = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
             <div className="lg:col-span-3">
               <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#245a9a]/75">
-                Program
+                Program &middot; AfroChain Summit
               </p>
               <h2
                 id="hackathon-title"
@@ -19,6 +19,9 @@ const Hackathon = () => {
               >
                 AfroChain Hackathon
               </h2>
+              <p className="mt-3 inline-flex max-w-full items-center rounded-2xl border border-[#245a9a]/25 bg-[#f6f9ff] px-4 py-2 text-center text-sm font-semibold text-[#245a9a] sm:rounded-full">
+                March 25&ndash;27, 2027 &middot; Addis Ababa
+              </p>
               <p className="mt-5 text-base md:text-lg text-[#245a9a]/90 leading-relaxed max-w-3xl">
                 A high-intensity builder sprint for teams delivering practical
                 blockchain and Web3 solutions aligned with digital economy

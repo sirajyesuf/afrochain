@@ -44,7 +44,7 @@ export default function NextChainHub() {
     <section
       id="nextchain-hub"
       aria-labelledby="nextchain-hub-title"
-      className="bg-[#f6f9ff] py-16 lg:py-24 scroll-mt-28"
+      className="bg-[#f6f9ff] py-16 lg:py-24 scroll-mt-8"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">

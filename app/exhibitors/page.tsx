@@ -1,16 +1,15 @@
-import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
 import Image from "next/image";
 import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Exhibitors - AfroChain Summit 2026",
+  title: "Exhibitors - AfroChain 2026–2027",
   description:
-    "Exhibit at AfroChain Summit 2026 and showcase solutions in Blockchain, AI, and Finance to investors, institutions, and builders from across Africa.",
+    "Exhibit at AfroChain 2026–2027 and showcase solutions in Blockchain, AI, and Finance to investors, institutions, and builders from across Africa.",
   keywords: [
     "AfroChain exhibitors",
-    "AfroChain Summit 2026 exhibitors",
+    "AfroChain 2026–2027 exhibitors",
     "blockchain summit exhibitors",
     "ai summit exhibitors africa",
     "fintech summit exhibitors africa",
@@ -20,15 +19,15 @@ export const metadata: Metadata = {
     "register as exhibitor",
   ],
   openGraph: {
-    title: "Exhibitors - AfroChain Summit 2026",
+    title: "Exhibitors - AfroChain 2026–2027",
     description:
-      "Exhibit at AfroChain Summit 2026 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
+      "Exhibit at AfroChain 2026–2027 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
     images: ["/web31.png"],
   },
   twitter: {
-    title: "Exhibitors - AfroChain Summit 2026",
+    title: "Exhibitors - AfroChain 2026–2027",
     description:
-      "Exhibit at AfroChain Summit 2026 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
+      "Exhibit at AfroChain 2026–2027 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
     images: ["/web31.png"],
   },
 };
@@ -36,7 +35,6 @@ export const metadata: Metadata = {
 export default function ExhibitorsPage() {
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-black flex flex-col">
         {/* Hero Section */}
         <section

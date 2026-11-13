@@ -2,16 +2,15 @@ import Image from 'next/image';
 import { Metadata } from 'next';
 import AboutUs from '@/app/components/AboutUs';
 import FAQ from '@/app/components/FAQ';
-import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 
 export const metadata: Metadata = {
-  title: "About AfroChain Summit 2026",
+  title: "About AfroChain 2026–2027",
   description:
-    "Learn the mission behind AfroChain Summit 2026 and how we are connecting Blockchain, AI, and Finance leaders to accelerate practical innovation across Ethiopia and Africa.",
+    "Learn the mission behind AfroChain 2026–2027 and how we are connecting Blockchain, AI, and Finance leaders to accelerate practical innovation across Ethiopia and Africa.",
   keywords: [
     "AfroChain about",
-    "afrochain summit 2026",
+    "afrochain 2026 2027",
     "blockchain summit mission",
     "ai and finance innovation africa",
     "Kese Events",
@@ -19,15 +18,15 @@ export const metadata: Metadata = {
     "Africa Web3 community",
   ],
   openGraph: {
-    title: "About AfroChain Summit 2026",
+    title: "About AfroChain 2026–2027",
     description:
-      "Learn the mission behind AfroChain Summit 2026 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
+      "Learn the mission behind AfroChain 2026–2027 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
     images: ['/5.jpg'],
   },
   twitter: {
-    title: "About AfroChain Summit 2026",
+    title: "About AfroChain 2026–2027",
     description:
-      "Learn the mission behind AfroChain Summit 2026 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
+      "Learn the mission behind AfroChain 2026–2027 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
     images: ['/5.jpg'],
   },
 };
@@ -35,7 +34,6 @@ export const metadata: Metadata = {
 export default function AboutUsPage() {
   return (
     <>
-      <Header />
       {/* Redesigned Full-Screen Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden" aria-label="About AfroChain Hero">
         {/* Background Image */}

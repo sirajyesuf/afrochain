@@ -61,7 +61,7 @@ export default function FAQ() {
           <Badge variant="secondary" className="mb-4 text-sm font-medium">
             Web3 & Blockchain
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Frequently Asked Questions</h1>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about Web3, blockchain technology, and the decentralized future
           </p>

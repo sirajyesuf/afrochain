@@ -1,11 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ExternalLink } from "lucide-react";
+import { SEASON } from "@/app/data/events";
 
 const Hero = () => {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      aria-label="AfroChain 2026 Hero"
+      aria-label="AfroChain 2026-2027 Season Hero"
     >
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,8 +24,11 @@ const Hero = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:pt-28">
         <div className="max-w-5xl">
-          <p className="inline-flex items-center rounded-full border border-white/40 bg-white/10 px-4 py-2 text-xs sm:text-sm font-semibold tracking-[0.16em] text-white/95 uppercase">
-            AfroChain 2026 | Sep 17-19, 2026 | Addis Ababa, Ethiopia
+          <p className="inline-flex max-w-full items-center rounded-2xl border border-white/40 bg-white/10 px-4 py-2 text-xs sm:text-sm font-semibold tracking-[0.16em] text-white/95 uppercase sm:rounded-full">
+            AfroChain {SEASON.displayLabel} Season
+            <span className="hidden sm:inline">
+              {" "}| 4 Events | Addis Ababa &amp; Kenya
+            </span>
           </p>
 
           <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight drop-shadow-lg">
@@ -32,9 +37,14 @@ const Hero = () => {
           </h1>
 
           <p className="mt-6 text-base sm:text-lg md:text-xl text-white/90 font-light tracking-wide max-w-4xl">
-            AfroChain 2026 is an independent platform connecting policymakers,
-            infrastructure builders, investors, and global institutions to
-            Ethiopia&apos;s next phase of digital and financial modernization.
+            AfroChain {SEASON.displayLabel} is a four-event season connecting
+            policymakers, infrastructure builders, investors, and global
+            institutions to Ethiopia&apos;s next phase of digital and financial
+            modernization.
+          </p>
+
+          <p className="mt-4 text-sm sm:text-base font-semibold tracking-[0.12em] text-[#dbe900] uppercase">
+            {SEASON.strapline}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -42,13 +52,13 @@ const Hero = () => {
               href="#blockchain"
               className="rounded-full border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white hover:text-[#245a9a] transition-colors duration-200"
             >
-              Blockchain
+            AI
             </a>
             <a
               href="#ai"
               className="rounded-full border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white hover:text-[#245a9a] transition-colors duration-200"
             >
-              Artificial Intelligence
+              Blockchain
             </a>
             <a
               href="#finance"
@@ -58,25 +68,14 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="mt-8 flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
-            <a
-              href="https://forms.gle/vrpvDxoufARBNnPLA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a] inline-flex items-center gap-2"
-              aria-label="Join AfroChain 2026"
-            >
-              Join AfroChain 2026
-              <ExternalLink className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <a
+          <div className="mt-8 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-start sm:gap-3">
+            <Link
               href="/partners"
-              className="bg-transparent text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-lg border-2 border-white transition-colors duration-200 text-sm sm:text-base hover:bg-white hover:text-[#245a9a] inline-flex items-center gap-2"
-              aria-label="Partner with AfroChain"
+              className="bg-transparent text-white font-bold py-2.5 px-5 rounded-lg border-2 border-white transition-colors duration-200 text-sm hover:bg-white hover:text-[#245a9a] inline-flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dbe900]"
             >
               Partner with AfroChain
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

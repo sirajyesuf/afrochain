@@ -1,5 +1,5 @@
-import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
+import Roadmap from '@/app/components/Roadmap';
 import Pillars from '@/app/components/Pillars';
 import MarketEntryCapital from '@/app/components/MarketEntryCapital';
 import AboutUs from '@/app/components/AboutUs';
@@ -13,8 +13,8 @@ import Footer from '@/app/components/Footer';
 export default function HomePage() {
   return (
     <>
-      <Header />
       <Hero />
+      <Roadmap />
       <Pillars />
       <MarketEntryCapital />
       {/* <Stats /> */}

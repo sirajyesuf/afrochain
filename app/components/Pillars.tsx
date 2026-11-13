@@ -21,7 +21,7 @@ const pillars: Pillar[] = [
     id: "blockchain",
     title: "Blockchain",
     overview:
-      "Blockchain is a foundational layer for transparency, financial modernization, and digital infrastructure in emerging markets. AfroChain 2026 focuses on practical blockchain applications aligned with national development priorities.",
+      "Blockchain is a foundational layer for transparency, financial modernization, and digital infrastructure in emerging markets. AfroChain 2026–2027 focuses on practical blockchain applications aligned with national development priorities.",
     subtopics: [
       "Digital Identity & Infrastructure",
       "On-chain Financial Systems",
@@ -107,7 +107,7 @@ const pillars: Pillar[] = [
     id: "finance",
     title: "Finance",
     overview:
-      "Finance is the bridge between infrastructure and growth. With Ethiopia's recent forex reforms and financial modernization efforts, AfroChain 2026 creates structured space for cross-border capital and fintech engagement.",
+      "Finance is the bridge between infrastructure and growth. With Ethiopia's recent forex reforms and financial modernization efforts, AfroChain 2026–2027 creates structured space for cross-border capital and fintech engagement.",
     subtopics: [
       "Digital Finance & Fintech Innovation",
       "Foreign Exchange Reform Insights",
@@ -159,12 +159,12 @@ export default function Pillars() {
   return (
     <section
       className="bg-[#f6f9ff] py-16 lg:py-24"
-      aria-label="AfroChain 2026 Strategic Pillars"
+      aria-label="AfroChain Summit Strategic Tracks"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-14">
           <p className="text-sm font-semibold tracking-widest text-[#245a9a]/80 uppercase">
-            AfroChain 2026 Pillars
+            Summit Program Tracks
           </p>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#245a9a]">
             Blockchain, AI, and Finance
@@ -172,6 +172,10 @@ export default function Pillars() {
           <p className="mt-4 text-base md:text-lg text-[#245a9a]/85">
             Each track is built for practical execution, institutional
             collaboration, and market-ready outcomes across Ethiopia and Africa.
+          </p>
+          <p className="mt-4 inline-flex max-w-full items-center rounded-2xl border border-[#245a9a]/25 bg-white px-4 py-2 text-center text-sm font-semibold text-[#245a9a] sm:rounded-full">
+            Tracks run at AfroChain Summit &middot; March 25&ndash;27, 2027 &middot;
+            Addis Ababa
           </p>
         </div>
 
@@ -181,7 +185,7 @@ export default function Pillars() {
               id={pillar.id}
               key={pillar.id}
               aria-labelledby={`${pillar.id}-title`}
-              className="scroll-mt-28 rounded-2xl border border-[#245a9a]/20 bg-white p-6 md:p-8 lg:p-10"
+              className="scroll-mt-8 rounded-2xl border border-[#245a9a]/20 bg-white p-6 md:p-8 lg:p-10"
             >
               <div>
                 <p className="text-sm font-semibold text-[#245a9a]/70 uppercase tracking-wider">
@@ -198,7 +202,7 @@ export default function Pillars() {
                 </p>
                 {pillar.id === "ai" && (
                   <p className="mt-4 inline-flex rounded-full border border-[#245a9a]/25 bg-[#f6f9ff] px-4 py-2 text-sm font-semibold text-[#245a9a]">
-                    AfroChain 2026 positions AI not as hype - but as
+                    AfroChain 2026–2027 positions AI not as hype - but as
                     infrastructure.
                   </p>
                 )}

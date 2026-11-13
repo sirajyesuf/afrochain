@@ -24,9 +24,10 @@ export default function Footer() {
                 </h3>
               </Link>
               <p className="text-white text-base leading-relaxed max-w-md font-medium">
-                The premier blockchain and Web3 conference in East Africa,
-                bringing together innovators, developers, and thought leaders to
-                shape the future of decentralized technology.
+                AfroChain is a year-round platform for blockchain, AI, and
+                finance across Africa &mdash; a four-event season running from
+                closed institutional forums in Addis Ababa to a regional summit
+                across East Africa.
               </p>
             </div>
             {/* Contact Info */}
@@ -49,6 +50,14 @@ export default function Footer() {
           <div>
             <h4 className="text-xl font-bold text-white mb-5">Quick Links</h4>
             <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/events"
+                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                >
+                  Events Roadmap
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/aboutus"

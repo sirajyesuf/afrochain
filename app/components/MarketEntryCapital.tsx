@@ -25,7 +25,7 @@ export default function MarketEntryCapital() {
     event.preventDefault();
 
     const subject = encodeURIComponent(
-      "Market Entry Briefing Request - AfroChain 2026",
+      "Investment Forum Briefing Request - AfroChain 2026-2027",
     );
     const body = encodeURIComponent(
       `Company Name: ${form.companyName}
@@ -40,15 +40,15 @@ Email: ${form.email}`,
 
   return (
     <section
-      id="market-entry-capital"
-      className="bg-white py-16 lg:py-24 scroll-mt-28"
+      id="investment-forum"
+      className="bg-white py-16 lg:py-24 scroll-mt-8"
       aria-labelledby="market-entry-capital-title"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-4xl">
             <p className="text-sm font-semibold tracking-widest text-[#245a9a]/80 uppercase">
-              Ethiopia Market Entry and Capital Forum
+              AfroChain Investment Forum &middot; Dec 17&ndash;18, 2026
             </p>
             <h2
               id="market-entry-capital-title"
@@ -57,9 +57,12 @@ Email: ${form.email}`,
               Structured Access to Ethiopia&apos;s Evolving Digital Economy
             </h2>
             <p className="mt-5 text-base md:text-lg text-[#245a9a]/90 leading-relaxed">
-              AfroChain 2026 includes a dedicated institutional platform for
-              international organizations exploring market entry, capital
-              deployment, and strategic partnerships in Ethiopia.
+              The AfroChain Investment Forum is a dedicated institutional
+              platform for international organizations exploring market entry,
+              capital deployment, and strategic partnerships in Ethiopia.
+            </p>
+            <p className="mt-4 inline-flex max-w-full items-center gap-2 rounded-2xl border border-[#245a9a]/30 bg-[#f6f9ff] px-4 py-2 text-center text-sm font-semibold text-[#245a9a] sm:rounded-full">
+              Closed / Invite Only &middot; Addis Ababa, Ethiopia
             </p>
           </div>
 
@@ -119,7 +122,7 @@ Email: ${form.email}`,
 
           <div className="mt-10 rounded-2xl border border-[#245a9a]/20 bg-white p-6 lg:p-8">
             <h3 className="text-2xl font-bold text-[#245a9a]">
-              Request Institutional Briefing
+              Request an Investment Forum Briefing
             </h3>
             <p className="mt-2 text-[#245a9a]/80">
               Submit your details to initiate an institutional briefing with the
@@ -236,7 +239,7 @@ Email: ${form.email}`,
                   type="submit"
                   className="inline-flex items-center justify-center rounded-lg bg-[#245a9a] px-6 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678]"
                 >
-                  Request Institutional Briefing
+                  Request an Investment Forum Briefing
                 </button>
               </div>
             </form>

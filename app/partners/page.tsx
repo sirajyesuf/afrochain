@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "@/app/components/Header";
 import PartnersGrid from "@/app/components/PartnersGrid";
 import Image from "next/image";
 import Footer from "@/app/components/Footer";
@@ -7,12 +6,12 @@ import { partners } from "@/app/data/partners";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Partners & Sponsors - AfroChain Summit 2026",
+  title: "Partners & Sponsors - AfroChain 2026–2027",
   description:
-    "Partner with AfroChain Summit 2026 and collaborate with organizations advancing Blockchain, AI, and Finance across Ethiopia and Africa.",
+    "Partner with AfroChain 2026–2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Ethiopia and Africa.",
   keywords: [
     "AfroChain partners",
-    "AfroChain Summit 2026 sponsors",
+    "AfroChain 2026–2027 sponsors",
     "blockchain summit sponsors",
     "ai summit partners africa",
     "finance innovation partners africa",
@@ -22,15 +21,15 @@ export const metadata: Metadata = {
     "become a sponsor",
   ],
   openGraph: {
-    title: "Partners & Sponsors - AfroChain Summit 2026",
+    title: "Partners & Sponsors - AfroChain 2026–2027",
     description:
-      "Partner with AfroChain Summit 2026 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
+      "Partner with AfroChain 2026–2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
     images: ["/keseevents-logo.png", "/afrochainwithwhitebg.png"],
   },
   twitter: {
-    title: "Partners & Sponsors - AfroChain Summit 2026",
+    title: "Partners & Sponsors - AfroChain 2026–2027",
     description:
-      "Partner with AfroChain Summit 2026 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
+      "Partner with AfroChain 2026–2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
     images: ["/keseevents-logo.png", "/afrochainwithwhitebg.png"],
   },
 };
@@ -38,7 +37,6 @@ export const metadata: Metadata = {
 export default function PartnersPage() {
   return (
     <>
-      <Header />
       {/* Hero Section for Partners Page */}
       <section
         className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]"

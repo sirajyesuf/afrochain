@@ -1,16 +1,15 @@
-import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
 import React from 'react';
 import ContactSection from '@/app/components/ContactSection';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact AfroChain Summit 2026",
+  title: "Contact AfroChain 2026–2027",
   description:
-    "Contact the AfroChain Summit 2026 team for partnerships, speaking, exhibiting, and collaboration opportunities across Blockchain, AI, and Finance.",
+    "Contact the AfroChain 2026–2027 team for partnerships, speaking, exhibiting, and collaboration opportunities across Blockchain, AI, and Finance.",
   keywords: [
     "contact AfroChain",
-    "afrochain summit 2026 contact",
+    "afrochain 2026 2027 contact",
     "blockchain summit contact",
     "ai summit africa contact",
     "Web3 Africa contact",
@@ -19,21 +18,20 @@ export const metadata: Metadata = {
     "blockchain conference inquiry",
   ],
   openGraph: {
-    title: "Contact AfroChain Summit 2026",
+    title: "Contact AfroChain 2026–2027",
     description:
-      "Contact the AfroChain Summit 2026 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
+      "Contact the AfroChain 2026–2027 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
   },
   twitter: {
-    title: "Contact AfroChain Summit 2026",
+    title: "Contact AfroChain 2026–2027",
     description:
-      "Contact the AfroChain Summit 2026 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
+      "Contact the AfroChain 2026–2027 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
   },
 };
 
 export default function ContactUsPage() {
   return (
     <>
-      <Header />
       <main className="min-h-screen bg-white flex flex-col">
         {/* Hero Section */}
         <section className="relative flex items-center justify-center min-h-[60vh] w-full overflow-hidden bg-gradient-to-br from-[#245a9a] via-[#245a9a]/90 to-[#245a9a]/80" aria-label="Contact Hero">

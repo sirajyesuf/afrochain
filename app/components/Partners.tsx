@@ -31,7 +31,7 @@ export default function PartnersSponsorSection() {
         {/* Header */}
         <div className="text-center space-y-4 mb-12 lg:mb-16">
           <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
-            Afrochain 2026 Partners
+            Afrochain 2026–2027 Partners
           </p>
           <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
             Partnering For Positive Change

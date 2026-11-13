@@ -1,260 +1,341 @@
 "use client";
 
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ChevronDown, Menu, X } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
-import Link from "next/link";
 
-const Header = () => {
+type NavItem = {
+  name: string;
+  href?: string;
+  submenu?: { name: string; href: string }[];
+};
+
+const navigation: NavItem[] = [
+  { name: "About Us", href: "/aboutus" },
+  {
+    name: "Programs",
+    submenu: [
+      { name: "Events Roadmap", href: "#roadmap" },
+      { name: "All Events & Dates", href: "/events" },
+      { name: "Hackathon", href: "#hackathon" },
+      { name: "Launchpad", href: "#launchpad" },
+      { name: "Speakers", href: "#speakers" },
+      { name: "Venue", href: "#venue" },
+    ],
+  },
+  {
+    name: "Partners",
+    submenu: [
+      { name: "Partners & Sponsors", href: "/partners" },
+      { name: "Exhibitors", href: "/exhibitors" },
+    ],
+  },
+  { name: "Contact us", href: "/contactus" },
+];
+
+const focusRing =
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dbe900]";
+
+/** Anchor links stay on the homepage; full paths open their own route. */
+function hrefFor(href: string, pathname: string) {
+  if (!href.startsWith("#")) return href;
+  return pathname === "/" ? href : `/${href}`;
+}
+
+export default function Header() {
+  const pathname = usePathname() ?? "/";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname =
-    typeof window !== "undefined" ? window.location.pathname : "";
+  const [openSection, setOpenSection] = useState<string | null>(null);
 
-  const navigation = [
-    { name: "About Us", href: "/aboutus" },
-    {
-      name: "Programs",
-      hasDropdown: true,
-      submenu: [
-        { name: "Hackathon", href: "#hackathon" },
-        { name: "Launchpad", href: "#launchpad" },
-        { name: "Speakers", href: "#speakers" },
-        { name: "Venue", href: "#venue" },
-      ],
-    },
-    {
-      name: "Partners",
-      hasDropdown: true,
-      submenu: [
-        { name: "Partners & Sponsors", href: "/partners" },
-        { name: "Exhibitors", href: "/exhibitors" },
-      ],
-    },
-    { name: "Contact us", href: "/contactus" },
-  ];
-
-  // Helper to render submenu links for Programs
-  const renderProgramLink = (sub: { name: string; href: string }) => {
-    // If on homepage, use anchor; else, use Link to homepage with hash
-    if (pathname === "/" || pathname === "") {
-      return (
-        <a href={sub.href} className="w-full">
-          {sub.name}
-        </a>
-      );
-    } else {
-      return (
-        <Link
-          href={`/#${String(sub.href).replace("#", "")}`}
-          scroll={true}
-          className="w-full"
-        >
-          {sub.name}
-        </Link>
-      );
-    }
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setOpenSection(null);
   };
 
-  return (
-    <header className="absolute w-full z-50 bg-transparent">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-6">
-          <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center gap-4">
-              {/* Date Badge */}
-              <div
-                className="inline-flex items-center gap-1.5 py-1 pr-2.5 pl-2 border-l-2 border-[#dbe900] bg-white/[0.06] rounded-r text-white text-sm"
-                suppressHydrationWarning
-              >
-                <span className="font-semibold uppercase tracking-wider">Sep 17-19,</span>
-                <span className="tabular-nums">2026</span>
-              </div>
-              {/* Logo and Title */}
-              <Link
-                href="/"
-                scroll={true}
-                className="flex flex-col items-start focus:outline-none"
-              >
-                <h1 className="text-white text-2xl font-bold">AFROCHAIN</h1>
-                <div className="text-white text-xs opacity-90">
-                  ADDIS ABABA, ETHIOPIA
-                </div>
-              </Link>
-            </div>
-          </div>
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+  // Escape closes and the page scroll is locked while the menu is open.
+  // No inert/focus juggling - the overlay owns its own close button, which
+  // keeps the interaction working identically on every device.
+  useEffect(() => {
+    if (!isMenuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeMenu();
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMenuOpen]);
+
+  const isCurrent = (href?: string) =>
+    !href ? false : href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const isSectionActive = (item: NavItem) =>
+    item.submenu?.some((sub) => isCurrent(sub.href)) ?? false;
+
+  return (
+    <header
+      className="absolute inset-x-0 top-0 z-50 bg-transparent"
+    >
+      <nav
+        aria-label="Main"
+        className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+      >
+        <div className="flex items-center justify-between py-5 lg:py-6">
+          <Link
+            href="/"
+            scroll={true}
+            className={`flex flex-col items-start rounded-sm ${focusRing} focus-visible:outline-offset-4`}
+          >
+            <span className="text-sm font-bold leading-tight tracking-wide text-white">
+              AFROCHAIN
+            </span>
+            <span className="text-[10px] leading-tight tracking-wide text-white/90">
+              ADDIS ABABA, ETHIOPIA
+            </span>
+          </Link>
+
+          {/* Desktop navigation */}
+          <div className="hidden items-center gap-7 lg:flex">
             {navigation.map((item) => {
-              if (item.hasDropdown && item.submenu) {
+              const active = item.submenu
+                ? isSectionActive(item)
+                : isCurrent(item.href);
+
+              if (item.submenu) {
                 return (
                   <DropdownMenu key={item.name}>
                     <DropdownMenuTrigger asChild>
-                      <span className="text-white hover:text-[#dbe900] px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1 cursor-pointer">
+                      <span
+                        className={`group flex cursor-pointer items-center gap-1 rounded-sm px-2 py-1.5 text-sm font-normal transition-colors duration-300 hover:text-[#dbe900] ${focusRing} ${
+                          active ? "text-[#dbe900]" : "text-white/85"
+                        }`}
+                      >
                         {item.name}
-                        <svg
-                          className="w-4 h-4 ml-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 9l-7 7-7-7"
-                          />
-                        </svg>
+                        <ChevronDown
+                          className="h-3.5 w-3.5 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                          aria-hidden="true"
+                        />
                       </span>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="start" className="w-56">
-                      {item.name === "Programs"
-                        ? item.submenu.map((sub) => (
-                            <DropdownMenuItem asChild key={sub.name}>
-                              {renderProgramLink(sub)}
-                            </DropdownMenuItem>
-                          ))
-                        : item.submenu.map((sub) => (
+                      {item.name === "Programs" ? (
+                        <>
+                          {item.submenu.slice(0, 2).map((sub) => (
                             <DropdownMenuItem asChild key={sub.name}>
                               <Link
-                                href={sub.href}
+                                href={hrefFor(sub.href, pathname)}
                                 scroll={true}
-                                className="w-full"
+                                className={`w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#245a9a] ${focusRing}`}
                               >
                                 {sub.name}
                               </Link>
                             </DropdownMenuItem>
                           ))}
+                          <DropdownMenuSeparator />
+                          {item.submenu.slice(2).map((sub) => (
+                            <DropdownMenuItem asChild key={sub.name}>
+                              <Link
+                                href={hrefFor(sub.href, pathname)}
+                                scroll={true}
+                                className="w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#245a9a]"
+                              >
+                                {sub.name}
+                              </Link>
+                            </DropdownMenuItem>
+                          ))}
+                        </>
+                      ) : (
+                        item.submenu.map((sub) => (
+                          <DropdownMenuItem asChild key={sub.name}>
+                            <Link
+                              href={sub.href}
+                              scroll={true}
+                              className="w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#245a9a]"
+                            >
+                              {sub.name}
+                            </Link>
+                          </DropdownMenuItem>
+                        ))
+                      )}
                     </DropdownMenuContent>
                   </DropdownMenu>
                 );
-              } else {
-                return (
-                  <div key={item.name} className="relative group">
-                    <Link
-                      href={item.href || "/"}
-                      scroll={true}
-                      className="text-white hover:text-[#dbe900] px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1"
-                    >
-                      {item.name}
-                    </Link>
-                  </div>
-                );
               }
+
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href ?? "/"}
+                  scroll={true}
+                  aria-current={active ? "page" : undefined}
+                  className={`rounded-sm px-2 py-1.5 text-sm font-normal transition-colors duration-300 hover:text-[#dbe900] ${focusRing} ${
+                    active ? "text-[#dbe900]" : "text-white/85"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
             })}
-            {/* CTA Button */}
+
             <a
               href="https://forms.gle/vrpvDxoufARBNnPLA"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-transparent text-white px-6 py-2 rounded text-sm font-medium transition-colors duration-300 border-2 border-white hover:bg-white hover:text-[#245a9a]"
+              className={`rounded-lg border-2 border-white bg-transparent px-5 py-2.5 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-[#245a9a] ${focusRing}`}
             >
               Register for Event
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white p-2"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile menu toggle */}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            className={`-mr-2 rounded-sm p-2 text-white relative z-[60] lg:hidden ${focusRing}`}
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <Menu className="h-6 w-6" aria-hidden="true" />
+            )}
+          </button>
         </div>
+      </nav>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden">
-            <div className="fixed inset-0 z-50 bg-black/80 flex flex-col justify-center items-center">
+      {/* Mobile navigation - portaled to <body> so `fixed` always covers the
+          viewport. Ancestor styles (e.g. backdrop blur) turn the header into a
+          containing block, which would clip a child overlay to the nav bar. */}
+      {isMenuOpen &&
+        createPortal(
+          <div
+            id="mobile-menu"
+            className="fixed inset-0 z-[100] bg-black/90 lg:hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Main menu"
+          >
+          <div className="flex h-full flex-col overflow-y-auto overscroll-contain">
+            {/* Close button lives inside the overlay - self-contained, always on top. */}
+            <div className="flex justify-end px-4 pt-4">
               <button
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute top-6 right-6 text-white p-2 z-50"
+                type="button"
+                onClick={closeMenu}
                 aria-label="Close menu"
+                className={`rounded-full border border-white/20 bg-white/5 p-2.5 text-white/90 transition-colors duration-200 hover:bg-white/10 hover:text-white ${focusRing}`}
               >
-                <X size={32} />
+                <X className="h-6 w-6" aria-hidden="true" />
               </button>
-              <div className="w-full max-w-xs mx-auto px-4 py-8 space-y-4">
+            </div>
+
+            <nav aria-label="Mobile" className="mx-auto w-full max-w-xs px-4 pb-10 pt-4">
+              <ul className="space-y-1">
                 {navigation.map((item) => {
-                  if (item.hasDropdown && item.submenu) {
+                  if (item.submenu) {
+                    const isOpen = openSection === item.name;
+                    const panelId = `mobile-submenu-${item.name
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`;
+
                     return (
-                      <DropdownMenu key={item.name}>
-                        <DropdownMenuTrigger asChild>
-                          <span className="block px-3 py-4 text-white text-lg font-semibold text-center hover:text-[#dbe900] transition-colors duration-300 rounded cursor-pointer">
-                            {item.name}
-                            <svg
-                              className="w-4 h-4 ml-1 inline"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          </span>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="start" className="w-56">
-                          {item.name === "Programs"
-                            ? item.submenu.map((sub) => (
-                                <DropdownMenuItem asChild key={sub.name}>
-                                  {renderProgramLink(sub)}
-                                </DropdownMenuItem>
-                              ))
-                            : item.submenu.map((sub) => (
-                                <DropdownMenuItem asChild key={sub.name}>
-                                  <Link
-                                    href={sub.href || ""}
-                                    scroll={true}
-                                    className="w-full"
-                                  >
-                                    {sub.name}
-                                  </Link>
-                                </DropdownMenuItem>
-                              ))}
-                        </DropdownMenuContent>
-                      </DropdownMenu>
-                    );
-                  } else {
-                    return (
-                      <div key={item.name} className="w-full">
-                        <Link
-                          href={item.href || "/"}
-                          scroll={true}
-                          className="block px-3 py-4 text-white text-lg font-semibold text-center hover:text-[#dbe900] transition-colors duration-300 rounded"
-                          onClick={() => setIsMenuOpen(false)}
+                      <li key={item.name}>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setOpenSection(isOpen ? null : item.name)
+                          }
+                          aria-expanded={isOpen}
+                          aria-controls={panelId}
+                          className={`flex w-full items-center justify-between rounded-lg px-3 py-4 text-left text-lg font-normal text-white/90 transition-colors duration-300 hover:text-[#dbe900] ${focusRing}`}
                         >
                           {item.name}
-                        </Link>
-                      </div>
+                          <ChevronDown
+                            className={`h-4 w-4 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] ${
+                              isOpen ? "rotate-180" : ""
+                            }`}
+                            aria-hidden="true"
+                          />
+                        </button>
+
+                        <div
+                          id={panelId}
+                          hidden={!isOpen}
+                          className="pb-1"
+                        >
+                          <ul className="ml-4 space-y-0.5 border-l-2 border-[#dbe900]/40 pl-3">
+                            {item.submenu.map((sub) => (
+                              <li key={sub.name}>
+                                <Link
+                                  href={hrefFor(sub.href, pathname)}
+                                  scroll={true}
+                                  onClick={closeMenu}
+                                  className={`block rounded-lg px-3 py-3 text-base font-normal text-white/85 transition-colors duration-300 hover:text-[#dbe900] ${focusRing}`}
+                                >
+                                  {sub.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
                     );
                   }
+
+                  return (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href ?? "/"}
+                        scroll={true}
+                        onClick={closeMenu}
+                        aria-current={isCurrent(item.href) ? "page" : undefined}
+                        className={`block rounded-lg px-3 py-4 text-lg font-normal text-white/90 transition-colors duration-300 hover:text-[#dbe900] ${focusRing} ${
+                          isCurrent(item.href) ? "text-[#dbe900]" : ""
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  );
                 })}
-                <a
-                  href="https://forms.gle/vrpvDxoufARBNnPLA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full block text-center bg-transparent text-white px-6 py-4 rounded-full text-lg font-bold transition-colors duration-300 mt-6 border-2 border-white hover:bg-white hover:text-[#245a9a]"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Register for Event
-                </a>
-              </div>
-            </div>
+              </ul>
+
+              <a
+                href="https://forms.gle/vrpvDxoufARBNnPLA"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className={`mt-6 block w-full rounded-lg border-2 border-white bg-transparent px-6 py-3 text-center text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:bg-white hover:text-[#245a9a] ${focusRing}`}
+              >
+                Register for Event
+              </a>
+            </nav>
           </div>
+          </div>,
+          document.body
         )}
-      </nav>
     </header>
   );
-};
-
-export default Header;
+}
