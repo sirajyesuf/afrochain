@@ -1,10 +1,12 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
   turbopack: {
-    // Ensure Next.js resolves from project root (avoids react-server-dom-webpack resolution errors)
-    root: ".",
+    // Ensure Next.js resolves from project root (avoids react-server-dom-webpack resolution errors).
+    // Must be an absolute path, otherwise Next warns and falls back to cwd().
+    root: path.resolve(process.cwd()),
   },
   images: {
     formats: ['image/webp', 'image/avif'],
