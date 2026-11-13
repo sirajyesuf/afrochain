@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Past-event photo originals (heavy source files; WebP versions live in public/past-events/web/)
+/public/past-events/*.jpg

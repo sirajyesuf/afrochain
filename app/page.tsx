@@ -7,6 +7,7 @@ import NextChainHub from '@/app/components/NextChainHub';
 import Hackathon from '@/app/components/Hackathon';
 import SpeakersSection from '@/app/components/Speakers';
 import VenueSection from '@/app/components/VenueSection';
+import PastEventsGallery from '@/app/components/PastEventsGallery';
 import PartnersSection from '@/app/components/Partners';
 import Footer from '@/app/components/Footer';
 
@@ -31,6 +32,7 @@ export default function HomePage() {
       <section id="venue" aria-label="Venue Section">
         <VenueSection />
       </section>
+      <PastEventsGallery />
       <PartnersSection />
       <Footer />
     </>

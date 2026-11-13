@@ -138,6 +138,20 @@ body {
   animation: marquee 20s linear infinite;
 }
 
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-reverse {
+  animation-name: marquee-reverse;
+}
+
+/* Reading a photo should not be a race with the animation. */
+.marquee:hover {
+  animation-play-state: paused;
+}
+
 /* Override Next.js portal positioning (persisted from browser preview) */
 nextjs-portal {
   left: unset;
