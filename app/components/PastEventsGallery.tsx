@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ImpactStats from "@/app/components/ImpactStats";
 
 /**
  * Past-events gallery: two auto-scrolling rows of square photos moving in
@@ -118,6 +119,8 @@ export default function PastEventsGallery() {
           aria-hidden="true"
         />
       </div>
+
+      <ImpactStats />
     </section>
   );
 }
