@@ -225,41 +225,34 @@ export default function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-transparent">
-      {/* Phones: the date becomes a full-width announcement bar above the nav,
-          so it gets attention without crowding the wordmark row. */}
+      {/* The dates sit in a full-width announcement bar at every size so the
+          promoted event is the first thing a visitor reads. */}
       <div
-        className="bg-[#dbe900] text-[#0f2f56] sm:hidden"
+        className="bg-[#dbe900] text-[#0f2f56]"
         suppressHydrationWarning
       >
-        <p className="whitespace-nowrap px-3 py-2 text-center text-[10px] font-bold uppercase tracking-[0.08em]">
-          {promotedEvent?.dateLabel}
-          <span className="mx-1.5 font-normal text-[#0f2f56]/55" aria-hidden="true">
-            ·
+        <p className="flex flex-col items-center gap-0.5 px-3 py-1.5 text-center sm:flex-row sm:justify-center sm:gap-2 sm:py-2">
+          <span className="text-[10px] font-bold uppercase leading-tight tracking-[0.14em] sm:text-[11px]">
+            {promotedEvent?.name}
           </span>
-          {promotedEvent?.location}
+          <span
+            className="hidden h-1 w-1 shrink-0 rounded-full bg-[#0f2f56]/40 sm:block"
+            aria-hidden="true"
+          />
+          <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.06em] sm:text-[11px]">
+            {promotedEvent?.dateLabel}
+            <span className="mx-1 opacity-60" aria-hidden="true">
+              ·
+            </span>
+            {promotedEvent?.location}
+          </span>
         </p>
       </div>
 
       <nav aria-label="Main" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-3 py-4 sm:py-5 lg:py-6">
-          {/* Left: promoted dates, then the wordmark. The badge stacks date
-              over city so it matches the two-line height of the brand instead
-              of stretching into a long strip. */}
+          {/* Left: the wordmark, with the city beneath it. */}
           <div className="flex min-w-0 items-center gap-2 sm:gap-3">
-            <div
-              className="hidden shrink-0 items-center rounded-r border-l-2 border-[#dbe900] bg-white/[0.06] py-1.5 pl-2 pr-2.5 sm:flex sm:pl-2.5 sm:pr-3"
-              suppressHydrationWarning
-            >
-              <span className="whitespace-nowrap text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-white sm:text-[11px]">
-                {promotedEvent?.dateLabel}
-              </span>
-            </div>
-
-            <span
-              className="hidden h-9 w-px shrink-0 bg-white/15 sm:block"
-              aria-hidden="true"
-            />
-
             <Link
               href="/"
               scroll={true}
