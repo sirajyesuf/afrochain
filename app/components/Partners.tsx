@@ -29,17 +29,13 @@ export default function PartnersSponsorSection() {
       `}</style>
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center space-y-4 mb-12 lg:mb-16">
+        <div className="mb-8 text-center lg:mb-10">
           <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
-            Afrochain 2026–2027 Partners
+            Past and Current Partners
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
+          <h2 className="mt-1 text-2xl font-bold leading-tight text-[#245a9a] sm:text-3xl lg:text-4xl whitespace-nowrap">
             Partnering For Positive Change
           </h2>
-          <p className="text-lg text-[#245a9a]/90 leading-relaxed max-w-2xl mx-auto">
-            Empowering Potential Through Collaboration And Innovation. Join Us
-            To Make A Positive Impact.
-          </p>
         </div>
       </div>
 
