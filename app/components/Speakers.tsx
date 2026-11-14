@@ -1,156 +1,109 @@
-"use client"
-import Image from "next/image"
+import Image from "next/image";
+import { speakers } from "@/app/data/speakers";
 
-const speakers = [
-  {
-    type: 'person',
-    name: 'Dr. Leon Rebelsky',
-    title: 'Market Trading, Crypto Development',
-    image: '/drleonrebelsky.png',
-    bgColor: 'bg-gradient-to-b from-yellow-300 to-lime-300',
-  },
-  {
-    type: 'person',
-    name: 'Mery Avestisyan',
-    title: 'Global Business Development',
-    image: '/mery.png',
-    bgColor: 'bg-gradient-to-b from-yellow-300 to-lime-300',
-  },
-  {
-    type: 'organization',
-    name: 'Africa Blockchain Institute',
-    image: '/africablockchain.png',
-  },
-  {
-    type: 'organization',
-    name: 'Ethiopian Blockchain Network',
-    image: '/ethiopianblockchain.png',
-  },
-  {
-    type: 'person',
-    name: 'Kanessa Muluneh',
-    title: 'Head of Coerman-Muluneh Family Office',
-    image: '/kanessa.png',
-    bgColor: 'bg-gradient-to-b from-yellow-300 to-lime-300',
-  },
-  {
-    type: 'organization',
-    name: 'MInT',
-    image: '/mint.png',
-  },
-  {
-    type: 'organization',
-    name: 'Project Catalyst',
-    image: '/projectcatalyst.png',
-  },
+const topics = [
+  "AI",
+  "Finance",
+  "Blockchain",
+  "Web3",
+  "DeFi",
+  "NFTs",
+  "Innovation",
+  "Fintech",
+  "Smart Contracts",
+  "Digital Identity",
 ];
 
+/**
+ * Speakers section, reserved for individual speakers only.
+ *
+ * Companies and institutions are partners, not speakers, and live in the
+ * partners section instead. While app/data/speakers.ts is empty the section
+ * shows a one-line announcement; adding confirmed speakers switches it to the
+ * grid automatically.
+ *
+ * Kept deliberately compact: the topics strip is a plain marquee at body-ish
+ * scale, and the heading and edition label share one baseline row.
+ */
 export default function SpeakersSection() {
-  return (
-    <div id="speakers" className="bg-white py-16 lg:py-24">
-      <style jsx>{`
-  @keyframes scroll {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-    100% {
-      transform: translate3d(-50%, 0, 0);
-    }
-  }
-  
-  .animate-scroll {
-    will-change: transform;
-    backface-visibility: hidden;
-    animation: scroll 25s linear infinite;
-  }
-  
-  .animate-scroll:hover {
-    animation-play-state: paused;
-  }
-`}</style>
-      <div className="container mx-auto px-4">
-        {/* Topics Header */}
-        <div className="mb-12 lg:mb-16">
-          <p className="text-sm text-[#245a9a] mb-4">— Topics Covered At The Summit.</p>
+  const confirmed = speakers.filter((speaker) => speaker.confirmed);
 
-          {/* Horizontal Scrolling Topics */}
-          <div className="relative overflow-hidden mb-8">
-            <div className="flex animate-scroll whitespace-nowrap">
-              <div className="flex items-center space-x-8 text-4xl lg:text-6xl xl:text-7xl font-bold">
-                <span className="text-[#245a9a]">AI.</span>
-                <span className="text-[#245a9a]">Finance.</span>
-                <span className="text-[#245a9a]">Blockchain.</span>
-                <span className="text-[#245a9a]">Web3.</span>
-                <span className="text-[#245a9a]">DeFi.</span>
-                <span className="text-[#245a9a]">NFTs.</span>
-                <span className="text-[#245a9a]">Innovation.</span>
-                <span className="text-[#245a9a]">Fintech.</span>
-                <span className="text-[#245a9a]">Smart Contracts.</span>
-                <span className="text-[#245a9a]">Digital Identity.</span>
-                <span className="text-[#245a9a]">AI.</span>
-                <span className="text-[#245a9a]">Finance.</span>
-                <span className="text-[#245a9a]">Blockchain.</span>
-                <span className="text-[#245a9a]">Web3.</span>
-                <span className="text-[#245a9a]">DeFi.</span>
-                <span className="text-[#245a9a]">NFTs.</span>
-                <span className="text-[#245a9a]">Innovation.</span>
-                <span className="text-[#245a9a]">Fintech.</span>
-                <span className="text-[#245a9a]">Smart Contracts.</span>
-                <span className="text-[#245a9a]">Digital Identity.</span>
+  return (
+    <div className="bg-white py-12 lg:py-16">
+      <div className="container mx-auto px-4">
+        {/* Topics strip */}
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#245a9a]/65">
+          Topics Covered At The Summit
+        </p>
+
+        <div className="relative mt-3 overflow-hidden">
+          <div className="marquee" style={{ animationDuration: "25s" }}>
+            {[0, 1].map((copy) => (
+              <div
+                key={copy}
+                className="flex shrink-0 items-center gap-5 pr-5 text-2xl font-bold text-[#245a9a] sm:gap-6 sm:pr-6 sm:text-3xl lg:text-4xl"
+                aria-hidden={copy === 1 ? "true" : undefined}
+              >
+                {topics.map((topic) => (
+                  <span key={topic} className="whitespace-nowrap">
+                    {topic}.
+                  </span>
+                ))}
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-3 text-sm text-[#245a9a]/80">
+          Network with game-changers and thought leaders at AfroChain 2026–2027.
+        </p>
+
+        {/* Speakers */}
+        <div className="mt-7 border-t border-[#245a9a]/10 pt-6 lg:mt-8">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+            <h2 className="text-2xl font-bold text-[#245a9a] lg:text-3xl">
+              Speakers
+            </h2>
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#245a9a]/65">
+              AfroChain Summit · March 2027
+            </p>
           </div>
 
-          <p className="text-lg text-[#245a9a] font-medium">
-            — Network With Game-Changers And Thought Leaders At AfroChain 2026–2027.
-          </p>
-        </div>
-
-        {/* Featured Speakers */}
-        <div className="mb-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-[#245a9a] mb-12">Featured Summit Speakers</h2>
-        </div>
-
-        {/* Speakers Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
-          {speakers.map((speaker, index) => (
-            <div key={index}>
-              {speaker.type === 'person' ? (
-                <>
-                  <div className="flex h-60 items-center justify-center rounded-lg border border-[#245a9a] bg-white p-4 text-center hover:border-[#245a9a]/80 transition-colors duration-300">
-                    <div className="relative h-56 w-full">
-                      <Image
-                        src={speaker.image}
-                        alt={speaker.name}
-                        fill
-                        className="rounded-md object-cover"
-                        unoptimized
-                      />
-                    </div>
-                  </div>
-                  <h4 className="mt-4 text-lg font-semibold text-[#245a9a]">{speaker.name}</h4>
-                  <p className="text-sm text-[#245a9a]/80">{speaker.title}</p>
-                </>
-              ) : (
-                <>
-                  <div className="flex h-60 items-center justify-center rounded-lg border border-[#245a9a] bg-white p-6 text-center hover:border-[#245a9a]/80 transition-colors duration-300">
-                    <div className="relative h-56 w-full">
-                      <Image
-                        src={speaker.image}
-                        alt={speaker.name}
-                        fill
-                        className="rounded-md object-contain"
-                        unoptimized
-                      />
-                    </div>
-                  </div>
-                  <h4 className="mt-4 text-lg font-semibold text-[#245a9a]">{speaker.name}</h4>
-                </>
-              )}
+          {confirmed.length === 0 ? (
+            <div className="mt-4 w-full rounded-xl border border-[#245a9a]/15 bg-[#f6f9ff] px-5 py-4">
+              <p className="text-sm leading-relaxed text-[#245a9a]/90 lg:whitespace-nowrap">
+                The 2027 speaker line-up is being finalised. Confirmed speakers
+                will be announced here as they are confirmed.
+              </p>
             </div>
-          ))}
+          ) : (
+            <ul className="mt-6 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-5 lg:gap-8">
+              {confirmed.map((speaker) => (
+                <li key={speaker.slug}>
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-[#245a9a]/15 bg-[#f6f9ff]">
+                    {speaker.image && (
+                      <Image
+                        src={speaker.image}
+                        alt={speaker.name}
+                        fill
+                        sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
+                        className="object-cover"
+                      />
+                    )}
+                  </div>
+                  <h3 className="mt-3 text-base font-semibold text-[#245a9a]">
+                    {speaker.name}
+                  </h3>
+                  <p className="text-sm text-[#245a9a]/75">
+                    {speaker.role}
+                    {speaker.organization ? `, ${speaker.organization}` : ""}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </div>
-  )
-} 
+  );
+}
