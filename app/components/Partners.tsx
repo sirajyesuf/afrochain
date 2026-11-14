@@ -33,7 +33,7 @@ export default function PartnersSponsorSection() {
           <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
             Past and Current Partners
           </p>
-          <h2 className="mt-1 text-2xl font-bold leading-tight text-[#245a9a] sm:text-3xl lg:text-4xl whitespace-nowrap">
+          <h2 className="mt-1 text-2xl font-bold leading-tight text-[#245a9a] sm:text-3xl lg:text-4xl">
             Partnering For Positive Change
           </h2>
         </div>

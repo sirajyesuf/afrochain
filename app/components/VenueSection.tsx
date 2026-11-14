@@ -20,7 +20,7 @@ export default function VenueSection() {
         <div className="max-w-5xl mx-auto">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#245a9a] mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#245a9a] mb-4">
               Summit Venue
             </h2>
             <div className="w-24 h-1 bg-[#dbe900] mx-auto rounded-full"></div>
@@ -106,7 +106,7 @@ export default function VenueSection() {
                 <Button
                   onClick={handleMapClick}
                   size="lg"
-                  className="w-full bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-8 py-4 rounded-xl font-semibold text-lg transform hover:scale-105 transition-all duration-300"
+                  className="w-full bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transform hover:scale-105 transition-all duration-300"
                 >
                   <MapPin className="w-5 h-5 mr-3" />
                   View on Google Maps
