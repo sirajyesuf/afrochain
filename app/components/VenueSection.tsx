@@ -50,6 +50,8 @@ export default function VenueSection() {
             <div className="space-y-8">
               {/* Venue Details Cards */}
               <div className="space-y-6">
+                {/* NOTE: updated manually per upcoming event - keep this card
+                    pointing at the nearest event only. */}
                 <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
@@ -57,26 +59,10 @@ export default function VenueSection() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
-                        Summit Dates
+                        Executive Forum Dates
                       </p>
                       <p className="text-xl font-bold text-[#245a9a]">
-                        Mar 25-27, 2027
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
-                        AfroChain Kenya
-                      </p>
-                      <p className="text-xl font-bold text-[#245a9a]">
-                        Apr 6-8, 2027
+                        Nov 20-21, 2026
                       </p>
                     </div>
                   </div>
