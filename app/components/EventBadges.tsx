@@ -6,9 +6,10 @@ type FormatBadgeProps = {
 };
 
 /**
- * Access model of an event. Invite-only events get an outlined treatment,
- * open events get the brand lime. Never use colour alone - the icon and the
- * label carry the meaning too.
+ * Access model of an event. Both badges stay in the neutral blue family -
+ * the four accent colours belong to the phase chips, not to status tags.
+ * Filled tint = open, outlined = invite-only; the icon carries the meaning
+ * too, never colour alone.
  */
 export function FormatBadge({ format }: FormatBadgeProps) {
   if (format === "invite-only") {
@@ -21,7 +22,7 @@ export function FormatBadge({ format }: FormatBadgeProps) {
   }
 
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#dbe900] px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#0f2f56]">
+    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#245a9a]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#245a9a]">
       <Globe2 className="h-3 w-3" aria-hidden="true" />
       Open + VIP
     </span>
@@ -64,16 +65,18 @@ export function PhaseChip({
     "inline-flex items-center whitespace-nowrap rounded-full px-2 py-1 text-[10px] font-bold uppercase tracking-[0.08em] sm:px-3 sm:text-[11px] sm:tracking-[0.18em]";
 
   if (accent) {
+    // Only the selected phase carries a ring - the accent fill and the ring
+    // together mark "you are here" in the stepper.
+    const ring = active
+      ? tone === "dark"
+        ? "ring-2 ring-white/60 ring-offset-2 ring-offset-[#0f2f56]"
+        : "ring-2 ring-[#245a9a]/40 ring-offset-2 ring-offset-white"
+      : "";
+
     return (
       <span
         style={{ backgroundColor: accent }}
-        className={`${base} ${accentText[accent] ?? "text-[#0f2f56]"} ${
-          active
-            ? tone === "dark"
-              ? "ring-2 ring-white/60 ring-offset-2 ring-offset-[#0f2f56]"
-              : "ring-2 ring-[#245a9a]/40 ring-offset-2 ring-offset-white"
-            : ""
-        }`}
+        className={`${base} ${accentText[accent] ?? "text-[#0f2f56]"} ${ring}`}
       >
         {phase}
       </span>

@@ -180,7 +180,7 @@ export const events: AfroChainEvent[] = [
     startDate: "2027-04-06",
     endDate: "2027-04-08",
     dateLabel: "Apr 6–8, 2027",
-    location: "Kenya",
+    location: "Nairobi, Kenya",
     format: "open",
     formatLabel: "Open to All + VIP",
     purpose:

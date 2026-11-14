@@ -55,7 +55,7 @@ function eventJsonLd(event: AfroChainEvent) {
         addressCountry: event.location.includes("Ethiopia") ? "ET" : "KE",
         addressLocality: event.location.includes("Ethiopia")
           ? "Addis Ababa"
-          : "Kenya",
+          : "Nairobi",
       },
     },
     url: `${siteUrl}/events#${event.slug}`,
@@ -108,12 +108,19 @@ export default function EventsPage() {
           <ol className="mt-9 flex flex-nowrap items-center gap-x-2.5 sm:gap-x-6">
             {events.map((event, index) => (
               <li key={event.phase} className="flex h-7 items-center gap-2">
-                <PhaseChip
-                  phase={event.phase}
-                  accent={event.accent}
-                  active={event.phase === activePhase}
-                  tone="dark"
-                />
+                <Link
+                  href={`#${event.slug}`}
+                  scroll={true}
+                  aria-label={`${event.phase} — jump to ${event.name}`}
+                  className={`inline-flex rounded-full transition-transform duration-200 hover:scale-105 ${focusRing}`}
+                >
+                  <PhaseChip
+                    phase={event.phase}
+                    accent={event.accent}
+                    active={event.phase === activePhase}
+                    tone="dark"
+                  />
+                </Link>
                 {index < events.length - 1 && (
                   <span
                     className="hidden h-px w-8 bg-white/25 lg:block"

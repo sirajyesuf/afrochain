@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef, useState } from "react";
 import { ArrowRight, CalendarDays, Lock, MapPin } from "lucide-react";
 import { SEASON, events } from "@/app/data/events";
 import { FormatBadge, PhaseChip } from "@/app/components/EventBadges";
@@ -9,6 +12,30 @@ const focusRing =
 export default function Roadmap() {
   const activePhase =
     events.find((event) => event.highlight)?.phase ?? SEASON.phases[0].phase;
+
+  // Phase clicked in the stepper: the ring moves to the clicked chip and the
+  // matching card highlights in place. The ring defaults to BUILD; clicking
+  // the selected chip again clears the card highlight and the ring returns
+  // to BUILD.
+  const [chipSlug, setChipSlug] = useState<string>(events[0]?.slug ?? "");
+  const [cardSlug, setCardSlug] = useState<string | null>(null);
+  const cardRefs = useRef<Record<string, HTMLElement | null>>({});
+
+  const selectPhase = (slug: string) => {
+    if (cardSlug === slug) {
+      setCardSlug(null);
+      setChipSlug(events[0]?.slug ?? "");
+      return;
+    }
+    setChipSlug(slug);
+    setCardSlug(slug);
+    requestAnimationFrame(() =>
+      cardRefs.current[slug]?.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      }),
+    );
+  };
 
   return (
     <section
@@ -42,11 +69,19 @@ export default function Roadmap() {
                   key={event.phase}
                   className="flex h-7 items-center justify-center gap-2 sm:justify-start sm:gap-3"
                 >
-                  <PhaseChip
-                    phase={event.phase}
-                    accent={event.accent}
-                    active={event.phase === activePhase}
-                  />
+                  <button
+                    type="button"
+                    onClick={() => selectPhase(event.slug)}
+                    aria-pressed={chipSlug === event.slug && cardSlug === event.slug}
+                    aria-label={`${event.phase} — highlight the ${event.name} card`}
+                    className={`inline-flex rounded-full transition-transform duration-200 hover:scale-105 ${focusRing}`}
+                  >
+                    <PhaseChip
+                      phase={event.phase}
+                      accent={event.accent}
+                      active={chipSlug === event.slug}
+                    />
+                  </button>
                   {index < events.length - 1 && (
                     <span
                       className="hidden h-px w-10 bg-[#245a9a]/25 lg:block lg:w-12"
@@ -63,11 +98,21 @@ export default function Roadmap() {
             {events.map((event) => (
               <li key={event.slug} className="flex flex-col">
                 <article
-                  className={`flex h-full flex-col overflow-hidden rounded-2xl border bg-white transition-shadow duration-200 hover:shadow-lg ${
-                    event.highlight
-                      ? "border-2 border-transparent shadow-md"
-                      : "border-[#245a9a]/20"
+                  ref={(el) => {
+                    cardRefs.current[event.slug] = el;
+                  }}
+                  className={`flex h-full flex-col overflow-hidden rounded-2xl border bg-white transition-all duration-300 hover:shadow-lg ${
+                    cardSlug === event.slug
+                      ? "border-2 border-transparent shadow-xl -translate-y-1"
+                      : event.highlight
+                        ? "border-2 border-transparent shadow-md"
+                        : "border-[#245a9a]/20"
                   }`}
+                  style={
+                    cardSlug === event.slug
+                      ? { boxShadow: `0 0 0 3px ${event.accent}, 0 20px 25px -5px rgb(15 47 86 / 0.18)` }
+                      : undefined
+                  }
                 >
                   <span
                     className="h-1 w-full"

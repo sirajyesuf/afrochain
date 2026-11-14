@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-6 text-base sm:text-lg md:text-xl text-white/90 font-light tracking-wide max-w-4xl">
-            AfroChain {SEASON.displayLabel} is a four-event season connecting
+            AfroChain {SEASON.displayLabel}{" "}is a four-event season connecting
             policymakers, infrastructure builders, investors, and global
             institutions to Ethiopia&apos;s next phase of digital and financial
             modernization.
