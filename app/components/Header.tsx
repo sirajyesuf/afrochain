@@ -241,9 +241,10 @@ export default function Header() {
           />
           <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.06em] sm:text-[11px]">
             {promotedEvent?.dateLabel}
-            <span className="mx-1 opacity-60" aria-hidden="true">
-              ·
-            </span>
+            <span
+              className="mx-1 inline-block h-1 w-1 shrink-0 rounded-full bg-[#0f2f56]/40 align-middle"
+              aria-hidden="true"
+            />
             {promotedEvent?.location}
           </span>
         </p>
