@@ -1,6 +1,7 @@
 import Hero from '@/app/components/Hero';
 import Roadmap from '@/app/components/Roadmap';
 import Pillars from '@/app/components/Pillars';
+import Passes from '@/app/components/Passes';
 import MarketEntryCapital from '@/app/components/MarketEntryCapital';
 import AboutUs from '@/app/components/AboutUs';
 import NextChainHub from '@/app/components/NextChainHub';
@@ -11,13 +12,25 @@ import PastEventsGallery from '@/app/components/PastEventsGallery';
 import PartnersSection from '@/app/components/Partners';
 import PartnershipOpportunities from '@/app/components/PartnershipOpportunities';
 import Footer from '@/app/components/Footer';
+import { eventJsonLd, events } from '@/app/data/events';
+
+const siteUrl = 'https://afrochainsummit.com';
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            events.map((event) => eventJsonLd(event, siteUrl)),
+          ),
+        }}
+      />
       <Hero />
       <Roadmap />
       <Pillars />
+      <Passes />
       <MarketEntryCapital />
       {/* <Stats /> */}
       <AboutUs partnershipHref="#partnership-opportunities" />

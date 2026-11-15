@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { ArrowRight, CalendarDays, Lock, MapPin } from "lucide-react";
 import { PROGRAM, events } from "@/app/data/events";
 import { FormatBadge, PhaseChip } from "@/app/components/EventBadges";
@@ -171,32 +172,40 @@ export default function Roadmap() {
                       </ul>
                     </div>
 
-                    <div className="mt-auto flex flex-col gap-2.5 pt-4">
-                      <div className="flex items-center justify-between gap-3">
-                        {event.cta.href === "#" ? (
-                          <span
-                            className={`inline-flex w-full cursor-not-allowed items-center justify-center gap-1.5 rounded-lg bg-[#245a9a]/10 px-4 py-2 text-sm font-semibold text-[#245a9a]/60`}
-                            role="link"
-                            aria-disabled="true"
-                            title="Registration link coming soon"
-                          >
-                            <Lock className="h-3.5 w-3.5" aria-hidden="true" />
-                            {event.cta.label}
-                          </span>
-                        ) : (
-                          <a
-                            href={event.cta.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#245a9a] px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678] ${focusRing}`}
-                          >
-                            {event.cta.label}
-                            <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                          </a>
-                        )}
-
+                    {event.cta && (
+                      <div className="mt-auto flex flex-col gap-2.5 pt-4">
+                        <div className="flex items-center justify-between gap-3">
+                          {event.cta.href === "#" ? (
+                            <span
+                              className={`inline-flex w-full cursor-not-allowed items-center justify-center gap-1.5 rounded-lg bg-[#245a9a]/10 px-4 py-2 text-sm font-semibold text-[#245a9a]/60`}
+                              role="link"
+                              aria-disabled="true"
+                              title="Registration link coming soon"
+                            >
+                              <Lock className="h-3.5 w-3.5" aria-hidden="true" />
+                              {event.cta.label}
+                            </span>
+                          ) : event.cta.href.startsWith("#") ? (
+                            <Link
+                              href={event.cta.href}
+                              className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#245a9a] px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678] ${focusRing}`}
+                            >
+                              {event.cta.label}
+                            </Link>
+                          ) : (
+                            <a
+                              href={event.cta.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#245a9a] px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678] ${focusRing}`}
+                            >
+                              {event.cta.label}
+                              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                            </a>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </article>
               </li>

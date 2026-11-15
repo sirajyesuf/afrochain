@@ -1,6 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 type BriefingForm = {
   companyName: string;
@@ -61,9 +63,18 @@ Email: ${form.email}`,
               platform for international organizations exploring market entry,
               capital deployment, and strategic partnerships in Ethiopia.
             </p>
-            <p className="mt-4 inline-flex max-w-full items-center gap-2 rounded-2xl border border-[#245a9a]/30 bg-[#f6f9ff] px-4 py-2 text-center text-sm font-semibold text-[#245a9a] sm:rounded-full">
-              Closed / Invite Only &middot; Addis Ababa, Ethiopia
-            </p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+              <p className="inline-flex max-w-full items-center gap-2 rounded-2xl border border-[#245a9a]/30 bg-[#f6f9ff] px-4 py-2 text-center text-sm font-semibold text-[#245a9a] sm:rounded-full">
+                Invitation or VIP Pass &middot; Addis Ababa, Ethiopia
+              </p>
+              <Link
+                href="/#passes"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#245a9a] underline decoration-[#245a9a]/30 underline-offset-4 transition-colors duration-200 hover:decoration-[#245a9a]"
+              >
+                Get VIP Pass
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">

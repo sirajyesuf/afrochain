@@ -52,10 +52,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/events"
+                  href="/#roadmap"
                   className="text-base text-white font-medium hover:underline focus:underline transition"
                 >
-                  Events Roadmap
+                  Road to Summit 2027
                 </Link>
               </li>
               <li>

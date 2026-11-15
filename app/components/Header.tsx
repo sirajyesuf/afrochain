@@ -26,7 +26,6 @@ const navigation: NavItem[] = [
     name: "Programs",
     submenu: [
       { name: "Road to Summit 2027", href: "#roadmap" },
-      { name: "All Events & Dates", href: "/events" },
       { name: "Hackathon", href: "#hackathon" },
       { name: "Launchpad", href: "#launchpad" },
       { name: "Speakers", href: "#speakers" },
@@ -43,7 +42,9 @@ const navigation: NavItem[] = [
   { name: "Contact us", href: "/contactus" },
 ];
 
-const registerHref = "https://forms.gle/vrpvDxoufARBNnPLA";
+/** Registration runs through the passes section, where visitors pick the
+    free community pass or the VIP pass. */
+const registerAnchor = "#passes";
 
 const focusRing =
   "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dbe900]";
@@ -86,7 +87,7 @@ export default function Header() {
     if (!hash) return;
     pendingHashRef.current = null;
 
-    const id = hash.replace(/^#/, "");
+    const id = hash.split("#").pop() ?? "";
     let attempts = 0;
     let timer: ReturnType<typeof setTimeout>;
 
@@ -198,6 +199,11 @@ export default function Header() {
   const isCurrent = (href?: string) =>
     !href ? false : href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  // The passes section only exists on the homepage, so every other route has
+  // to address it by full path.
+  const registerHref =
+    pathname === "/" ? registerAnchor : `/${registerAnchor}`;
+
   const isSectionActive = (item: NavItem) =>
     item.submenu?.some((sub) => isCurrent(sub.href)) ?? false;
 
@@ -212,13 +218,6 @@ export default function Header() {
       // offset afterwards would land the next page halfway down.
       restoreScrollRef.current = false;
     }
-    restoreFocusRef.current = false;
-    closeMenu();
-  };
-
-  // The register link opens in a new tab, so this page stays exactly where it
-  // was and should not lose its scroll position.
-  const handleExternalClick = () => {
     restoreFocusRef.current = false;
     closeMenu();
   };
@@ -351,27 +350,23 @@ export default function Header() {
               );
             })}
 
-            <a
+            <Link
               href={registerHref}
-              target="_blank"
-              rel="noopener noreferrer"
               className={`ml-3 rounded-lg border border-white/70 px-4 py-2 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:border-[#dbe900] hover:bg-[#dbe900] hover:text-[#0f2f56] ${focusRing}`}
             >
               Register for Event
-            </a>
+            </Link>
           </div>
 
           {/* Right cluster: a compact register link appears on medium screens
               where the full nav no longer fits, then the menu toggle. */}
           <div className="flex shrink-0 items-center gap-1">
-            <a
+            <Link
               href={registerHref}
-              target="_blank"
-              rel="noopener noreferrer"
               className={`hidden rounded-md border border-white/70 px-3 py-1.5 text-xs font-semibold tracking-wide text-white transition-colors duration-300 hover:border-[#dbe900] hover:bg-[#dbe900] hover:text-[#0f2f56] md:inline-flex lg:hidden ${focusRing}`}
             >
               Register
-            </a>
+            </Link>
 
             <button
               ref={toggleRef}
@@ -521,15 +516,14 @@ export default function Header() {
                   })}
                 </ul>
 
-                <a
+                <Link
                   href={registerHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={handleExternalClick}
+                  scroll={true}
+                  onClick={() => handleNavClick(registerHref)}
                   className={`mt-8 flex w-full items-center justify-center rounded-lg bg-[#dbe900] px-6 py-3 text-sm font-semibold tracking-wide text-[#0f2f56] transition-colors duration-300 hover:bg-[#e6f21a] ${focusRing}`}
                 >
                   Register for Event
-                </a>
+                </Link>
               </nav>
             </div>
           </div>,

@@ -6,10 +6,10 @@ type FormatBadgeProps = {
 };
 
 /**
- * Access model of an event. Both badges stay in the neutral blue family -
+ * Access model of an event. All badges stay in the neutral blue family -
  * the four accent colours belong to the phase chips, not to status tags.
- * Filled tint = open, outlined = invite-only; the icon carries the meaning
- * too, never colour alone.
+ * Filled tint = accessible with a pass, outlined = invitation only; the icon
+ * carries the meaning too, never colour alone.
  */
 export function FormatBadge({ format }: FormatBadgeProps) {
   if (format === "invite-only") {
@@ -17,6 +17,15 @@ export function FormatBadge({ format }: FormatBadgeProps) {
       <span className="inline-flex items-center gap-1.5 rounded-full border border-[#245a9a]/30 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#245a9a]">
         <Lock className="h-3 w-3" aria-hidden="true" />
         Invite Only
+      </span>
+    );
+  }
+
+  if (format === "invite-or-vip") {
+    return (
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-[#245a9a]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#245a9a]">
+        <Lock className="h-3 w-3" aria-hidden="true" />
+        Invite Or VIP Pass
       </span>
     );
   }

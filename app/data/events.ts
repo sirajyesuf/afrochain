@@ -1,4 +1,4 @@
-export type EventFormat = "invite-only" | "open";
+export type EventFormat = "invite-only" | "invite-or-vip" | "open";
 
 export type AfroChainEvent = {
   slug: string;
@@ -17,7 +17,8 @@ export type AfroChainEvent = {
   focus: string[];
   audience: string[];
   highlights: string[];
-  cta: {
+  /** Optional: some events run without a call to action on their card. */
+  cta?: {
     label: string;
     href: string;
   };
@@ -56,8 +57,8 @@ export const events: AfroChainEvent[] = [
     endDate: "2026-11-21",
     dateLabel: "Nov 20–21, 2026",
     location: "Addis Ababa, Ethiopia",
-    format: "invite-only",
-    formatLabel: "Closed / Invite Only",
+    format: "invite-or-vip",
+    formatLabel: "Invitation or VIP Pass",
     purpose:
       "Policy, regulation, financial infrastructure and institutional relationships.",
     focus: [
@@ -81,11 +82,6 @@ export const events: AfroChainEvent[] = [
       "Curated one-to-one introductions between government and financial institutions",
       "A senior-leader off-site format built for substantive working discussion",
     ],
-    cta: {
-      label: "Request Invitation",
-      // TODO: replace with the Executive Forum invite request form URL
-      href: "#",
-    },
     highlight: true,
   },
   {
@@ -99,8 +95,8 @@ export const events: AfroChainEvent[] = [
     endDate: "2026-12-18",
     dateLabel: "Dec 17–18, 2026",
     location: "Addis Ababa, Ethiopia",
-    format: "invite-only",
-    formatLabel: "Closed / Invite Only",
+    format: "invite-or-vip",
+    formatLabel: "Invitation or VIP Pass",
     purpose:
       "Investment, market entry, partnerships and international companies.",
     focus: [
@@ -123,11 +119,6 @@ export const events: AfroChainEvent[] = [
       "Co-investment and partnership conversations with regional capital",
       "Structured sessions on frontier, digital finance, and infrastructure investment",
     ],
-    cta: {
-      label: "Request Invitation",
-      // TODO: replace with the Investment Forum invite request form URL
-      href: "#",
-    },
     highlight: false,
   },
   {
@@ -168,9 +159,10 @@ export const events: AfroChainEvent[] = [
       "Open general access alongside a dedicated VIP track",
     ],
     cta: {
-      label: "Register",
-      // TODO: replace with the AfroChain Summit registration form URL
-      href: "https://forms.gle/vrpvDxoufARBNnPLA",
+      label: "Get Tickets",
+      // Ticketing runs through the passes section, where visitors choose
+      // the free community pass or the VIP pass.
+      href: "#passes",
     },
     highlight: false,
   },
@@ -211,9 +203,11 @@ export const events: AfroChainEvent[] = [
       "Open access with a dedicated VIP track for institutional participants",
     ],
     cta: {
-      label: "Register",
-      // TODO: replace with the AfroChain Kenya registration form URL
-      href: "https://forms.gle/vrpvDxoufARBNnPLA",
+      label: "Tickets Coming Soon",
+      // Kenya is a separate event with its own registration and pricing.
+      // Until those are announced the button stays disabled rather than
+      // sending people to the wrong registration form.
+      href: "#",
     },
     highlight: false,
   },
@@ -226,4 +220,35 @@ export function getEvent(slug: string) {
 export function getNextEvent(from: Date = new Date()) {
   const today = from.toISOString().slice(0, 10);
   return events.find((event) => event.startDate >= today) ?? events[0];
+}
+
+/** schema.org Event markup, rendered on the homepage as JSON-LD. */
+export function eventJsonLd(event: AfroChainEvent, siteUrl: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: event.name,
+    description: event.purpose,
+    startDate: event.startDate,
+    endDate: event.endDate,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    location: {
+      "@type": "Place",
+      name: event.location,
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: event.location.includes("Ethiopia") ? "ET" : "KE",
+        addressLocality: event.location.includes("Ethiopia")
+          ? "Addis Ababa"
+          : "Nairobi",
+      },
+    },
+    url: `${siteUrl}/#roadmap`,
+    organizer: {
+      "@type": "Organization",
+      name: "AfroChain",
+      url: siteUrl,
+    },
+  };
 }

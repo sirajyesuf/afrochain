@@ -32,7 +32,7 @@ export const partnershipCategories: PartnershipCategory[] = [
     code: "03",
     title: "Executive Forum Partnerships",
     summary:
-      "Co-branded sessions, moderated panels, and closed-door briefings inside the invite-only Executive Forum, the opening stop on the Road to AfroChain Summit 2027.",
+      "Co-branded sessions, moderated panels, and closed-door briefings inside the Executive Forum, the opening stop on the Road to AfroChain Summit 2027.",
     points: [
       "Direct access to regulators, ministries, and central banks",
       "Co-branded session and panel formats",
