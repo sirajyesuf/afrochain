@@ -70,7 +70,7 @@ const Hero = () => {
 
           <div className="mt-8 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-start sm:gap-3">
             <Link
-              href="/partners"
+              href="#partnership-opportunities"
               className="bg-transparent text-white font-bold py-2.5 px-5 rounded-lg border-2 border-white transition-colors duration-200 text-sm hover:bg-white hover:text-[#245a9a] inline-flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dbe900]"
             >
               Partner with AfroChain

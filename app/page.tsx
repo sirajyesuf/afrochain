@@ -9,6 +9,7 @@ import SpeakersSection from '@/app/components/Speakers';
 import VenueSection from '@/app/components/VenueSection';
 import PastEventsGallery from '@/app/components/PastEventsGallery';
 import PartnersSection from '@/app/components/Partners';
+import PartnershipOpportunities from '@/app/components/PartnershipOpportunities';
 import Footer from '@/app/components/Footer';
 
 export default function HomePage() {
@@ -19,7 +20,7 @@ export default function HomePage() {
       <Pillars />
       <MarketEntryCapital />
       {/* <Stats /> */}
-      <AboutUs />
+      <AboutUs partnershipHref="#partnership-opportunities" />
       <section id="launchpad" aria-label="Launchpad Section">
         <NextChainHub />
       </section>
@@ -34,6 +35,7 @@ export default function HomePage() {
       </section>
       <PastEventsGallery />
       <PartnersSection />
+      <PartnershipOpportunities />
       <Footer />
     </>
   );

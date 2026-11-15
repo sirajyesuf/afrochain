@@ -1,6 +1,14 @@
 import Link from "next/link";
 
-export default function AboutUs() {
+type AboutUsProps = {
+  /** Where the partnership CTAs point. The section only lives on the
+      homepage, so other routes need the full path. */
+  partnershipHref?: string;
+};
+
+export default function AboutUs({
+  partnershipHref = "/#partnership-opportunities",
+}: AboutUsProps) {
   return (
     <section
       className="relative overflow-hidden bg-[#f8fbff] py-16 lg:py-24"
@@ -68,7 +76,7 @@ export default function AboutUs() {
                   Access Model
                 </p>
                 <p className="mt-2 text-2xl font-bold leading-tight">
-                  AfroChain is a gateway, not an exhibition.
+                  AfroChain is a gateway, not just an exhibition.
                 </p>
                 <p className="mt-3 text-white/85 leading-relaxed">
                   A single platform connecting policy stakeholders, institutions,
@@ -140,7 +148,14 @@ export default function AboutUs() {
                 <ul className="mt-4 space-y-2 text-[#245a9a]/90">
                   <li>Market entry clarity</li>
                   <li>Policy-informed ecosystem access</li>
-                  <li>Strategic partnership opportunities</li>
+                  <li>
+                    <Link
+                      href={partnershipHref}
+                      className="font-semibold text-[#245a9a] underline decoration-[#245a9a]/30 underline-offset-2 transition-colors duration-200 hover:decoration-[#245a9a]"
+                    >
+                      Strategic partnership opportunities
+                    </Link>
+                  </li>
                 </ul>
               </article>
               </div>
@@ -161,7 +176,7 @@ export default function AboutUs() {
               Request Institutional Briefing
             </Link>
             <Link
-              href="/partners"
+              href={partnershipHref}
               className="inline-flex items-center justify-center rounded-lg border-2 border-[#245a9a] bg-white px-6 py-3 text-sm font-semibold text-[#245a9a] transition-colors duration-200 hover:bg-[#245a9a] hover:text-white"
             >
               Partner with AfroChain
