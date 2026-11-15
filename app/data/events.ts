@@ -24,14 +24,18 @@ export type AfroChainEvent = {
   highlight: boolean;
 };
 
-export const SEASON = {
-  label: "2026-2027",
-  displayLabel: "2026–2027",
-  title: "AfroChain 2026–2027",
+/** Brand constants for the current edition.
+ *
+ * `edition` is the umbrella brand, `roadLabel` is the programme that leads to
+ * the flagship Summit, and the four events sit on that road in phase order. */
+export const PROGRAM = {
+  edition: "AfroChain 2027",
+  editionLabel: "2027",
+  roadLabel: "Road to AfroChain Summit 2027",
   headline: "Four Stages. One Ecosystem.",
   strapline: "BUILD · CONNECT · SCALE · EXPAND",
   intro:
-    "From closed institutional forums in Addis Ababa to a regional summit across East Africa.",
+    "Four events leading to AfroChain Summit 2027 — from closed institutional forums in Addis Ababa to a regional summit across East Africa.",
   phases: [
     { phase: "BUILD", month: "Nov", line: "Build the foundations" },
     { phase: "CONNECT", month: "Dec", line: "Connect investment & opportunities" },

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { ArrowRight, CalendarDays, Lock, MapPin } from "lucide-react";
-import { SEASON, events } from "@/app/data/events";
+import { PROGRAM, events } from "@/app/data/events";
 import { FormatBadge, PhaseChip } from "@/app/components/EventBadges";
 import DaysUntil from "@/app/components/DaysUntil";
 
@@ -11,7 +11,7 @@ const focusRing =
 
 export default function Roadmap() {
   const activePhase =
-    events.find((event) => event.highlight)?.phase ?? SEASON.phases[0].phase;
+    events.find((event) => event.highlight)?.phase ?? PROGRAM.phases[0].phase;
 
   // One selection drives both the stepper ring and the card highlight, so
   // they always match. It defaults to BUILD: on load the first card is
@@ -42,7 +42,7 @@ export default function Roadmap() {
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-6xl text-center">
             <p className="text-sm font-semibold tracking-widest text-[#245a9a]/85 uppercase">
-              AfroChain {SEASON.displayLabel} Season
+              {PROGRAM.roadLabel}
             </p>
             <h2
               id="roadmap-title"
@@ -54,7 +54,7 @@ export default function Roadmap() {
               </span>
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg text-[#245a9a]/90 leading-relaxed">
-              {SEASON.intro}
+              {PROGRAM.intro}
             </p>
 
             {/* Phase stepper */}
