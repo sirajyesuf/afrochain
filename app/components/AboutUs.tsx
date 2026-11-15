@@ -163,7 +163,7 @@ export default function AboutUs({
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex lg:justify-end">
             <p className="inline-flex rounded-full border border-[#245a9a]/30 px-4 py-2 text-sm font-semibold text-[#245a9a]">
               We are not just hosting conversations. We are structuring access.
             </p>
