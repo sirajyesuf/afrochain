@@ -11,7 +11,7 @@ const Hackathon = () => {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
             <div className="lg:col-span-3">
               <p className="text-xs font-semibold tracking-[0.16em] uppercase text-[#245a9a]/75">
-                Program &middot; AfroChain Summit
+                Program &middot; AfroChain Summit 2027
               </p>
               <h2
                 id="hackathon-title"

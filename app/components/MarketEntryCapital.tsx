@@ -25,7 +25,7 @@ export default function MarketEntryCapital() {
     event.preventDefault();
 
     const subject = encodeURIComponent(
-      "Investment Forum Briefing Request - AfroChain 2026-2027",
+      "Investment Forum Briefing Request - AfroChain 2027",
     );
     const body = encodeURIComponent(
       `Company Name: ${form.companyName}

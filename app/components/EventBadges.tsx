@@ -50,7 +50,7 @@ const accentText: Record<string, string> = {
 };
 
 /**
- * Season phase. Each chip carries the accent colour of its event's card
+ * Programme phase. Each chip carries the accent colour of its event's card
  * topper, so the stepper and the cards read as one system. The active phase
  * (the one currently running) gets a ring so "where we are now" is readable
  * without relying on a text label alone.

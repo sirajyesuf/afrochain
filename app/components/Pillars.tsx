@@ -21,7 +21,7 @@ const pillars: Pillar[] = [
     id: "blockchain",
     title: "Blockchain",
     overview:
-      "Blockchain is a foundational layer for transparency, financial modernization, and digital infrastructure in emerging markets. AfroChain 2026–2027 focuses on practical blockchain applications aligned with national development priorities.",
+      "Blockchain is a foundational layer for transparency, financial modernization, and digital infrastructure in emerging markets. AfroChain 2027 focuses on practical blockchain applications aligned with national development priorities.",
     subtopics: [
       "Digital Identity & Infrastructure",
       "On-chain Financial Systems",
@@ -107,7 +107,7 @@ const pillars: Pillar[] = [
     id: "finance",
     title: "Finance",
     overview:
-      "Finance is the bridge between infrastructure and growth. With Ethiopia's recent forex reforms and financial modernization efforts, AfroChain 2026–2027 creates structured space for cross-border capital and fintech engagement.",
+      "Finance is the bridge between infrastructure and growth. With Ethiopia's recent forex reforms and financial modernization efforts, AfroChain 2027 creates structured space for cross-border capital and fintech engagement.",
     subtopics: [
       "Digital Finance & Fintech Innovation",
       "Foreign Exchange Reform Insights",
@@ -202,7 +202,7 @@ export default function Pillars() {
                 </p>
                 {pillar.id === "ai" && (
                   <p className="mt-4 inline-flex rounded-full border border-[#245a9a]/25 bg-[#f6f9ff] px-4 py-2 text-sm font-semibold text-[#245a9a]">
-                    AfroChain 2026–2027 positions AI not as hype - but as
+                    AfroChain 2027 positions AI not as hype - but as
                     infrastructure.
                   </p>
                 )}

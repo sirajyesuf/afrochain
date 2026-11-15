@@ -10,11 +10,11 @@ export const partnershipCategories: PartnershipCategory[] = [
     code: "01",
     title: "Strategic Sponsorship",
     summary:
-      "Brand presence across the AfroChain 2026–2027 season, from the Summit to AfroChain Kenya.",
+      "Brand presence across the Road to AfroChain Summit 2027, from the Executive Forum to AfroChain Kenya.",
     points: [
       "Logo placement across event and digital materials",
       "Stage, session, and award recognition",
-      "Co-branded communications for the full season",
+      "Co-branded communications for the full programme",
     ],
   },
   {
@@ -32,7 +32,7 @@ export const partnershipCategories: PartnershipCategory[] = [
     code: "03",
     title: "Executive Forum Partnerships",
     summary:
-      "Co-branded sessions, moderated panels, and closed-door briefings inside the invite-only Executive Forum.",
+      "Co-branded sessions, moderated panels, and closed-door briefings inside the invite-only Executive Forum, the opening stop on the Road to AfroChain Summit 2027.",
     points: [
       "Direct access to regulators, ministries, and central banks",
       "Co-branded session and panel formats",

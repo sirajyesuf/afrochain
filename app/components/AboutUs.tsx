@@ -21,7 +21,7 @@ export default function AboutUs({
           <div className="grid grid-cols-1 lg:grid-cols-5 rounded-3xl overflow-hidden shadow-none border border-[#245a9a]/15">
             <div className="lg:col-span-3 bg-[#0f2f56] p-7 md:p-10 text-white">
               <p className="text-xs font-semibold tracking-[0.18em] uppercase text-white/70">
-                About AfroChain 2026–2027
+                About AfroChain 2027
               </p>
               <h2
                 id="about-afrochain-title"
@@ -39,7 +39,8 @@ export default function AboutUs({
               <p className="mt-4 text-[#245a9a]/90 leading-relaxed">
                 It has evolved from a regional summit into a strategic forum for
                 infrastructure builders, policymakers, investors, and global
-                institutions shaping Africa&apos;s digital future.
+                institutions shaping Africa&apos;s digital future &mdash;
+                building the Road to AfroChain Summit 2027.
               </p>
             </div>
           </div>
@@ -65,7 +66,7 @@ export default function AboutUs({
               </p>
               {/* <div className="mt-5 rounded-lg bg-[#f4f8ff] px-4 py-3">
                 <p className="text-[#245a9a] font-semibold">
-                  AfroChain 2026–2027 sits at the intersection of policy direction and
+                  AfroChain 2027 sits at the intersection of policy direction and
                   global execution.
                 </p>
               </div> */}

@@ -55,7 +55,7 @@ export default function SpeakersSection() {
         </div>
 
         <p className="mt-3 text-sm text-[#245a9a]/80">
-          Network with game-changers and thought leaders at AfroChain 2026–2027.
+          Network with game-changers and thought leaders at AfroChain Summit 2027.
         </p>
 
         {/* Speakers */}

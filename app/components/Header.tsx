@@ -25,7 +25,7 @@ const navigation: NavItem[] = [
   {
     name: "Programs",
     submenu: [
-      { name: "Events Roadmap", href: "#roadmap" },
+      { name: "Road to Summit 2027", href: "#roadmap" },
       { name: "All Events & Dates", href: "/events" },
       { name: "Hackathon", href: "#hackathon" },
       { name: "Launchpad", href: "#launchpad" },

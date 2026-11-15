@@ -21,7 +21,7 @@ export default function VenueSection() {
           {/* Title */}
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#245a9a] mb-4">
-              Summit Venue
+              Summit 2027 Venue
             </h2>
             <div className="w-24 h-1 bg-[#dbe900] mx-auto rounded-full"></div>
           </div>
@@ -59,7 +59,7 @@ export default function VenueSection() {
                     </div>
                     <div>
                       <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
-                        Executive Forum Dates
+                        Executive Forum &middot; Road to Summit 2027
                       </p>
                       <p className="text-xl font-bold text-[#245a9a]">
                         Nov 20-21, 2026

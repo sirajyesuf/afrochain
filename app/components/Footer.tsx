@@ -25,9 +25,9 @@ export default function Footer() {
               </Link>
               <p className="text-white text-base leading-relaxed max-w-md font-medium">
                 AfroChain is a year-round platform for blockchain, AI, and
-                finance across Africa &mdash; a four-event season running from
-                closed institutional forums in Addis Ababa to a regional summit
-                across East Africa.
+                finance across Africa &mdash; the four-event Road to AfroChain
+                Summit 2027, running from closed institutional forums in Addis
+                Ababa to a regional summit across East Africa.
               </p>
             </div>
             {/* Contact Info */}
