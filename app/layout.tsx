@@ -20,13 +20,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "AfroChain 2026–2027 - Blockchain, AI & Finance in Africa",
-    template: "%s | AfroChain 2026–2027"
+    default: "AfroChain 2027 - Blockchain, AI & Finance in Africa",
+    template: "%s | AfroChain 2027"
   },
   description:
-    "AfroChain 2026–2027 is a four-event season across Africa: Executive Forum (Nov 2026), Investment Forum (Dec 2026), AfroChain Summit (Mar 2027), and AfroChain Kenya (Apr 2027). Connect with builders, institutions, policymakers, and investors shaping Africa's digital economy.",
+    "AfroChain 2027 is Africa's digital economy platform for blockchain, AI, and finance. The Road to AfroChain Summit 2027 spans four events: Executive Forum (Nov 2026), Investment Forum (Dec 2026), AfroChain Summit (Mar 25–27, 2027), and AfroChain Kenya (Apr 2027). Connect with builders, institutions, policymakers, and investors shaping Africa's digital economy.",
   keywords: [
-    "afrochain 2026 2027",
+    "afrochain 2027",
+    "road to afrochain summit 2027",
     "afrochain executive forum",
     "afrochain investment forum",
     "afrochain summit 2027",
@@ -57,24 +58,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://afrochainsummit.com',
-    siteName: 'AfroChain 2026–2027',
-    title: "AfroChain 2026–2027 - Blockchain, AI & Finance in Africa",
+    siteName: 'AfroChain 2027',
+    title: "AfroChain 2027 - Blockchain, AI & Finance in Africa",
     description:
-      "Four events. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official AfroChain 2026–2027 roadmap.",
+      "Four events. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official Road to AfroChain Summit 2027.",
     images: [
       {
         url: '/afrochainwithwhitebg.png',
         width: 1200,
         height: 630,
-        alt: 'AfroChain 2026–2027 - Blockchain, AI and Finance in Africa',
+        alt: 'AfroChain 2027 - Blockchain, AI and Finance in Africa',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "AfroChain 2026–2027 - Blockchain, AI & Finance in Africa",
+    title: "AfroChain 2027 - Blockchain, AI & Finance in Africa",
     description:
-      "Four events. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official AfroChain 2026–2027 roadmap.",
+      "Four events. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official Road to AfroChain Summit 2027.",
     images: ['/afrochainwithwhitebg.png'],
     creator: '@afrochain',
     site: '@afrochain',

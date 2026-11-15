@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, CalendarDays, Globe2, Lock, MapPin, Target, Users } from "lucide-react";import { SEASON, events, type AfroChainEvent } from "@/app/data/events";
+import { ArrowRight, CalendarDays, Globe2, Lock, MapPin, Target, Users } from "lucide-react";
+import { PROGRAM, events, type AfroChainEvent } from "@/app/data/events";
 import { FormatBadge, PhaseChip } from "@/app/components/EventBadges";
 
 const siteUrl = "https://afrochainsummit.com";
@@ -11,8 +12,10 @@ const focusRing =
 export const metadata: Metadata = {
   title: "Events Roadmap",
   description:
-    "The AfroChain 2026–2027 official event roadmap: Executive Forum (Nov 20–21, 2026), Investment Forum (Dec 17–18, 2026), AfroChain Summit (Mar 25–27, 2027), and AfroChain Kenya (Apr 6–8, 2027).",
+    "The Road to AfroChain Summit 2027: Executive Forum (Nov 20–21, 2026), Investment Forum (Dec 17–18, 2026), AfroChain Summit (Mar 25–27, 2027), and AfroChain Kenya (Apr 6–8, 2027).",
   keywords: [
+    "afrochain 2027",
+    "road to afrochain summit 2027",
     "afrochain executive forum",
     "afrochain investment forum",
     "afrochain summit 2027",
@@ -23,17 +26,17 @@ export const metadata: Metadata = {
     canonical: "/events",
   },
   openGraph: {
-    title: "AfroChain 2026–2027 Events Roadmap",
+    title: "Road to AfroChain Summit 2027",
     description:
       "Four stages. One ecosystem. Executive Forum, Investment Forum, Summit, and Kenya — the official AfroChain roadmap.",
     url: `${siteUrl}/events`,
-    siteName: "AfroChain 2026–2027",
+    siteName: "AfroChain 2027",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AfroChain 2026–2027 Events Roadmap",
+    title: "Road to AfroChain Summit 2027",
     description:
-      "Four stages. One ecosystem. The official AfroChain event roadmap for 2026–2027.",
+      "Four stages. One ecosystem. The official AfroChain event roadmap for 2027.",
   },
 };
 
@@ -69,7 +72,7 @@ function eventJsonLd(event: AfroChainEvent) {
 
 export default function EventsPage() {
   const activePhase =
-    events.find((event) => event.highlight)?.phase ?? SEASON.phases[0].phase;
+    events.find((event) => event.highlight)?.phase ?? PROGRAM.phases[0].phase;
 
   return (
     <>
@@ -90,17 +93,17 @@ export default function EventsPage() {
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="inline-flex max-w-full items-center rounded-2xl border border-white/40 bg-white/10 px-4 py-2 text-xs sm:text-sm font-semibold tracking-[0.16em] text-white/95 uppercase sm:rounded-full">
-              AfroChain {SEASON.displayLabel} Season
+              {PROGRAM.roadLabel}
             </p>
             <h1
               id="events-title"
               className="mt-5 text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight drop-shadow-lg"
             >
-              The AfroChain{" "}
-              <span className="text-[#dbe900]">Roadmap</span>
+              The Road to{" "}
+              <span className="text-[#dbe900]">AfroChain Summit 2027</span>
             </h1>
             <p className="mt-4 text-base sm:text-lg text-white/90 font-light tracking-wide leading-relaxed">
-              {SEASON.headline} {SEASON.intro}
+              {PROGRAM.headline} {PROGRAM.intro}
             </p>
           </div>
 
@@ -285,8 +288,8 @@ export default function EventsPage() {
               Stay close to the roadmap
             </h2>
             <p className="mt-4 text-white/85 leading-relaxed">
-              AfroChain runs a single season across four events. Partner with
-              the series, or reach the team directly about access.
+              The Road to AfroChain Summit 2027 runs across four events. Partner
+              with the series, or reach the team directly about access.
             </p>
             <div className="mt-8 flex flex-col gap-2.5 sm:flex-row sm:justify-center sm:gap-3">
               <Link

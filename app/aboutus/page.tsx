@@ -5,12 +5,13 @@ import FAQ from '@/app/components/FAQ';
 import Footer from '@/app/components/Footer';
 
 export const metadata: Metadata = {
-  title: "About AfroChain 2026–2027",
+  title: "About AfroChain 2027",
   description:
-    "Learn the mission behind AfroChain 2026–2027 and how we are connecting Blockchain, AI, and Finance leaders to accelerate practical innovation across Ethiopia and Africa.",
+    "Learn the mission behind AfroChain 2027 and how we are connecting Blockchain, AI, and Finance leaders to accelerate practical innovation across Ethiopia and Africa.",
   keywords: [
     "AfroChain about",
-    "afrochain 2026 2027",
+    "afrochain 2027",
+    "road to afrochain summit 2027",
     "blockchain summit mission",
     "ai and finance innovation africa",
     "Kese Events",
@@ -18,15 +19,15 @@ export const metadata: Metadata = {
     "Africa Web3 community",
   ],
   openGraph: {
-    title: "About AfroChain 2026–2027",
+    title: "About AfroChain 2027",
     description:
-      "Learn the mission behind AfroChain 2026–2027 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
+      "Learn the mission behind AfroChain 2027 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
     images: ['/5.jpg'],
   },
   twitter: {
-    title: "About AfroChain 2026–2027",
+    title: "About AfroChain 2027",
     description:
-      "Learn the mission behind AfroChain 2026–2027 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
+      "Learn the mission behind AfroChain 2027 and how we are connecting Blockchain, AI, and Finance leaders across Africa.",
     images: ['/5.jpg'],
   },
 };

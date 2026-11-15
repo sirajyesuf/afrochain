@@ -6,12 +6,14 @@ import { partners } from "@/app/data/partners";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Partners & Sponsors - AfroChain 2026–2027",
+  title: "Partners & Sponsors - AfroChain 2027",
   description:
-    "Partner with AfroChain 2026–2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Ethiopia and Africa.",
+    "Partner with AfroChain 2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Ethiopia and Africa.",
   keywords: [
     "AfroChain partners",
-    "AfroChain 2026–2027 sponsors",
+    "AfroChain 2027 sponsors",
+    "afrochain 2027",
+    "road to afrochain summit 2027",
     "blockchain summit sponsors",
     "ai summit partners africa",
     "finance innovation partners africa",
@@ -21,15 +23,15 @@ export const metadata: Metadata = {
     "become a sponsor",
   ],
   openGraph: {
-    title: "Partners & Sponsors - AfroChain 2026–2027",
+    title: "Partners & Sponsors - AfroChain 2027",
     description:
-      "Partner with AfroChain 2026–2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
+      "Partner with AfroChain 2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
     images: ["/keseevents-logo.png", "/afrochainwithwhitebg.png"],
   },
   twitter: {
-    title: "Partners & Sponsors - AfroChain 2026–2027",
+    title: "Partners & Sponsors - AfroChain 2027",
     description:
-      "Partner with AfroChain 2026–2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
+      "Partner with AfroChain 2027 and collaborate with organizations advancing Blockchain, AI, and Finance across Africa.",
     images: ["/keseevents-logo.png", "/afrochainwithwhitebg.png"],
   },
 };

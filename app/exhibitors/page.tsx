@@ -4,12 +4,14 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Exhibitors - AfroChain 2026–2027",
+  title: "Exhibitors - AfroChain Summit 2027",
   description:
-    "Exhibit at AfroChain 2026–2027 and showcase solutions in Blockchain, AI, and Finance to investors, institutions, and builders from across Africa.",
+    "Exhibit at AfroChain Summit 2027 and showcase solutions in Blockchain, AI, and Finance to investors, institutions, and builders from across Africa.",
   keywords: [
     "AfroChain exhibitors",
-    "AfroChain 2026–2027 exhibitors",
+    "AfroChain Summit 2027 exhibitors",
+    "afrochain 2027",
+    "road to afrochain summit 2027",
     "blockchain summit exhibitors",
     "ai summit exhibitors africa",
     "fintech summit exhibitors africa",
@@ -19,15 +21,15 @@ export const metadata: Metadata = {
     "register as exhibitor",
   ],
   openGraph: {
-    title: "Exhibitors - AfroChain 2026–2027",
+    title: "Exhibitors - AfroChain Summit 2027",
     description:
-      "Exhibit at AfroChain 2026–2027 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
+      "Exhibit at AfroChain Summit 2027 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
     images: ["/web31.png"],
   },
   twitter: {
-    title: "Exhibitors - AfroChain 2026–2027",
+    title: "Exhibitors - AfroChain Summit 2027",
     description:
-      "Exhibit at AfroChain 2026–2027 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
+      "Exhibit at AfroChain Summit 2027 and showcase solutions in Blockchain, AI, and Finance to investors and institutions across Africa.",
     images: ["/web31.png"],
   },
 };
@@ -55,7 +57,7 @@ export default function ExhibitorsPage() {
           <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-24 mt-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg text-center">
               Meet the <span className="text-[#dbe900]">Exhibitors</span> of
-              AfroChain 2026
+              AfroChain Summit 2027
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 max-w-2xl text-center mb-8">
               Discover the innovators, builders, and organizations shaping the
@@ -90,7 +92,7 @@ export default function ExhibitorsPage() {
             <div className="w-16 h-1 bg-[#245a9a] rounded-full mb-6"></div>
             <p className="text-lg text-[#245a9a]/90 mb-8">
               Exhibitors at{" "}
-              <span className="font-bold text-[#245a9a]">AfroChain 2026</span>{" "}
+              <span className="font-bold text-[#245a9a]">AfroChain Summit 2027</span>{" "}
               can showcase their products or services to a diverse audience of
               startups, investors, policymakers, and industry leaders from
               across Africa and beyond. Enjoy exclusive opportunities,
@@ -205,7 +207,7 @@ export default function ExhibitorsPage() {
               Exhibitors Coming Soon
             </h2>
             <p className="text-[#245a9a]/80">
-              Stay tuned for the full list of AfroChain 2026 exhibitors.
+              Stay tuned for the full list of AfroChain Summit 2027 exhibitors.
             </p>
           </div>
         </section>

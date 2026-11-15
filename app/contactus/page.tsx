@@ -4,12 +4,13 @@ import ContactSection from '@/app/components/ContactSection';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Contact AfroChain 2026–2027",
+  title: "Contact AfroChain 2027",
   description:
-    "Contact the AfroChain 2026–2027 team for partnerships, speaking, exhibiting, and collaboration opportunities across Blockchain, AI, and Finance.",
+    "Contact the AfroChain 2027 team for partnerships, speaking, exhibiting, and collaboration opportunities across Blockchain, AI, and Finance.",
   keywords: [
     "contact AfroChain",
-    "afrochain 2026 2027 contact",
+    "afrochain 2027 contact",
+    "road to afrochain summit 2027",
     "blockchain summit contact",
     "ai summit africa contact",
     "Web3 Africa contact",
@@ -18,14 +19,14 @@ export const metadata: Metadata = {
     "blockchain conference inquiry",
   ],
   openGraph: {
-    title: "Contact AfroChain 2026–2027",
+    title: "Contact AfroChain 2027",
     description:
-      "Contact the AfroChain 2026–2027 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
+      "Contact the AfroChain 2027 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
   },
   twitter: {
-    title: "Contact AfroChain 2026–2027",
+    title: "Contact AfroChain 2027",
     description:
-      "Contact the AfroChain 2026–2027 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
+      "Contact the AfroChain 2027 team for partnerships, speaking, exhibiting, and collaboration opportunities.",
   },
 };
 
