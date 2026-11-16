@@ -40,7 +40,7 @@ export default function Passes() {
                   }`}
                 >
                   {pass.badge && (
-                    <span className="inline-flex w-fit items-center rounded-full bg-[#dbe900] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0f2f56]">
+                    <span className="inline-flex w-fit items-center rounded-full bg-[#cfe3f7] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0f2f56]">
                       {pass.badge}
                     </span>
                   )}
@@ -96,7 +96,7 @@ export default function Passes() {
                       <li key={benefit} className="flex items-start gap-2">
                         <Check
                           className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${
-                            featured ? "text-[#dbe900]" : "text-[#245a9a]"
+                            featured ? "text-[#cfe3f7]" : "text-[#245a9a]"
                           }`}
                           aria-hidden="true"
                         />
@@ -111,7 +111,7 @@ export default function Passes() {
                         "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[13px] font-semibold transition-colors duration-200 sm:px-5 sm:py-3 sm:text-sm";
                       const tone = featured
                         ? cta.variant === "primary"
-                          ? "bg-[#dbe900] text-[#0f2f56] hover:bg-[#e6f21a]"
+                          ? "bg-white text-[#0f2f56] hover:bg-[#cfe3f7]"
                           : "border-2 border-white/70 text-white hover:bg-white hover:text-[#0f2f56]"
                         : cta.variant === "primary"
                           ? "bg-[#245a9a] text-white hover:bg-[#1c4678]"
@@ -148,7 +148,7 @@ export default function Passes() {
             })}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-[#245a9a]/15 border-l-4 border-l-[#dbe900] bg-white p-5 sm:p-6">
+          <div className="mt-6 rounded-2xl border border-[#245a9a]/15 border-l-4 border-l-[#245a9a] bg-white p-5 sm:p-6">
             <h3 className="text-base font-bold text-[#245a9a]">
               Important distinction
             </h3>

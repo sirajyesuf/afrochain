@@ -65,7 +65,7 @@ export default function PartnersSponsorSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={partner.name}
-                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white hover:border-[#dbe900] hover:shadow-md transition-all duration-300"
+                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white hover:border-[#245a9a] hover:shadow-md transition-all duration-300"
                   >
                     {tile}
                   </a>

@@ -95,7 +95,7 @@ export default function PastEventsGallery() {
               className="mt-2 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#245a9a] leading-tight whitespace-nowrap sm:tracking-normal"
             >
               <span className="whitespace-nowrap">Moments from</span>{" "}
-              <span className="whitespace-nowrap text-[#dbe900]">
+              <span className="whitespace-nowrap text-[#0f2f56]">
                 Past Events
               </span>
             </h2>

@@ -56,7 +56,7 @@ export default function ExhibitorsPage() {
           {/* Hero Content */}
           <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-24 mt-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg text-center">
-              Meet the <span className="text-[#dbe900]">Exhibitors</span> of
+              Meet the <span className="text-[#cfe3f7]">Exhibitors</span> of
               AfroChain Summit 2027
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 max-w-2xl text-center mb-8">

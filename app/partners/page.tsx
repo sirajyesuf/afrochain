@@ -74,7 +74,7 @@ export default function PartnersPage() {
             </a>
           </div>
           <div className="mt-10">
-            <p className="text-sm font-semibold text-[#dbe900] tracking-wider uppercase mb-4">
+            <p className="text-sm font-semibold text-[#cfe3f7] tracking-wider uppercase mb-4">
               2026 Partners
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
@@ -97,7 +97,7 @@ export default function PartnersPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       title={partner.name}
-                      className="group flex items-center justify-center w-24 h-14 rounded-lg bg-white p-2 shadow hover:shadow-lg hover:ring-2 hover:ring-[#dbe900] transition-all duration-300"
+                      className="group flex items-center justify-center w-24 h-14 rounded-lg bg-white p-2 shadow hover:shadow-lg hover:ring-2 hover:ring-[#cfe3f7] transition-all duration-300"
                     >
                       {tile}
                     </a>

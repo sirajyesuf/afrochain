@@ -170,7 +170,7 @@ export const events: AfroChainEvent[] = [
     slug: "kenya",
     phase: "EXPAND",
     phaseLine: "Expand regionally",
-    accent: "#dbe900",
+    accent: "#245a9a",
     name: "AfroChain Kenya",
     shortName: "Kenya",
     startDate: "2027-04-06",

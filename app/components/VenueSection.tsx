@@ -23,7 +23,7 @@ export default function VenueSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#245a9a] mb-4">
               Summit 2027 Venue
             </h2>
-            <div className="w-24 h-1 bg-[#dbe900] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-[#245a9a] mx-auto rounded-full"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -42,7 +42,7 @@ export default function VenueSection() {
                 </div>
                 {/* Floating decorative elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#245a9a] rounded-full opacity-20 animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#dbe900] rounded-full opacity-30 animate-bounce delay-500"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#245a9a] rounded-full opacity-30 animate-bounce delay-500"></div>
               </div>
             </div>
 

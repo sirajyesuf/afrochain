@@ -33,7 +33,7 @@ const Hero = () => {
 
           <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight drop-shadow-lg">
             Africa&apos;s Strategic Gateway for{" "}
-            <span className="text-[#dbe900]">Blockchain, AI, and Finance</span>
+            <span className="text-[#cfe3f7]">Blockchain, AI, and Finance</span>
           </h1>
 
           <p className="mt-6 text-base sm:text-lg md:text-xl text-white/90 font-light tracking-wide max-w-4xl">
@@ -43,7 +43,7 @@ const Hero = () => {
             financial modernization.
           </p>
 
-          <p className="mt-4 text-sm sm:text-base font-semibold tracking-[0.12em] text-[#dbe900] uppercase">
+          <p className="mt-4 text-sm sm:text-base font-semibold tracking-[0.12em] text-[#cfe3f7] uppercase">
             {PROGRAM.strapline}
           </p>
 
@@ -71,7 +71,7 @@ const Hero = () => {
           <div className="mt-8 flex flex-col items-stretch gap-2.5 sm:flex-row sm:items-start sm:gap-3">
             <Link
               href="#partnership-opportunities"
-              className="bg-transparent text-white font-bold py-2.5 px-5 rounded-lg border-2 border-white transition-colors duration-200 text-sm hover:bg-white hover:text-[#245a9a] inline-flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dbe900]"
+              className="bg-transparent text-white font-bold py-2.5 px-5 rounded-lg border-2 border-white transition-colors duration-200 text-sm hover:bg-white hover:text-[#245a9a] inline-flex items-center justify-center gap-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#cfe3f7]"
             >
               Partner with AfroChain
               <ExternalLink className="h-4 w-4" aria-hidden="true" />

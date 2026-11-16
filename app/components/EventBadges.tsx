@@ -49,13 +49,13 @@ type PhaseChipProps = {
 /**
  * Text colour per accent background, chosen by measured contrast ratio
  * against the accent colour (WCAG 4.5:1 for bold small labels):
- * lime 10.0, amber 6.2, sky 4.9 (navy), violet 4.2 (white).
+ * brand blue 7.0 (white), amber 6.2, sky 4.9 (navy), violet 4.2 (white).
  */
 const accentText: Record<string, string> = {
   "#8b5cf6": "text-white",
   "#f59e0b": "text-[#0f2f56]",
   "#0ea5e9": "text-[#0f2f56]",
-  "#dbe900": "text-[#0f2f56]",
+  "#245a9a": "text-white",
 };
 
 /**

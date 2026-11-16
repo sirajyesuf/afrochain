@@ -8,7 +8,7 @@ import { FormatBadge, PhaseChip } from "@/app/components/EventBadges";
 import DaysUntil from "@/app/components/DaysUntil";
 
 const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#dbe900]";
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245a9a]";
 
 export default function Roadmap() {
   const activePhase =
@@ -50,7 +50,7 @@ export default function Roadmap() {
               className="mt-3 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#245a9a] leading-tight whitespace-nowrap sm:tracking-normal"
             >
               <span className="whitespace-nowrap">Four Stages.</span>{" "}
-              <span className="whitespace-nowrap text-[#dbe900]">
+              <span className="whitespace-nowrap text-[#0f2f56]">
                 One Ecosystem.
               </span>
             </h2>

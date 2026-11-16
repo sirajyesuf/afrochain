@@ -31,7 +31,7 @@ export default function PartnersGrid() {
               target="_blank"
               rel="noopener noreferrer"
               title={partner.name}
-              className="group flex flex-col items-center justify-center rounded-lg border border-[#245a9a]/15 bg-white p-6 hover:border-[#dbe900] hover:shadow-lg transition-all duration-300"
+              className="group flex flex-col items-center justify-center rounded-lg border border-[#245a9a]/15 bg-white p-6 hover:border-[#245a9a] hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center justify-center h-20 lg:h-24 w-full">
                 <Image

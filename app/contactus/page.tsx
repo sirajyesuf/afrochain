@@ -41,7 +41,7 @@ export default function ContactUsPage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-center">
               Contact <span className="">AfroChain</span>
             </h1>
-            <div className="w-16 h-1 bg-yellow-300 rounded-full mb-6"></div>
+            <div className="w-16 h-1 bg-white rounded-full mb-6"></div>
             <p className="text-lg sm:text-xl text-white/90 max-w-2xl text-center mb-8">
               Have a question, partnership inquiry, or want to get involved? Reach out to the AfroChain team below.
             </p>

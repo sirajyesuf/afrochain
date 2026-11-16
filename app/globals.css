@@ -80,7 +80,10 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --brand-blue: #2563eb;
+  --brand-blue: #245a9a;
+  --brand-blue-deep: #0f2f56;
+  --brand-blue-hover: #1c4678;
+  --brand-blue-soft: #cfe3f7;
 }
 
 .dark {
@@ -115,7 +118,10 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  --brand-blue: #3b82f6;
+  --brand-blue: #7fb3e8;
+  --brand-blue-deep: #0f2f56;
+  --brand-blue-hover: #1c4678;
+  --brand-blue-soft: #cfe3f7;
 }
 
 @layer base {
