@@ -12,18 +12,18 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="bg-[#0f2f56] border-t border-white/10 font-sans">
+    <footer className="bg-ink-900 border-t border-white/10 font-sans">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-8">
               <Link href="/">
-                <h3 className="text-3xl font-extrabold text-white mb-3 tracking-tight">
+                <h3 className="type-h3 text-white mb-3">
                   AfroChain
                 </h3>
               </Link>
-              <p className="text-white text-base leading-relaxed max-w-md font-medium">
+              <p className="text-white text-base leading-relaxed max-w-md font-semibold">
                 AfroChain is a year-round platform for blockchain, AI, and
                 finance across Africa &mdash; the four-event Road to AfroChain
                 Summit 2027, running from closed institutional forums in Addis
@@ -48,12 +48,12 @@ export default function Footer() {
           </div>
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-5">Quick Links</h4>
+            <h4 className="type-h4 text-white mb-5">Quick Links</h4>
             <ul className="space-y-3">
               <li>
                 <Link
                   href="/#roadmap"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Road to Summit 2027
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/aboutus"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   About Us
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#speakers"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Speakers
                 </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#venue"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Venue
                 </Link>
@@ -85,7 +85,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/partners"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Partners
                 </Link>
@@ -93,7 +93,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#hackathon"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Hackathon
                 </Link>
@@ -101,7 +101,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contactus"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Contact Us
                 </Link>
@@ -109,7 +109,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/exhibitors"
-                  className="text-base text-white font-medium hover:underline focus:underline transition"
+                  className="text-base text-white font-semibold hover:underline focus:underline transition"
                 >
                   Exhibitors
                 </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
           </div>
           {/* Social & Legal */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-5">Connect</h4>
+            <h4 className="type-h4 text-white mb-5">Connect</h4>
             <div className="flex gap-4 mt-2 mb-8">
               <a
                 href="https://t.me/afrochaineth2026"
@@ -162,7 +162,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-base text-white font-medium">
+            <p className="text-base text-white font-semibold">
               © {currentYear} AfroChain. All rights reserved.
             </p>
             {/*<p className="text-sm opacity-90 text-white">
@@ -175,7 +175,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="inline-block"
             >
-              <h3 className="text-white text-sm font-semibold mb-2 transition-colors cursor-pointer">
+              <h3 className="type-h3 text-white mb-2 transition-colors cursor-pointer">
                 Powered by Santa Trading
               </h3>
             </a>
@@ -183,7 +183,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Soft bottom edge */}
-      <div className="w-full h-2 bg-gradient-to-t from-[#0f2f56] to-transparent" aria-hidden />
+      <div className="w-full h-2 bg-gradient-to-t from-ink-900 to-transparent" aria-hidden />
     </footer>
   );
 }

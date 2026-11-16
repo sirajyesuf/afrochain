@@ -58,10 +58,10 @@ export default function FAQ() {
     <div className="min-h-screen bg-background py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4 text-sm font-medium">
+          <Badge variant="secondary" className="mb-4 text-sm font-semibold">
             Web3 & Blockchain
           </Badge>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+          <h2 className="type-h2 text-foreground mb-4">Frequently Asked Questions</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Everything you need to know about Web3, blockchain technology, and the decentralized future
           </p>
@@ -79,7 +79,7 @@ export default function FAQ() {
                   value={faq.id}
                   className="border border-border rounded-lg px-4 hover:bg-accent/50 transition-colors"
                 >
-                  <AccordionTrigger className="text-left font-medium hover:no-underline py-4">
+                  <AccordionTrigger className="text-left font-semibold hover:no-underline py-4">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-muted-foreground leading-relaxed pb-4">

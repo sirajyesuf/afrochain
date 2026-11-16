@@ -35,14 +35,14 @@ export default function ContactUsPage() {
     <>
       <main className="min-h-screen bg-white flex flex-col">
         {/* Hero Section */}
-        <section className="relative flex items-center justify-center min-h-[60vh] w-full overflow-hidden bg-gradient-to-br from-[#245a9a] via-[#245a9a]/90 to-[#245a9a]/80" aria-label="Contact Hero">
+        <section className="relative flex items-center justify-center min-h-[60vh] w-full overflow-hidden bg-gradient-to-br from-brand-600 via-brand-600/90 to-brand-600/80" aria-label="Contact Hero">
           {/* Hero Content */}
           <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-24">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-center">
+            <h1 className="type-h1 text-white mb-6 text-center">
               Contact <span className="">AfroChain</span>
             </h1>
             <div className="w-16 h-1 bg-white rounded-full mb-6"></div>
-            <p className="text-lg sm:text-xl text-white/90 max-w-2xl text-center mb-8">
+            <p className="type-lead text-white/90 max-w-2xl text-center mb-8">
               Have a question, partnership inquiry, or want to get involved? Reach out to the AfroChain team below.
             </p>
           </div>

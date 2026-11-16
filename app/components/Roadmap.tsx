@@ -8,7 +8,7 @@ import { FormatBadge, PhaseChip } from "@/app/components/EventBadges";
 import DaysUntil from "@/app/components/DaysUntil";
 
 const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#245a9a]";
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600";
 
 export default function Roadmap() {
   const activePhase =
@@ -42,19 +42,19 @@ export default function Roadmap() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-6xl text-center">
-            <p className="text-sm font-semibold tracking-widest text-[#245a9a]/85 uppercase">
+            <p className="type-eyebrow text-muted-ink">
               {PROGRAM.roadLabel}
             </p>
             <h2
               id="roadmap-title"
-              className="mt-3 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#245a9a] leading-tight whitespace-nowrap sm:tracking-normal"
+              className="type-h2 mt-3 text-brand-600"
             >
               <span className="whitespace-nowrap">Four Stages.</span>{" "}
-              <span className="whitespace-nowrap text-[#0f2f56]">
+              <span className="whitespace-nowrap text-ink-900">
                 One Ecosystem.
               </span>
             </h2>
-            <p className="mx-auto mt-4 max-w-3xl text-base md:text-lg text-[#245a9a]/90 leading-relaxed">
+            <p className="mx-auto mt-4 max-w-3xl type-lead text-body">
               {PROGRAM.intro}
             </p>
 
@@ -80,7 +80,7 @@ export default function Roadmap() {
                   </button>
                   {index < events.length - 1 && (
                     <span
-                      className="hidden h-px w-10 bg-[#245a9a]/25 lg:block lg:w-12"
+                      className="hidden h-px w-10 bg-brand-600/25 lg:block lg:w-12"
                       aria-hidden="true"
                     />
                   )}
@@ -100,7 +100,7 @@ export default function Roadmap() {
                   className={`flex h-full flex-col overflow-hidden rounded-2xl border bg-white transition-all duration-300 hover:shadow-none ${
                     selectedSlug === event.slug
                       ? "border-2 border-transparent shadow-none -translate-y-1"
-                      : "border-[#245a9a]/20"
+                      : "border-brand-600/20"
                   }`}
                   style={
                     selectedSlug === event.slug
@@ -116,7 +116,7 @@ export default function Roadmap() {
 
                   <div className="flex h-full flex-col p-5 lg:p-6">
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <span className="inline-flex items-center gap-2 rounded-full bg-[#245a9a]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#245a9a]">
+                      <span className="inline-flex items-center gap-2 rounded-full bg-brand-600/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-600">
                         <span
                           className="h-2 w-2 rounded-full"
                           style={{ backgroundColor: event.accent }}
@@ -127,44 +127,44 @@ export default function Roadmap() {
                       <FormatBadge format={event.format} />
                     </div>
 
-                    <h3 className="mt-3 text-xl font-bold text-[#245a9a] leading-tight">
+                    <h3 className="type-h3 mt-3 text-brand-600">
                       {event.name}
                     </h3>
 
-                    <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-[#245a9a]/90">
+                    <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-body">
                       <CalendarDays className="h-4 w-4 shrink-0" aria-hidden="true" />
                       {event.dateLabel}
                     </p>
-                    <p className="mt-1 flex items-center gap-2 text-sm text-[#245a9a]/85">
+                    <p className="mt-1 flex items-center gap-2 text-sm text-body">
                       <MapPin className="h-4 w-4 shrink-0" aria-hidden="true" />
                       {event.location}
                     </p>
 
                     {event.highlight && (
-                      <p className="mt-3 flex items-center gap-1.5 text-sm font-bold text-[#245a9a]">
+                      <p className="mt-3 flex items-center gap-1.5 text-sm font-bold text-brand-600">
                         Starts
                         <DaysUntil date={event.startDate} />
                       </p>
                     )}
 
                     <div className="mt-5">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#245a9a]/85">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-body">
                         Purpose
                       </p>
-                      <p className="mt-1.5 text-sm leading-relaxed text-[#245a9a]/90">
+                      <p className="mt-1.5 text-base leading-relaxed text-body">
                         {event.purpose}
                       </p>
                     </div>
 
                     <div className="mt-5">
-                      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#245a9a]/85">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-body">
                         Focus Areas
                       </p>
                       <ul className="mt-2 flex flex-wrap gap-1.5">
                         {event.focus.map((topic) => (
                           <li
                             key={topic}
-                            className="rounded-full border border-[#245a9a]/20 bg-[#f6f9ff] px-2.5 py-1 text-xs font-medium text-[#245a9a]"
+                            className="rounded-full border border-brand-600/20 bg-surface-1 px-2.5 py-1 text-xs font-semibold text-brand-600"
                           >
                             {topic}
                           </li>
@@ -177,7 +177,7 @@ export default function Roadmap() {
                         <div className="flex items-center justify-between gap-3">
                           {event.cta.href === "#" ? (
                             <span
-                              className={`inline-flex w-full cursor-not-allowed items-center justify-center gap-1.5 rounded-lg bg-[#245a9a]/10 px-4 py-2 text-sm font-semibold text-[#245a9a]/60`}
+                              className={`inline-flex w-full cursor-not-allowed items-center justify-center gap-1.5 rounded-lg bg-brand-600/10 px-4 py-2 text-sm font-semibold text-muted-ink`}
                               role="link"
                               aria-disabled="true"
                               title="Registration link coming soon"
@@ -188,7 +188,7 @@ export default function Roadmap() {
                           ) : event.cta.href.startsWith("#") ? (
                             <Link
                               href={event.cta.href}
-                              className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#245a9a] px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678] ${focusRing}`}
+                              className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 ${focusRing}`}
                             >
                               {event.cta.label}
                             </Link>
@@ -197,7 +197,7 @@ export default function Roadmap() {
                               href={event.cta.href}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-[#245a9a] px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678] ${focusRing}`}
+                              className={`inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700 ${focusRing}`}
                             >
                               {event.cta.label}
                               <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />

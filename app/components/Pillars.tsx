@@ -152,28 +152,28 @@ const pillars: Pillar[] = [
 
 const buttonClass = (variant: "primary" | "secondary" = "secondary") =>
   variant === "primary"
-    ? "inline-flex items-center justify-center gap-2 rounded-lg bg-[#245a9a] px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1c4678]"
-    : "inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#245a9a] bg-white px-5 py-3 text-sm font-semibold text-[#245a9a] transition-colors duration-200 hover:bg-[#245a9a] hover:text-white";
+    ? "inline-flex items-center justify-center gap-2 rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-brand-700"
+    : "inline-flex items-center justify-center gap-2 rounded-lg border-2 border-brand-600 bg-white px-5 py-3 text-sm font-semibold text-brand-600 transition-colors duration-200 hover:bg-brand-600 hover:text-white";
 
 export default function Pillars() {
   return (
     <section
-      className="bg-[#f6f9ff] py-16 lg:py-24"
+      className="bg-surface-1 py-16 lg:py-24"
       aria-label="AfroChain Summit Strategic Tracks"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <p className="text-sm font-semibold tracking-widest text-[#245a9a]/80 uppercase">
+          <p className="type-eyebrow text-muted-ink">
             Summit Program Tracks
           </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[#245a9a]">
+          <h2 className="type-h2 mt-3 text-brand-600">
             Blockchain, AI, and Finance
           </h2>
-          <p className="mt-4 text-base md:text-lg text-[#245a9a]/85">
+          <p className="mt-4 type-lead text-body">
             Each track is built for practical execution, institutional
             collaboration, and market-ready outcomes across Ethiopia and Africa.
           </p>
-          <p className="mt-4 inline-flex max-w-full items-center rounded-2xl border border-[#245a9a]/25 bg-white px-4 py-2 text-center text-sm font-semibold text-[#245a9a] sm:rounded-full">
+          <p className="mt-4 inline-flex max-w-full items-center rounded-2xl border border-brand-600/25 bg-white px-4 py-2 text-center text-sm font-semibold text-brand-600 sm:rounded-full">
             Tracks run at AfroChain Summit &middot; March 25&ndash;27, 2027 &middot;
             Addis Ababa
           </p>
@@ -185,62 +185,62 @@ export default function Pillars() {
               id={pillar.id}
               key={pillar.id}
               aria-labelledby={`${pillar.id}-title`}
-              className="scroll-mt-8 rounded-2xl border border-[#245a9a]/20 bg-white p-6 md:p-8 lg:p-10"
+              className="scroll-mt-8 rounded-2xl border border-brand-600/20 bg-white p-6 md:p-8 lg:p-10"
             >
               <div>
-                <p className="text-sm font-semibold text-[#245a9a]/70 uppercase tracking-wider">
+                <p className="type-eyebrow text-muted-ink">
                   Pillar {index + 1}
                 </p>
                 <h3
                   id={`${pillar.id}-title`}
-                  className="mt-2 text-3xl md:text-4xl font-bold text-[#245a9a]"
+                  className="type-h3 mt-2 text-brand-600"
                 >
                   {pillar.title}
                 </h3>
-                <p className="mt-5 text-base md:text-lg leading-relaxed text-[#245a9a]/90">
+                <p className="mt-5 type-lead text-body">
                   {pillar.overview}
                 </p>
                 {pillar.id === "ai" && (
-                  <p className="mt-4 inline-flex rounded-full border border-[#245a9a]/25 bg-[#f6f9ff] px-4 py-2 text-sm font-semibold text-[#245a9a]">
+                  <p className="mt-4 inline-flex rounded-full border border-brand-600/25 bg-surface-1 px-4 py-2 text-sm font-semibold text-brand-600">
                     AfroChain 2027 positions AI not as hype - but as
                     infrastructure.
                   </p>
                 )}
 
                 <div className="mt-7 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                  <div className="rounded-xl border border-[#245a9a]/20 bg-[#f6f9ff] p-5">
-                    <h4 className="text-base font-bold text-[#245a9a]">
+                  <div className="rounded-xl border border-brand-600/20 bg-surface-1 p-5">
+                    <h4 className="type-h4 text-brand-600">
                       Key Subtopics
                     </h4>
                     <ul className="mt-3 space-y-2">
                       {pillar.subtopics.map((topic) => (
-                        <li key={topic} className="text-[#245a9a]/90">
+                        <li key={topic} className="text-body">
                           {topic}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="rounded-xl border border-[#245a9a]/20 bg-[#f6f9ff] p-5">
-                    <h4 className="text-base font-bold text-[#245a9a]">
+                  <div className="rounded-xl border border-brand-600/20 bg-surface-1 p-5">
+                    <h4 className="type-h4 text-brand-600">
                       Who This Is For
                     </h4>
                     <ul className="mt-3 space-y-2">
                       {pillar.audience.map((group) => (
-                        <li key={group} className="text-[#245a9a]/90">
+                        <li key={group} className="text-body">
                           {group}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="rounded-xl border border-[#245a9a]/20 bg-[#f6f9ff] p-5">
-                    <h4 className="text-base font-bold text-[#245a9a]">
+                  <div className="rounded-xl border border-brand-600/20 bg-surface-1 p-5">
+                    <h4 className="type-h4 text-brand-600">
                       What You&apos;ll Get
                     </h4>
                     <ul className="mt-3 space-y-2">
                       {pillar.outcomes.map((outcome) => (
-                        <li key={outcome} className="text-[#245a9a]/90">
+                        <li key={outcome} className="text-body">
                           {outcome}
                         </li>
                       ))}

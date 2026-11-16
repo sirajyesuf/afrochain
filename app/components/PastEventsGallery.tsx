@@ -68,7 +68,7 @@ function MarqueeRow({ files, reverse = false, duration }: MarqueeRowProps) {
               height={800}
               loading="lazy"
               sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, 224px"
-              className="h-40 w-40 rounded-2xl border border-[#245a9a]/10 object-cover transition-transform duration-300 hover:scale-105 sm:h-48 sm:w-48 md:h-56 md:w-56"
+              className="h-40 w-40 rounded-2xl border border-brand-600/10 object-cover transition-transform duration-300 hover:scale-105 sm:h-48 sm:w-48 md:h-56 md:w-56"
             />
           </li>
         ))}
@@ -81,21 +81,21 @@ export default function PastEventsGallery() {
   return (
     <section
       id="past-events"
-      className="scroll-mt-8 bg-[#f6f9ff] py-16 lg:py-24"
+      className="scroll-mt-8 bg-surface-1 py-16 lg:py-24"
       aria-labelledby="past-events-title"
     >
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold tracking-widest text-[#245a9a]/85 uppercase">
+            <p className="type-eyebrow text-muted-ink">
               Our Journey So Far
             </p>
             <h2
               id="past-events-title"
-              className="mt-2 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#245a9a] leading-tight whitespace-nowrap sm:tracking-normal"
+              className="type-h2 mt-2 text-brand-600"
             >
               <span className="whitespace-nowrap">Moments from</span>{" "}
-              <span className="whitespace-nowrap text-[#0f2f56]">
+              <span className="whitespace-nowrap text-ink-900">
                 Past Events
               </span>
             </h2>
@@ -111,11 +111,11 @@ export default function PastEventsGallery() {
         </div>
 
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#f6f9ff] to-transparent sm:w-24"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-surface-1 to-transparent sm:w-24"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-[#f6f9ff] to-transparent sm:w-24"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 bg-gradient-to-l from-surface-1 to-transparent sm:w-24"
           aria-hidden="true"
         />
       </div>

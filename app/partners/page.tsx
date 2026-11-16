@@ -41,16 +41,16 @@ export default function PartnersPage() {
     <>
       {/* Hero Section for Partners Page */}
       <section
-        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-[#245a9a]"
+        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-brand-600"
         aria-label="Partners Hero"
       >
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/70 to-brand-600/40"></div>
         <div className="relative z-10 w-full max-w-4xl mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg mt-8">
+          <h1 className="type-h1 text-white mb-4 drop-shadow-lg mt-8">
             🤝 Our Partners & Sponsors
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 font-light mb-6 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-brand-100 font-normal mb-6 max-w-2xl mx-auto">
             We are grateful for the support and collaboration of our partners
             and sponsors who make Afrochain possible. Discover the innovators,
             builders, and organizations shaping the future of Web3 and
@@ -62,7 +62,7 @@ export default function PartnersPage() {
               href="https://forms.gle/vrpvDxoufARBNnPLA"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white font-bold py-2 px-6 rounded-lg border-2 border-[#245a9a] transition-colors duration-200 text-base shadow"
+              className="bg-brand-600 hover:bg-brand-600/90 text-white font-bold py-2 px-6 rounded-lg border-2 border-brand-600 transition-colors duration-200 text-base shadow"
             >
               Become a Partner or Sponsor
             </a>
@@ -74,7 +74,7 @@ export default function PartnersPage() {
             </a>
           </div>
           <div className="mt-10">
-            <p className="text-sm font-semibold text-[#cfe3f7] tracking-wider uppercase mb-4">
+            <p className="type-eyebrow text-brand-100 mb-4">
               2026 Partners
             </p>
             <div className="flex flex-wrap items-center justify-center gap-3">
@@ -97,7 +97,7 @@ export default function PartnersPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       title={partner.name}
-                      className="group flex items-center justify-center w-24 h-14 rounded-lg bg-white p-2 shadow hover:shadow-lg hover:ring-2 hover:ring-[#cfe3f7] transition-all duration-300"
+                      className="group flex items-center justify-center w-24 h-14 rounded-lg bg-white p-2 shadow hover:shadow-lg hover:ring-2 hover:ring-brand-100 transition-all duration-300"
                     >
                       {tile}
                     </a>

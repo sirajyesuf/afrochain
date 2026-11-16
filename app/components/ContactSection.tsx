@@ -26,9 +26,9 @@ export default function ContactSection() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] mb-4">Contact our friendly team</h2>
-            <div className="w-16 h-1 bg-[#245a9a] rounded-full mx-auto mb-6"></div>
-            <p className="text-lg text-[#245a9a]/80">Let us know how we can help.</p>
+            <h2 className="type-h2 text-brand-600 mb-4">Contact our friendly team</h2>
+            <div className="w-16 h-1 bg-brand-600 rounded-full mx-auto mb-6"></div>
+            <p className="text-lg text-body">Let us know how we can help.</p>
           </div>
 
           {/* Contact Grid */}
@@ -36,15 +36,15 @@ export default function ContactSection() {
             {/* Chat to sales */}
             <div className="text-center p-6">
               <div className="flex justify-center mb-6">
-                <div className="w-12 h-12 bg-[#245a9a]/10 rounded-lg flex items-center justify-center">
-                  <MessageCircle className="w-6 h-6 text-[#245a9a]" />
+                <div className="w-12 h-12 bg-brand-600/10 rounded-lg flex items-center justify-center">
+                  <MessageCircle className="w-6 h-6 text-brand-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Chat to sales</h3>
-              <p className="text-[#245a9a]/70 mb-4">Speak to our friendly team.</p>
+              <h3 className="type-h3 text-brand-600 mb-2">Chat to sales</h3>
+              <p className="text-muted-ink mb-4">Speak to our friendly team.</p>
               <button
                 onClick={() => handleEmailClick("afrochaineth@gmail.com")}
-                className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                className="text-brand-600 font-semibold hover:text-muted-ink transition-colors underline"
               >
                 afrochaineth@gmail.com
               </button>
@@ -53,15 +53,15 @@ export default function ContactSection() {
             {/* Chat to support */}
             <div className="text-center p-6">
               <div className="flex justify-center mb-6">
-                <div className="w-12 h-12 bg-[#245a9a]/10 rounded-lg flex items-center justify-center">
-                  <HelpCircle className="w-6 h-6 text-[#245a9a]" />
+                <div className="w-12 h-12 bg-brand-600/10 rounded-lg flex items-center justify-center">
+                  <HelpCircle className="w-6 h-6 text-brand-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Chat to support</h3>
-              <p className="text-[#245a9a]/70 mb-4">We&apos;re here to help.</p>
+              <h3 className="type-h3 text-brand-600 mb-2">Chat to support</h3>
+              <p className="text-muted-ink mb-4">We&apos;re here to help.</p>
               <button
                 onClick={() => handleEmailClick("info@santatradingplc.com")}
-                className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                className="text-brand-600 font-semibold hover:text-muted-ink transition-colors underline"
               >
                 info@santatradingplc.com
               </button>
@@ -70,15 +70,15 @@ export default function ContactSection() {
             {/* Visit us */}
             <div className="text-center p-6">
               <div className="flex justify-center mb-6">
-                <div className="w-12 h-12 bg-[#245a9a]/10 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-[#245a9a]" />
+                <div className="w-12 h-12 bg-brand-600/10 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-brand-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Visit us</h3>
-              <p className="text-[#245a9a]/70 mb-4">Visit our office HQ.</p>
+              <h3 className="type-h3 text-brand-600 mb-2">Visit us</h3>
+              <p className="text-muted-ink mb-4">Visit our office HQ.</p>
               <button
                 onClick={handleMapClick}
-                className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                className="text-brand-600 font-semibold hover:text-muted-ink transition-colors underline"
               >
                 View on Google Maps
               </button>
@@ -87,22 +87,22 @@ export default function ContactSection() {
             {/* Call us */}
             <div className="text-center p-6">
               <div className="flex justify-center mb-6">
-                <div className="w-12 h-12 bg-[#245a9a]/10 rounded-lg flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-[#245a9a]" />
+                <div className="w-12 h-12 bg-brand-600/10 rounded-lg flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-brand-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#245a9a] mb-2">Call us</h3>
-              <p className="text-[#245a9a]/70 mb-4">Mon-Fri from 8am to 5pm.</p>
+              <h3 className="type-h3 text-brand-600 mb-2">Call us</h3>
+              <p className="text-muted-ink mb-4">Mon-Fri from 8am to 5pm.</p>
               <div className="flex flex-col items-center gap-2">
                 <button
                   onClick={() => handlePhoneClick("+251913034049")}
-                  className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                  className="text-brand-600 font-semibold hover:text-muted-ink transition-colors underline"
                 >
                   +251 913 034 049
                 </button>
                 <button
                   onClick={() => handlePhoneClick("+251911039254")}
-                  className="text-[#245a9a] font-medium hover:text-[#245a9a]/70 transition-colors underline"
+                  className="text-brand-600 font-semibold hover:text-muted-ink transition-colors underline"
                 >
                   +251 911 039 254
                 </button>

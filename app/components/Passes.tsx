@@ -5,22 +5,22 @@ export default function Passes() {
   return (
     <section
       id="passes"
-      className="scroll-mt-8 bg-[#eaf2fb] py-16 lg:py-24"
+      className="scroll-mt-8 bg-surface-2 py-16 lg:py-24"
       aria-labelledby="passes-title"
     >
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-semibold tracking-widest text-[#245a9a]/80 uppercase">
+            <p className="type-eyebrow text-muted-ink">
               Admission
             </p>
             <h2
               id="passes-title"
-              className="mt-3 text-3xl font-bold leading-tight text-[#245a9a] md:text-4xl lg:text-5xl"
+              className="type-h2 mt-3 text-brand-600"
             >
               Choose Your AfroChain Pass
             </h2>
-            <p className="mt-4 text-base text-[#245a9a]/90 leading-relaxed md:text-lg">
+            <p className="mt-4 text-base text-body leading-relaxed md:text-lg">
               One summit, two levels of access. See exactly what each pass
               includes before you register.
             </p>
@@ -35,19 +35,19 @@ export default function Passes() {
                   key={pass.id}
                   className={`flex flex-col rounded-2xl border p-5 sm:p-6 lg:p-7 ${
                     featured
-                      ? "border-transparent bg-[#0f2f56] text-white"
-                      : "border-[#245a9a]/20 bg-white text-[#245a9a]"
+                      ? "border-transparent bg-ink-900 text-white"
+                      : "border-brand-600/20 bg-white text-brand-600"
                   }`}
                 >
                   {pass.badge && (
-                    <span className="inline-flex w-fit items-center rounded-full bg-[#cfe3f7] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0f2f56]">
+                    <span className="inline-flex w-fit items-center rounded-full bg-brand-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-ink-900">
                       {pass.badge}
                     </span>
                   )}
 
                   <h3
                     className={`mt-3 text-sm font-bold uppercase tracking-[0.16em] ${
-                      featured ? "text-white/70" : "text-[#245a9a]/70"
+                      featured ? "text-white/70" : "text-muted-ink"
                     }`}
                   >
                     {pass.name}
@@ -55,7 +55,7 @@ export default function Passes() {
 
                   <p
                     className={`mt-1.5 text-3xl font-bold leading-tight lg:text-4xl ${
-                      featured ? "text-white" : "text-[#245a9a]"
+                      featured ? "text-white" : "text-brand-600"
                     }`}
                   >
                     {pass.price}
@@ -63,8 +63,8 @@ export default function Passes() {
 
                   {pass.priceNote && (
                     <p
-                      className={`mt-2 text-[13px] leading-snug sm:text-sm ${
-                        featured ? "text-white/80" : "text-[#245a9a]/80"
+                      className={`mt-2 text-sm leading-snug sm:text-sm ${
+                        featured ? "text-white/80" : "text-body"
                       }`}
                     >
                       {pass.priceNote}
@@ -72,31 +72,31 @@ export default function Passes() {
                   )}
 
                   <p
-                    className={`mt-2.5 text-[13px] font-medium leading-snug sm:text-sm ${
-                      featured ? "text-white/90" : "text-[#245a9a]/90"
+                    className={`mt-2.5 text-sm font-semibold leading-snug sm:text-sm ${
+                      featured ? "text-white/90" : "text-body"
                     }`}
                   >
                     {pass.scope}
                   </p>
 
                   <p
-                    className={`mt-5 text-[11px] font-bold uppercase tracking-[0.16em] ${
-                      featured ? "text-white/70" : "text-[#245a9a]/70"
+                    className={`mt-5 text-xs font-bold uppercase tracking-[0.16em] ${
+                      featured ? "text-white/70" : "text-muted-ink"
                     }`}
                   >
                     Includes
                   </p>
 
                   <ul
-                    className={`mt-2.5 flex flex-col gap-2 text-[13px] leading-snug sm:text-sm sm:leading-relaxed ${
-                      featured ? "text-white/90" : "text-[#245a9a]/90"
+                    className={`mt-2.5 flex flex-col gap-2 text-sm leading-snug sm:text-sm sm:leading-relaxed ${
+                      featured ? "text-white/90" : "text-body"
                     }`}
                   >
                     {pass.benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-2">
                         <Check
                           className={`mt-0.5 h-3.5 w-3.5 shrink-0 ${
-                            featured ? "text-[#cfe3f7]" : "text-[#245a9a]"
+                            featured ? "text-brand-100" : "text-brand-600"
                           }`}
                           aria-hidden="true"
                         />
@@ -108,14 +108,14 @@ export default function Passes() {
                   <div className="mt-6 flex flex-col gap-2.5">
                     {pass.ctas.map((cta) => {
                       const base =
-                        "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[13px] font-semibold transition-colors duration-200 sm:px-5 sm:py-3 sm:text-sm";
+                        "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors duration-200 sm:px-5 sm:py-3 sm:text-sm";
                       const tone = featured
                         ? cta.variant === "primary"
-                          ? "bg-white text-[#0f2f56] hover:bg-[#cfe3f7]"
-                          : "border-2 border-white/70 text-white hover:bg-white hover:text-[#0f2f56]"
+                          ? "bg-white text-ink-900 hover:bg-brand-100"
+                          : "border-2 border-white/70 text-white hover:bg-white hover:text-ink-900"
                         : cta.variant === "primary"
-                          ? "bg-[#245a9a] text-white hover:bg-[#1c4678]"
-                          : "border-2 border-[#245a9a] text-[#245a9a] hover:bg-[#245a9a] hover:text-white";
+                          ? "bg-brand-600 text-white hover:bg-brand-700"
+                          : "border-2 border-brand-600 text-brand-600 hover:bg-brand-600 hover:text-white";
 
                       // The amount always rides inside the button, so the
                       // price travels with the action at every screen size.
@@ -148,11 +148,11 @@ export default function Passes() {
             })}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-[#245a9a]/15 border-l-4 border-l-[#245a9a] bg-white p-5 sm:p-6">
-            <h3 className="text-base font-bold text-[#245a9a]">
+          <div className="mt-6 rounded-2xl border border-brand-600/15 border-l-4 border-l-[#245a9a] bg-white p-5 sm:p-6">
+            <h3 className="type-h3 text-brand-600">
               Important distinction
             </h3>
-            <p className="mt-2 text-[#245a9a]/90 leading-relaxed">
+            <p className="mt-2 text-body leading-relaxed">
               {PASS_DISCLAIMER}
             </p>
           </div>

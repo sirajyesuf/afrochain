@@ -47,7 +47,7 @@ const navigation: NavItem[] = [
 const registerAnchor = "#passes";
 
 const focusRing =
-  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#cfe3f7]";
+  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-100";
 
 /** Anchor links stay on the homepage; full paths open their own route. */
 function hrefFor(href: string, pathname: string) {
@@ -227,18 +227,18 @@ export default function Header() {
       {/* The dates sit in a full-width announcement bar at every size so the
           promoted event is the first thing a visitor reads. */}
       <div
-        className="bg-[#245a9a] text-white"
+        className="bg-brand-600 text-white"
         suppressHydrationWarning
       >
         <p className="flex flex-col items-center gap-0.5 px-3 py-1.5 text-center sm:flex-row sm:justify-center sm:gap-2 sm:py-2">
-          <span className="text-[10px] font-bold uppercase leading-tight tracking-[0.14em] sm:text-[11px]">
+          <span className="text-xs font-bold uppercase leading-tight tracking-[0.14em]">
             {promotedEvent?.name}
           </span>
           <span
             className="hidden h-1 w-1 shrink-0 rounded-full bg-white/40 sm:block"
             aria-hidden="true"
           />
-          <span className="text-[9px] font-semibold uppercase leading-tight tracking-[0.06em] sm:text-[11px]">
+          <span className="text-xs font-semibold uppercase leading-tight tracking-[0.06em]">
             {promotedEvent?.dateLabel}
             <span
               className="mx-1 inline-block h-1 w-1 shrink-0 rounded-full bg-white/40 align-middle"
@@ -261,7 +261,7 @@ export default function Header() {
               <span className="text-sm font-bold leading-tight tracking-wide text-white sm:text-base">
                 AFROCHAIN
               </span>
-              <span className="text-[10px] leading-tight tracking-wide text-white/85">
+              <span className="text-xs leading-tight tracking-wide text-white/85">
                 ADDIS ABABA, ETHIOPIA
               </span>
             </Link>
@@ -279,8 +279,8 @@ export default function Header() {
                   <DropdownMenu key={item.name}>
                     <DropdownMenuTrigger asChild>
                       <span
-                        className={`group flex cursor-pointer items-center gap-1 rounded-md px-2.5 py-1.5 text-sm font-normal transition-colors duration-300 hover:text-[#cfe3f7] ${focusRing} ${
-                          active ? "text-[#cfe3f7]" : "text-white/85"
+                        className={`group flex cursor-pointer items-center gap-1 rounded-md px-2.5 py-1.5 text-sm font-normal transition-colors duration-300 hover:text-brand-100 ${focusRing} ${
+                          active ? "text-brand-100" : "text-white/85"
                         }`}
                       >
                         {item.name}
@@ -298,7 +298,7 @@ export default function Header() {
                               <Link
                                 href={hrefFor(sub.href, pathname)}
                                 scroll={true}
-                                className={`w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#245a9a] ${focusRing}`}
+                                className={`w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-600 ${focusRing}`}
                               >
                                 {sub.name}
                               </Link>
@@ -310,7 +310,7 @@ export default function Header() {
                               <Link
                                 href={hrefFor(sub.href, pathname)}
                                 scroll={true}
-                                className="w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#245a9a]"
+                                className="w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-600"
                               >
                                 {sub.name}
                               </Link>
@@ -323,7 +323,7 @@ export default function Header() {
                             <Link
                               href={sub.href}
                               scroll={true}
-                              className="w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#245a9a]"
+                              className="w-full focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-600"
                             >
                               {sub.name}
                             </Link>
@@ -341,8 +341,8 @@ export default function Header() {
                   href={item.href ?? "/"}
                   scroll={true}
                   aria-current={active ? "page" : undefined}
-                  className={`rounded-md px-2.5 py-1.5 text-sm font-normal transition-colors duration-300 hover:text-[#cfe3f7] ${focusRing} ${
-                    active ? "text-[#cfe3f7]" : "text-white/85"
+                  className={`rounded-md px-2.5 py-1.5 text-sm font-normal transition-colors duration-300 hover:text-brand-100 ${focusRing} ${
+                    active ? "text-brand-100" : "text-white/85"
                   }`}
                 >
                   {item.name}
@@ -352,7 +352,7 @@ export default function Header() {
 
             <Link
               href={registerHref}
-              className={`ml-3 rounded-lg border border-white/70 px-4 py-2 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:border-[#cfe3f7] hover:bg-[#cfe3f7] hover:text-[#0f2f56] ${focusRing}`}
+              className={`ml-3 rounded-lg border border-white/70 px-4 py-2 text-sm font-semibold tracking-wide text-white transition-colors duration-300 hover:border-brand-100 hover:bg-brand-100 hover:text-ink-900 ${focusRing}`}
             >
               Register for Event
             </Link>
@@ -363,7 +363,7 @@ export default function Header() {
           <div className="flex shrink-0 items-center gap-1">
             <Link
               href={registerHref}
-              className={`hidden rounded-md border border-white/70 px-3 py-1.5 text-xs font-semibold tracking-wide text-white transition-colors duration-300 hover:border-[#cfe3f7] hover:bg-[#cfe3f7] hover:text-[#0f2f56] md:inline-flex lg:hidden ${focusRing}`}
+              className={`hidden rounded-md border border-white/70 px-3 py-1.5 text-xs font-semibold tracking-wide text-white transition-colors duration-300 hover:border-brand-100 hover:bg-brand-100 hover:text-ink-900 md:inline-flex lg:hidden ${focusRing}`}
             >
               Register
             </Link>
@@ -396,7 +396,7 @@ export default function Header() {
           <div
             id="mobile-menu"
             ref={overlayRef}
-            className="fixed inset-0 z-[100] h-[100dvh] bg-[#0f2f56] lg:hidden"
+            className="fixed inset-0 z-[100] h-[100dvh] bg-ink-900 lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Main menu"
@@ -407,10 +407,10 @@ export default function Header() {
               <div className="flex items-center justify-between gap-3 px-4 pb-4 pt-4 sm:px-6">
                 <div className="flex min-w-0 items-center gap-2.5">
                   {/*<div
-                    className="flex shrink-0 items-center rounded-r border-l-2 border-[#cfe3f7] bg-white/[0.06] py-1.5 pl-2 pr-2.5"
+                    className="flex shrink-0 items-center rounded-r border-l-2 border-brand-100 bg-white/[0.06] py-1.5 pl-2 pr-2.5"
                     suppressHydrationWarning
                   >
-                    <span className="whitespace-nowrap text-[10px] font-semibold uppercase leading-none tracking-[0.08em] text-white">
+                    <span className="whitespace-nowrap text-xs font-semibold uppercase leading-none tracking-[0.08em] text-white">
                       {promotedEvent?.dateLabel}
                     </span>
                   </div>*/}
@@ -418,7 +418,7 @@ export default function Header() {
                     <span className="text-sm font-bold tracking-wide text-white">
                       AFROCHAIN
                     </span>
-                    <span className="truncate text-[10px] tracking-wide text-white/80">
+                    <span className="truncate text-xs tracking-wide text-white/80">
                       ADDIS ABABA, ETHIOPIA
                     </span>
                   </span>
@@ -459,7 +459,7 @@ export default function Header() {
                             }
                             aria-expanded={isOpen}
                             aria-controls={panelId}
-                            className={`flex w-full items-center justify-between px-1 py-3.5 text-left text-base text-white/90 transition-colors duration-300 hover:text-[#cfe3f7] ${focusRing}`}
+                            className={`flex w-full items-center justify-between px-1 py-3.5 text-left text-base text-white/90 transition-colors duration-300 hover:text-brand-100 ${focusRing}`}
                           >
                             {item.name}
                             <ChevronDown
@@ -471,7 +471,7 @@ export default function Header() {
                           </button>
 
                           <div id={panelId} hidden={!isOpen} className="pb-2">
-                            <ul className="ml-1 space-y-0.5 border-l-2 border-[#cfe3f7]/40 pl-3">
+                            <ul className="ml-1 space-y-0.5 border-l-2 border-brand-100/40 pl-3">
                               {item.submenu.map((sub) => {
                                 const href = hrefFor(sub.href, pathname);
                                 return (
@@ -480,7 +480,7 @@ export default function Header() {
                                       href={href}
                                       scroll={true}
                                       onClick={() => handleNavClick(href)}
-                                      className={`block py-3 text-sm text-white/80 transition-colors duration-300 hover:text-[#cfe3f7] ${focusRing}`}
+                                      className={`block py-3 text-sm text-white/80 transition-colors duration-300 hover:text-brand-100 ${focusRing}`}
                                     >
                                       {sub.name}
                                     </Link>
@@ -505,8 +505,8 @@ export default function Header() {
                           aria-current={
                             isCurrent(item.href) ? "page" : undefined
                           }
-                          className={`block px-1 py-3.5 text-base text-white/90 transition-colors duration-300 hover:text-[#cfe3f7] ${focusRing} ${
-                            isCurrent(item.href) ? "text-[#cfe3f7]" : ""
+                          className={`block px-1 py-3.5 text-base text-white/90 transition-colors duration-300 hover:text-brand-100 ${focusRing} ${
+                            isCurrent(item.href) ? "text-brand-100" : ""
                           }`}
                         >
                           {item.name}
@@ -520,7 +520,7 @@ export default function Header() {
                   href={registerHref}
                   scroll={true}
                   onClick={() => handleNavClick(registerHref)}
-                  className={`mt-8 flex w-full items-center justify-center rounded-lg bg-[#cfe3f7] px-6 py-3 text-sm font-semibold tracking-wide text-[#0f2f56] transition-colors duration-300 hover:bg-white ${focusRing}`}
+                  className={`mt-8 flex w-full items-center justify-center rounded-lg bg-brand-100 px-6 py-3 text-sm font-semibold tracking-wide text-ink-900 transition-colors duration-300 hover:bg-white ${focusRing}`}
                 >
                   Register for Event
                 </Link>

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export default function ExhibitorsPage() {
   return (
     <>
-      <main className="min-h-screen bg-black flex flex-col">
+      <main className="min-h-screen bg-ink-900 flex flex-col">
         {/* Hero Section */}
         <section
           className="relative flex items-center justify-center min-h-[60vh] w-full overflow-hidden"
@@ -52,14 +52,14 @@ export default function ExhibitorsPage() {
             priority
           />
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-[#245a9a]/40 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/70 to-brand-600/40 z-10" />
           {/* Hero Content */}
           <div className="relative z-20 flex flex-col items-center justify-center w-full px-4 py-24 mt-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg text-center">
-              Meet the <span className="text-[#cfe3f7]">Exhibitors</span> of
+            <h1 className="type-h1 text-white mb-6 drop-shadow-lg text-center">
+              Meet the <span className="text-brand-100">Exhibitors</span> of
               AfroChain Summit 2027
             </h1>
-            <p className="text-lg sm:text-xl text-gray-200 max-w-2xl text-center mb-8">
+            <p className="type-lead text-brand-100 max-w-2xl text-center mb-8">
               Discover the innovators, builders, and organizations shaping the
               future of Web3 and blockchain in Africa. Explore their projects,
               connect, and get inspired!
@@ -70,13 +70,13 @@ export default function ExhibitorsPage() {
                 href="https://forms.gle/vrpvDxoufARBNnPLA"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#245a9a] hover:bg-[#245a9a]/90 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200 text-base shadow-md text-center"
+                className="bg-brand-600 hover:bg-brand-600/90 text-white font-bold py-2 px-6 rounded-lg transition-colors duration-200 text-base shadow-md text-center"
               >
                 REGISTER AS EXHIBITOR
               </a>
               <a
                 href="/contactus"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#245a9a] font-bold py-2 px-6 rounded-lg transition-colors duration-200 text-base shadow-md text-center"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-brand-600 font-bold py-2 px-6 rounded-lg transition-colors duration-200 text-base shadow-md text-center"
               >
                 CONTACT US
               </a>
@@ -86,13 +86,13 @@ export default function ExhibitorsPage() {
         {/* Exhibitor Benefit Section */}
         <section className="bg-white py-16" aria-label="Exhibitor Benefits">
           <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#245a9a] mb-2">
+            <h2 className="type-h2 text-brand-600 mb-2">
               Exhibitor Benefits
             </h2>
-            <div className="w-16 h-1 bg-[#245a9a] rounded-full mb-6"></div>
-            <p className="text-lg text-[#245a9a]/90 mb-8">
+            <div className="w-16 h-1 bg-brand-600 rounded-full mb-6"></div>
+            <p className="type-lead text-body mb-8">
               Exhibitors at{" "}
-              <span className="font-bold text-[#245a9a]">AfroChain Summit 2027</span>{" "}
+              <span className="font-bold text-brand-600">AfroChain Summit 2027</span>{" "}
               can showcase their products or services to a diverse audience of
               startups, investors, policymakers, and industry leaders from
               across Africa and beyond. Enjoy exclusive opportunities,
@@ -119,7 +119,7 @@ export default function ExhibitorsPage() {
                     />
                   </svg>
                 </span>
-                <span className="text-base text-[#245a9a] font-medium">
+                <span className="text-base text-brand-600 font-semibold">
                   Showcase products or services to a diverse audience.
                 </span>
               </li>
@@ -143,7 +143,7 @@ export default function ExhibitorsPage() {
                     />
                   </svg>
                 </span>
-                <span className="text-base text-[#245a9a] font-medium">
+                <span className="text-base text-brand-600 font-semibold">
                   Receive booth space, promotional opportunities, and access to
                   networking events.
                 </span>
@@ -168,7 +168,7 @@ export default function ExhibitorsPage() {
                     />
                   </svg>
                 </span>
-                <span className="text-base text-[#245a9a] font-medium">
+                <span className="text-base text-brand-600 font-semibold">
                   Increase visibility and brand recognition within the tech
                   ecosystem.
                 </span>
@@ -193,7 +193,7 @@ export default function ExhibitorsPage() {
                     />
                   </svg>
                 </span>
-                <span className="text-base text-[#245a9a] font-medium">
+                <span className="text-base text-brand-600 font-semibold">
                   Connect with potential partners, customers, and investors.
                 </span>
               </li>
@@ -203,10 +203,10 @@ export default function ExhibitorsPage() {
         {/* Exhibitors List Placeholder */}
         <section className="flex-1 bg-white py-16" aria-label="Exhibitors List">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-4 text-[#245a9a]">
+            <h2 className="type-h2 mb-4 text-brand-600">
               Exhibitors Coming Soon
             </h2>
-            <p className="text-[#245a9a]/80">
+            <p className="text-body">
               Stay tuned for the full list of AfroChain Summit 2027 exhibitors.
             </p>
           </div>

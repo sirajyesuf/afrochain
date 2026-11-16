@@ -30,10 +30,10 @@ export default function PartnersSponsorSection() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-8 text-center lg:mb-10">
-          <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
+          <p className="type-eyebrow text-muted-ink">
             Past and Current Partners
           </p>
-          <h2 className="mt-1 text-2xl font-bold leading-tight text-[#245a9a] sm:text-3xl lg:text-4xl">
+          <h2 className="type-h2 mt-1 text-brand-600">
             Partnering For Positive Change
           </h2>
         </div>
@@ -65,7 +65,7 @@ export default function PartnersSponsorSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     title={partner.name}
-                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white hover:border-[#245a9a] hover:shadow-md transition-all duration-300"
+                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-brand-600/15 bg-white hover:border-brand-600 hover:shadow-md transition-all duration-300"
                   >
                     {tile}
                   </a>
@@ -73,7 +73,7 @@ export default function PartnersSponsorSection() {
                   <div
                     key={`${copy}-${partner.name}`}
                     title={partner.name}
-                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-[#245a9a]/15 bg-white"
+                    className="mx-3 lg:mx-4 flex items-center justify-center h-16 lg:h-20 w-36 lg:w-48 rounded-lg border border-brand-600/15 bg-white"
                   >
                     {tile}
                   </div>

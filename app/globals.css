@@ -3,11 +3,35 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* AfroChain brand palette. Use these tokens (bg-brand-600, text-body,
+   border-line, ...) instead of hard-coded hex values so the palette stays
+   in one place. Contrast is measured against white unless noted. */
+@theme {
+  --color-brand-50: #eaf2fb;
+  --color-brand-100: #cfe3f7; /* 10.2:1 on ink-900 */
+  --color-brand-200: #b6d2ef;
+  --color-brand-300: #85b4e3;
+  --color-brand-400: #4f8fd0;
+  --color-brand-500: #2f6cae;
+  --color-brand-600: #245a9a; /* 7.0:1 */
+  --color-brand-700: #1c4678; /* 9.6:1 */
+  --color-brand-800: #163a63;
+  --color-brand-900: #0f2f56; /* 13.5:1 */
+  --color-ink-900: #0f2f56;
+  --color-body: #334e68; /* 8.6:1 */
+  --color-muted-ink: #486581; /* 6.1:1 */
+  --color-surface-1: #f6f9ff;
+  --color-surface-2: #eaf2fb;
+  --color-line: #d9e2ec;
+  --color-accent-violet: #7c3aed; /* 5.7:1 with white */
+  --color-accent-amber: #f59e0b;
+  --color-accent-sky: #0ea5e9;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -45,6 +69,66 @@
 
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+/* Type scale. Clamps resolve to the agreed breakpoint table:
+   H1 32→72, H2 30→52, H3 20→24, lead 17→20, body 16→17. */
+@layer components {
+  .type-h1 {
+    font-size: clamp(2rem, 1.1rem + 4.2vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  .type-h2 {
+    font-size: clamp(1.875rem, 1.35rem + 2.4vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+
+  .type-h3 {
+    font-size: clamp(1.25rem, 1.15rem + 0.4vw, 1.5rem);
+    line-height: 1.25;
+    font-weight: 700;
+  }
+
+  .type-h4 {
+    font-size: clamp(1rem, 0.97rem + 0.15vw, 1.125rem);
+    line-height: 1.35;
+    font-weight: 600;
+  }
+
+  .type-lead {
+    font-size: clamp(1.0625rem, 1rem + 0.3vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .type-body {
+    font-size: clamp(1rem, 0.98rem + 0.1vw, 1.0625rem);
+    line-height: 1.65;
+  }
+
+  .type-small {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .type-eyebrow {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .type-caption {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
 }
 
 :root {
@@ -80,10 +164,6 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --brand-blue: #245a9a;
-  --brand-blue-deep: #0f2f56;
-  --brand-blue-hover: #1c4678;
-  --brand-blue-soft: #cfe3f7;
 }
 
 .dark {
@@ -118,10 +198,6 @@ body {
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
-  --brand-blue: #7fb3e8;
-  --brand-blue-deep: #0f2f56;
-  --brand-blue-hover: #1c4678;
-  --brand-blue-soft: #cfe3f7;
 }
 
 @layer base {

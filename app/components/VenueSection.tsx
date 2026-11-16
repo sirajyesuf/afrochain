@@ -20,10 +20,10 @@ export default function VenueSection() {
         <div className="max-w-5xl mx-auto">
           {/* Title */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#245a9a] mb-4">
+            <h2 className="type-h2 text-brand-600 mb-4">
               Summit 2027 Venue
             </h2>
-            <div className="w-24 h-1 bg-[#245a9a] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-brand-600 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -41,8 +41,8 @@ export default function VenueSection() {
                   />
                 </div>
                 {/* Floating decorative elements */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-[#245a9a] rounded-full opacity-20 animate-bounce"></div>
-                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-[#245a9a] rounded-full opacity-30 animate-bounce delay-500"></div>
+                <div className="absolute -top-4 -right-4 w-8 h-8 bg-brand-600 rounded-full opacity-20 animate-bounce"></div>
+                <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-brand-600 rounded-full opacity-30 animate-bounce delay-500"></div>
               </div>
             </div>
 
@@ -52,48 +52,48 @@ export default function VenueSection() {
               <div className="space-y-6">
                 {/* NOTE: updated manually per upcoming event - keep this card
                     pointing at the nearest event only. */}
-                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
+                <div className="bg-white rounded-2xl p-6 border-2 border-brand-600">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center">
                       <Calendar className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                      <p className="type-caption font-semibold text-brand-600 uppercase tracking-wide">
                         Executive Forum &middot; Road to Summit 2027
                       </p>
-                      <p className="text-xl font-bold text-[#245a9a]">
+                      <p className="text-xl font-bold text-brand-600">
                         Nov 20-21, 2026
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
+                <div className="bg-white rounded-2xl p-6 border-2 border-brand-600">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center">
                       <Building className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                      <p className="type-caption font-semibold text-brand-600 uppercase tracking-wide">
                         Venue
                       </p>
-                      <p className="text-xl font-bold text-[#245a9a]">
+                      <p className="text-xl font-bold text-brand-600">
                         Addis Ababa Science Museum
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 border-2 border-[#245a9a]">
+                <div className="bg-white rounded-2xl p-6 border-2 border-brand-600">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-[#245a9a] rounded-xl flex items-center justify-center">
+                    <div className="w-12 h-12 bg-brand-600 rounded-xl flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-[#245a9a] uppercase tracking-wide">
+                      <p className="type-caption font-semibold text-brand-600 uppercase tracking-wide">
                         Location
                       </p>
-                      <p className="text-xl font-bold text-[#245a9a]">
+                      <p className="text-xl font-bold text-brand-600">
                         Addis Ababa, Ethiopia
                       </p>
                     </div>
@@ -106,7 +106,7 @@ export default function VenueSection() {
                 <Button
                   onClick={handleMapClick}
                   size="lg"
-                  className="w-full bg-[#245a9a] hover:bg-[#245a9a]/90 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transform hover:scale-105 transition-all duration-300"
+                  className="w-full bg-brand-600 hover:bg-brand-600/90 text-white px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold text-base sm:text-lg transform hover:scale-105 transition-all duration-300"
                 >
                   <MapPin className="w-5 h-5 mr-3" />
                   View on Google Maps

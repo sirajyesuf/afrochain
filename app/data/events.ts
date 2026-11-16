@@ -50,7 +50,7 @@ export const events: AfroChainEvent[] = [
     slug: "executive-forum",
     phase: "BUILD",
     phaseLine: "Build the foundations",
-    accent: "#8b5cf6",
+    accent: "#7c3aed",
     name: "AfroChain Executive Forum",
     shortName: "Executive Forum",
     startDate: "2026-11-20",

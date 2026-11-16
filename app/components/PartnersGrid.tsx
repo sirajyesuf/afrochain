@@ -10,13 +10,13 @@ export default function PartnersGrid() {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center space-y-4 mb-12 lg:mb-16">
-          <p className="text-sm font-semibold text-[#245a9a]/80 tracking-wider uppercase">
+          <p className="type-eyebrow text-muted-ink">
             Afrochain 2025 Partners
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#245a9a] leading-tight">
+          <h2 className="type-h2 text-brand-600">
             Partnering For Positive Change
           </h2>
-          <p className="text-lg text-[#245a9a]/90 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-body leading-relaxed max-w-2xl mx-auto">
             Empowering Potential Through Collaboration And Innovation. Join Us
             To Make A Positive Impact.
           </p>
@@ -31,7 +31,7 @@ export default function PartnersGrid() {
               target="_blank"
               rel="noopener noreferrer"
               title={partner.name}
-              className="group flex flex-col items-center justify-center rounded-lg border border-[#245a9a]/15 bg-white p-6 hover:border-[#245a9a] hover:shadow-lg transition-all duration-300"
+              className="group flex flex-col items-center justify-center rounded-lg border border-brand-600/15 bg-white p-6 hover:border-brand-600 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center justify-center h-20 lg:h-24 w-full">
                 <Image
@@ -42,7 +42,7 @@ export default function PartnersGrid() {
                   className="object-contain max-h-14 lg:max-h-16"
                 />
               </div>
-              <p className="mt-3 text-sm font-medium text-[#245a9a] text-center group-hover:text-[#245a9a]/90">
+              <p className="mt-3 text-sm font-semibold text-brand-600 text-center group-hover:text-body">
                 {partner.name}
               </p>
             </a>

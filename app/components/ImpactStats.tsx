@@ -13,7 +13,7 @@ export default function ImpactStats() {
   return (
     <div className="container mx-auto px-4">
       <div className="mx-auto mt-10 max-w-6xl lg:mt-14">
-        <dl className="grid grid-cols-3 overflow-hidden rounded-xl border border-[#245a9a]/15 bg-white lg:grid-cols-6">
+        <dl className="grid grid-cols-3 overflow-hidden rounded-xl border border-brand-600/15 bg-white lg:grid-cols-6">
           {impactStats.map((stat, index) => {
             // left rule on any cell that is not first in its row
             const leftRule = index % 3 === 0 ? "" : "border-l";
@@ -27,12 +27,12 @@ export default function ImpactStats() {
                 key={stat.label}
                 // flex-col keeps the markup order valid (dt before dd) while the
                 // order-* classes make the number read first visually.
-                className={`flex min-w-0 flex-col items-center border-[#245a9a]/12 px-2 py-5 text-center sm:px-3 lg:py-6 ${leftRule} ${desktopLeftRule} ${topRule}`}
+                className={`flex min-w-0 flex-col items-center border-brand-600/12 px-2 py-5 text-center sm:px-3 lg:py-6 ${leftRule} ${desktopLeftRule} ${topRule}`}
               >
-                <dt className="order-2 mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[0.1em] text-[#245a9a]/65 sm:text-[10px] lg:text-[11px]">
+                <dt className="order-2 mt-2 text-xs font-semibold uppercase leading-tight tracking-[0.1em] text-muted-ink">
                   {stat.label}
                 </dt>
-                <dd className="order-1 text-xl font-bold leading-none tracking-tight text-[#0f2f56] tabular-nums sm:text-2xl lg:text-3xl">
+                <dd className="order-1 text-xl font-bold leading-none tracking-tight text-ink-900 tabular-nums sm:text-2xl lg:text-3xl">
                   {stat.value}
                 </dd>
               </div>
